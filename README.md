@@ -16,13 +16,17 @@ Atualizar os dados.
 
 ### Develop
 
-atualizar o yarn
+Registraro Yarn
 
-``` # yarn config add default https://registry.npmjs.org/ ```
+``` # make registry ```
 
-instalar
+Instalar o site
 
-``` # yarn install ```
+``` # make install ```
+
+build o site
+
+``` # make build```
 
 --------------
 
@@ -36,3 +40,5 @@ Bootstrap: https://getbootstrap.com/
 Yarn pkg: https://classic.yarnpkg.com/en/docs/
 
 Webpack: https://webpack.js.org/
+
+Create React App: https://github.com/facebook/create-react-app
