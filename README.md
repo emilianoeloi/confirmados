@@ -42,3 +42,7 @@ Yarn pkg: https://classic.yarnpkg.com/en/docs/
 Webpack: https://webpack.js.org/
 
 Create React App: https://github.com/facebook/create-react-app
+
+React wrapper for Chart.js: https://github.com/jerairrest/react-chartjs-2
+
+Chart.js: https://www.chartjs.org/
