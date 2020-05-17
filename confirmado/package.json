@@ -1,0 +1,19 @@
+{
+  "name": "confirmado",
+  "version": "1.0.0",
+  "description": "Gráfico para confirmacoes",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": { },
+  "devDependencies": {
+    "bootstrap": "4.5.0",
+    "lodash": "4.17.15",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11" 
+  }
+}
