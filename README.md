@@ -20,12 +20,19 @@ atualizar o yarn
 
 ``` # yarn config add default https://registry.npmjs.org/ ```
 
+instalar
+
+``` # yarn install ```
+
 --------------
 
 
 ## Referências
 
 Dados para USA: https://github.com/nytimes/covid-19-data
+
 Bootstrap: https://getbootstrap.com/
+
 Yarn pkg: https://classic.yarnpkg.com/en/docs/
+
 Webpack: https://webpack.js.org/
