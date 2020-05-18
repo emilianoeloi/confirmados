@@ -1,20 +1,12 @@
 import React from 'react';
 import {
-  defaults,
   Line
 } from 'react-chartjs-2';
-import merge from 'lodash.merge';
 import './App.css';
+import { function1, function2 } from './Data.js'
 
-defaults.global.animation = false;
-merge(defaults, {
-  global: {
-    animation: false,
-    line: {
-      borderColor: '#F85F73',
-     },
-  },
-});
+let label2 = function2()
+let datasets2 = function1()
 
 class App extends React.Component {
   constructor(props) {
@@ -26,50 +18,10 @@ class App extends React.Component {
       const ctx = canvas.getContext("2d")
       const gradient = ctx.createLinearGradient(0,0,100,0);
       return {
-        backgroundColor: gradient,
-        labels:dataUSA.label,
-        datasets: [
-          dataUSA.dataset,
-          dataBRA.dataset,
-          dataCHI.dataset
-        ]
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: datasets2
       }
     }
-    var dataset = function(label, data, color) {
-      var defaultLabel = label  
-      var defaultData = data
-      var defaultDataset = {
-        data: defaultData,
-        lineTension: 0,
-        backgroundColor: 'transparent',
-        borderColor: '#007bff',
-        borderWidth: 4,
-        pointBackgroundColor: '#007bff'
-      }
-      return {
-        label: defaultLabel,
-        data: defaultData,
-        dataset: defaultDataset
-      }
-    }
-  
-    var dataUSA = dataset(
-      ['2020-01-21', '2020-01-22', '2020-01-23'] ,
-      [1, 1, 1],
-      '#c1c1c1'
-    )
-  
-    var dataBRA = dataset(
-      ['2020-01-21', '2020-01-22', '2020-01-23'] ,
-      [0, 0, 0],
-      '#c1c1c1'
-    )
-  
-    var dataCHI = dataset(
-      ['2020-01-21', '2020-01-22', '2020-01-23'] ,
-      [0, 558, 643],
-      '#c1c1c1'
-    )
     return (
       <Line
         ref={this.chartReference}
@@ -77,18 +29,32 @@ class App extends React.Component {
         width={900}
         height={380}
         options={{
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: false
-              }
-            }]
-          },
-          legend: {
-            display: false
-          },  
-          maintainAspectRatio: false
-        }}
+					responsive: true,
+					hoverMode: 'index',
+					stacked: false,
+					title: {
+						display: true,
+						text: 'Chart.js Line Chart - Multi Axis'
+					},
+					scales: {
+						yAxes: [{
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: true,
+							position: 'left',
+							id: 'y-axis-1',
+						}, {
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: true,
+							position: 'right',
+							id: 'y-axis-2',
+
+							// grid line settings
+							gridLines: {
+								drawOnChartArea: false, // only want the grid lines for one axis to show up
+							},
+						}],
+					}
+				}}
       />
     )
   }
