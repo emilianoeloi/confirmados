@@ -3,11 +3,7 @@ import {
   Line
 } from 'react-chartjs-2';
 import './App.css';
-import { function1, function2, function3 } from './Data.js'
-
-let label2 = function2()
-let datasets2 = function1()
-let yAxes2 = function3()
+import { _datasets, _labels, _options } from './Data.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -19,8 +15,8 @@ class App extends React.Component {
       const ctx = canvas.getContext("2d")
       const gradient = ctx.createLinearGradient(0,0,100,0);
       return {
-        labels: label2,
-        datasets: datasets2
+        labels: _labels,
+        datasets: _datasets
       }
     }
     return (
@@ -38,7 +34,7 @@ class App extends React.Component {
 					text: 'Confirmados de COVID-19'
 				},
 				scales: {
-					yAxes: yAxes2
+					yAxes: _options
 				}
 				}}
       />
