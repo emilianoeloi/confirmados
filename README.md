@@ -1,8 +1,10 @@
 # Confirmações do COVID-19
 
-## Confirmarções
+## Confirmados
 
 Um app/site tem gráficos para confirmar sobre o coronavírus.
+
+[Confirmados]: confirmados.png
 
 ## Gráfico
 
