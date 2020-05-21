@@ -3,7 +3,11 @@ import {
   Line
 } from 'react-chartjs-2';
 import './App.css';
-import { _datasets, _labels, _options } from './Data.js'
+import { loader } from './Data.js'
+
+var _datasets = loader.datasets 
+var _labels = loader.labels
+var yAxes = loader.yAxes
 
 class App extends React.Component {
   constructor(props) {
@@ -33,9 +37,7 @@ class App extends React.Component {
 					display: true,
 					text: 'Confirmados de COVID-19'
 				},
-				scales: {
-					yAxes: _options
-				}
+				scales: { yAxes }
 				}}
       />
     )
