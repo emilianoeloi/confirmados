@@ -4,9 +4,8 @@
 
 Um app/site tem gráficos para confirmar sobre o coronavírus.
 
-[!Confirmados][confirmaods]
-
-[confirmados]: confirmados.png
+![confirmados]
+confirmados.png
 
 ## Gráfico
 
@@ -50,3 +49,7 @@ Create React App: https://github.com/facebook/create-react-app
 React wrapper for Chart.js: https://github.com/jerairrest/react-chartjs-2
 
 Chart.js: https://www.chartjs.org/
+
+Scheme Color: https://www.schemecolor.com/
+
+Mastering Markdown: https://guides.github.com/features/mastering-markdown/
