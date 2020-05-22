@@ -5,12 +5,6 @@ import {
 import './App.css';
 import { loader } from './Data.js'
 
-var _datasets = loader.datasets 
-var _labels = loader.labels
-var yAxes = loader.yAxes
-
-console.info(loader)
-
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -19,8 +13,8 @@ class App extends React.Component {
   render() {
     const data = (canvas) => {
       return {
-        labels: _labels,
-        datasets: _datasets
+        labels: loader.labels,
+        datasets: loader.datasets
       }
     }
     return (
@@ -37,7 +31,7 @@ class App extends React.Component {
 					display: true,
 					text: 'Confirmados de COVID-19'
 				},
-				scales: { yAxes }
+				scales: { yAxes: loader.options }
 				}}
       />
     )

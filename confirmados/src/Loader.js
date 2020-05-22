@@ -19,7 +19,7 @@ class Loader {
         this.cases = cases
         this.options = []
 
-        let total = 10
+        let total = 20
 
         for(var i = 0; i < total; i++) {
             let item = cases[i]
