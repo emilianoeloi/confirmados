@@ -4,8 +4,7 @@
 
 Um app/site tem gráficos para confirmar sobre o coronavírus.
 
-![confirmados]
-(confirmados.png)
+![confirmados](confirmados.png)
 
 ## Gráfico
 

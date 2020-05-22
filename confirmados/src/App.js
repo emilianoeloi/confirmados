@@ -9,6 +9,8 @@ var _datasets = loader.datasets
 var _labels = loader.labels
 var yAxes = loader.yAxes
 
+console.info(loader)
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -16,8 +18,6 @@ class App extends React.Component {
   }
   render() {
     const data = (canvas) => {
-      const ctx = canvas.getContext("2d")
-      const gradient = ctx.createLinearGradient(0,0,100,0);
       return {
         labels: _labels,
         datasets: _datasets

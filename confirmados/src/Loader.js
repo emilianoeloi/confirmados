@@ -8,6 +8,7 @@ class Loader {
         yAxis,
         country,
         cases) {
+            
         this.datasets = datasets
         this.labels = labels
         this.yAxes = yAxes
@@ -16,6 +17,7 @@ class Loader {
         this.yAxis = yAxis
         this.country = country
         this.cases = cases
+        this.options = []
 
         let total = 10
 

@@ -1,8 +1,4 @@
 import { Loader } from './Loader.js'
-let brazil = {
-  name: 'Brasil',
-  color: '#009c3b'
-}
 
 let usa = {
   name: 'USA',
@@ -28,7 +24,7 @@ var loader = new Loader(
   null,
   [],
   [],
-  null,
+  [],
   usa,
   _cases_us
 )
