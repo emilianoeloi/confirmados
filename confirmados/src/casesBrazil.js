@@ -1,0 +1,62 @@
+let country = {
+    name: 'Brasil',
+    color: '#009c3b'
+}
+
+let cases = [
+    {date: '2020-01-21', cases: 0, death: 0},
+    {date: '2020-01-22', cases: 0, death: 0},
+    {date: '2020-01-23', cases: 0, death: 0},
+    {date: '2020-01-24', cases: 0, death: 0},
+    {date: '2020-01-25', cases: 0, death: 0},
+    {date: '2020-01-26', cases: 0, death: 0},
+    {date: '2020-01-27', cases: 0, death: 0},
+    {date: '2020-01-28', cases: 0, death: 0},
+    {date: '2020-01-29', cases: 0, death: 0},
+    {date: '2020-01-30', cases: 0, death: 0},
+    {date: '2020-01-31', cases: 0, death: 0},
+    {date: '2020-02-01', cases: 0, death: 0},
+    {date: '2020-02-02', cases: 0, death: 0},
+    {date: '2020-02-03', cases: 0, death: 0},
+    {date: '2020-02-04', cases: 0, death: 0},
+    {date: '2020-02-05', cases: 0, death: 0},
+    {date: '2020-02-06', cases: 0, death: 0},
+    {date: '2020-02-07', cases: 0, death: 0},
+    {date: '2020-02-08', cases: 0, death: 0},
+    {date: '2020-02-09', cases: 0, death: 0},
+    {date: '2020-02-10', cases: 0, death: 0},
+    {date: '2020-02-11', cases: 0, death: 0},
+    {date: '2020-02-12', cases: 0, death: 0},
+    {date: '2020-02-13', cases: 0, death: 0},
+    {date: '2020-02-14', cases: 0, death: 0},
+    {date: '2020-02-15', cases: 0, death: 0},
+    {date: '2020-02-16', cases: 0, death: 0},
+    {date: '2020-02-17', cases: 0, death: 0},
+    {date: '2020-02-18', cases: 0, death: 0},
+    {date: '2020-02-19', cases: 0, death: 0},
+    {date: '2020-02-20', cases: 0, death: 0},
+    {date: '2020-02-21', cases: 0, death: 0},
+    {date: '2020-02-22', cases: 0, death: 0},
+    {date: '2020-02-23', cases: 0, death: 0},
+    {date: '2020-02-24', cases: 0, death: 0},
+    {date: '2020-02-25', cases: 0, death: 0},
+    {date: '2020-02-26', cases:	1, death: 0},
+    {date: '2020-02-27', cases:	1, death: 0},
+    {date: '2020-02-28', cases:	1, death: 0},
+    {date: '2020-02-29', cases:	2, death: 0},
+    {date: '2020-03-01', cases:	2, death: 0},
+    {date: '2020-03-02', cases:	2, death: 0},
+    {date: '2020-03-03', cases:	2, death: 0},
+    {date: '2020-03-04', cases:	3, death: 0},
+    {date: '2020-03-05', cases:	7, death: 0},
+    {date: '2020-03-06', cases:	13, death: 0},
+    {date: '2020-03-07', cases:	19, death: 0},
+    {date: '2020-03-08', cases:	25, death: 0},
+    {date: '2020-03-09', cases:	25, death: 0},
+    {date: '2020-03-10', cases:	34, death: 0}
+]
+
+export default {
+    country,
+    cases
+}

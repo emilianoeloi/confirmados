@@ -18,24 +18,26 @@ Atualizar os dados.
 
 ### Develop
 
-Registraro Yarn
-
-``` # make registry ```
-
-Instalar o site
+Instalar
 
 ``` # make install ```
 
-build o site
+start
 
-``` # make build```
+``` # make start```
 
 --------------
 
 
 ## Referências
 
-Dados para USA: https://github.com/nytimes/covid-19-data
+Novel Coronavirus (COVID-19) Cases, provided by JHU CSSE: https://systems.jhu.edu/research/public-health/ncov/
+
+Brazil Ministry of Health: https://covid.saude.gov.br/
+
+Novel Coronavirus (COVID-19) Cases, provided by JHU CSSE: http://weekly.chinacdc.cn/news/TrackingtheEpidemic.htm
+
+NYC Department of Health and Mental Hygiene: https://github.com/nytimes/covid-19-data
 
 Bootstrap: https://getbootstrap.com/
 
