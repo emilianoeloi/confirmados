@@ -7,6 +7,8 @@ class Loader {
         this.yAxis = []
         this.options = []
         this.cases = []
+        this.display = true
+        this.max = 0
     }
 
     setCaseCountry(country, cases) {
@@ -16,6 +18,9 @@ class Loader {
             let item = cases[i]
             data.push(item.cases)
             labels.push(item.date)
+            if (item.cases > this.max) {
+                this.max = item.cases
+            }
         }
         this.setCountry(country, data, labels)
     }
@@ -32,15 +37,22 @@ class Loader {
             borderColor: country.color,
             yAxisID: yAxis,
             fill: false,
-            borderWidth: 5
+            borderWidth: 2
         })
         console.info(yAxis)
         this.options.push({
             id: yAxis,
             type: 'linear',
-            display: true,
-            position: 'left'
+            display: this.display,
+            position: 'left',
+            ticks: {
+                max: this.max,
+                min: 0
+            }
         })
+        if (this.display) {
+            this.display = false
+        }
     }
 }
 
