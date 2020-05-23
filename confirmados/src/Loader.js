@@ -1,51 +1,42 @@
 class Loader {
-    constructor(
-        datasets,
-        labels,
-        yAxes,
-        data, 
-        countries,
-        yAxis,
-        country,
-        cases) {
-            
-        this.datasets = datasets
-        this.labels = labels
-        this.yAxes = yAxes
-        this.data = data
-        this.countries = countries
-        this.yAxis = yAxis
-        this.country = country
-        this.cases = cases
+    constructor() {
+        this.datasets = []
+        this.labels = []
+        this.yAxes = []
+        this.countries = []
+        this.yAxis = []
         this.options = []
+        this.cases = []
+    }
 
-        let total = 20
-
-        for(var i = 0; i < total; i++) {
+    setCaseCountry(country, cases) {
+        var data = []
+        var labels = []
+        for(var i = 0; i < cases.length; i++) {
             let item = cases[i]
-            this.setDate(item)
+            data.push(item.cases)
+            labels.push(item.date)
         }
-        this.setCountry(country)
+        this.setCountry(country, data, labels)
     }
 
-    setDate(item) {
-        this.data.push(item.cases)
-        this.labels.push(item.date)
-    }
-
-    setCountry(country) {
-        this.countries[this.countries+1] = country
-        this.yAxis = `y-axis-${this.countries.length}`
+    setCountry(country, data, labels) {
+        this.labels = labels
+        this.countries[this.countries.length+1] = country
+        console.info(this.countries)
+        var yAxis = `y-axis-${this.countries.length}`
+        console.info(country.color)
         this.datasets.push({
-            label: this.country.name,
-            data: this.data,
-            borderColor: this.country.color,
-            yAxisID: this.yAxis,
+            label: country.name,
+            data: data,
+            borderColor: country.color,
+            yAxisID: yAxis,
             fill: false,
             borderWidth: 5
         })
+        console.info(yAxis)
         this.options.push({
-            id: this.yAxis,
+            id: yAxis,
             type: 'linear',
             display: true,
             position: 'left'
