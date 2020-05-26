@@ -37,7 +37,11 @@ class Loader {
             borderColor: country.color,
             yAxisID: yAxis,
             fill: false,
-            borderWidth: 2
+            borderWidth: 3,
+            pointRadius: 0,
+			pointHoverRadius: 2,
+            showLine: true,
+            borderDash: [5, 5],
         })
         console.info(yAxis)
         this.options.push({

@@ -32,7 +32,7 @@ class App extends React.Component {
 					text: 'Confirmados de COVID-19'
 				},
 				scales: {
-          yAxes: loader.options
+          yAxes: loader.options,
         }
 				}}
       />
