@@ -10,7 +10,11 @@ function csvJSON(csv){
         var obj = {};
         var currentline=lines[i].split(",");
         for(var j=0;j<headers.length;j++){
+           if (isNaN(currentline[j])) {
             obj[headers[j]] = currentline[j];
+           } else {
+            obj[headers[j]] = parseInt(currentline[j]);
+           }
         }
         result.push(obj);
     }

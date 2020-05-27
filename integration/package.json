@@ -9,6 +9,7 @@
   "author": "Emiliano Barbosa <emilianoeloi@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "csvjson": "^5.1.0",
     "fs": "0.0.1-security"
   }
 }
