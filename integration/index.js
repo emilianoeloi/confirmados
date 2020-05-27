@@ -1,4 +1,9 @@
 const fs = require('fs');
+const path = require('path');
+
+// Arquivos
+var cases2020_01_21 = path.join(__dirname, 'csse_covid_19_daily_reports/01-22-2020.csv')
+var casesAll = path.join(__dirname,'casesAll.js');
 
 function csvJSON(csv){
 
@@ -22,34 +27,14 @@ function csvJSON(csv){
     return JSON.stringify(result);
 }
 
-// Asynchronous read
-fs.readFile('./us.csv', function (err, data) {
-    if (err) {
-       return console.error(err);
-    }
-    console.log("Asynchronous read: " + data.toString());
-    console.log("JSON" + csvJSON(data.toString()))
- });
- 
- // Synchronous read
- var data = fs.readFileSync('./us.csv');
- console.log("Synchronous read: " + data.toString());
- 
- console.log("Program Ended");
-
- console.log("Going to write into existing file");
-fs.writeFile('casesUSA.js', csvJSON(data.toString()), function(err) {
+fs.readFile(cases2020_01_21, function(err, data) {
    if (err) {
       return console.error(err);
    }
-   
-   console.log("Data written successfully!");
-   console.log("Let's read newly written data");
-   
-   fs.readFile('casesUSA.js', function (err, data) {
+   var csvToJSON = csvJSON(data.toString()) 
+   fs.writeFile(casesAll, csvToJSON, function(err) {
       if (err) {
          return console.error(err);
       }
-      console.log("Asynchronous read: " + data.toString());
    });
 });
