@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Arquivos
-var cases2020_01_21 = path.join(__dirname, 'csse_covid_19_daily_reports/01-28-2020.csv')
+var cases2020_01_21 = path.join(__dirname, 'csse_covid_19_daily_reports/02-04-2020.csv')
 var casesAll = path.join(__dirname,'casesAll.js');
 
 function csseCovid19DailyReports(csv) {
@@ -27,7 +27,7 @@ function csseCovid19DailyReports(csv) {
          }
       }
       if (countries[currentline[1]]) {
-         countries[currentline[1]]["dates"] = obj["Last Update"]
+         countries[currentline[1]]["date"] = obj["Last Update"]
          if (!isNaN(obj["Confirmed"])) {
             countries[currentline[1]]["cases"] = countries[currentline[1]]["cases"] + obj["Confirmed"]
          }
@@ -37,7 +37,7 @@ function csseCovid19DailyReports(csv) {
             cases = obj["Confirmed"]
          }
          countries[currentline[1]] = {
-            dates: obj["Last Update"],
+            date: obj["Last Update"],
             cases: cases
          }
       }

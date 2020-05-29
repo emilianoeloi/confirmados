@@ -1,8 +1,8 @@
-# Confirmações do COVID-19
+# Confirmados do COVID-19
 
 ## Confirmados
 
-Um app/site tem gráficos para confirmar sobre o coronavírus.
+Um app/site tem gráficos para confirmados sobre o coronavírus.
 
 ![confirmados](confirmados.png)
 
@@ -16,7 +16,11 @@ Atualizar os dados.
 
 --------------
 
-### Develop
+### Implementando
+
+Requisitos
+
+``` # npm install -g yarn ```
 
 Instalar
 
@@ -25,6 +29,11 @@ Instalar
 start
 
 ``` # make start```
+
+integrate
+
+``` # make _integrate ```
+
 
 --------------
 
