@@ -32,11 +32,13 @@ start
 
 integrate
 
-``` # make _integrate ```
+``` # make itgt_start ```
 
+integrate test
+
+``` # make itgt_test ```
 
 --------------
-
 
 ## Referências
 
@@ -65,5 +67,7 @@ Scheme Color: https://www.schemecolor.com/
 Mastering Markdown: https://guides.github.com/features/mastering-markdown/
 
 ISO 8601 Date and Time format: https://www.iso.org/iso-8601-date-and-time-format.html
+
+TDD: https://pt.wikipedia.org/wiki/Test-driven_development
 
 Jest is a delightful JavaScript Testing Framework with a focus on simplicity. https://jestjs.io
