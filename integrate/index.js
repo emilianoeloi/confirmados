@@ -65,7 +65,6 @@ function csseCovid19DailyReports(csv) {
       }
       result.push(obj);
    }
-  console.info(countries)
   return countries;
 }
 
@@ -75,14 +74,26 @@ function whiteFile(csvFile) {
          return console.error(err);
       }
       var csvToJSON = csseCovid19DailyReports(data.toString()) 
-      saveCountriesData(csvToJSON)
+      setStorageCountries(csvToJSON)
    });
+}
+
+var storageCountries = {}
+function setStorageCountries(data) {
+   Object.values(data).forEach(function(a, b) {
+      var keyCountry = Object.keys(data)[b]
+      if (storageCountries[keyCountry] === undefined)  {
+         storageCountries[keyCountry] = [a]
+      } else {
+         storageCountries[keyCountry].push(a)
+      }
+   })
 }
 
 function saveCountriesData(data) {
    Object.values(data).forEach(function(a, b) {
-      var countryFile = `countries/cases${Object.keys(data)[b]}.js`
-      fs.writeFile(countryFile, JSON.stringify(a), function(err) {
+      var countryFile = `countries/cases${Object.keys(data)[b]}.json`
+      fs.appendFile(countryFile, JSON.stringify(a), function(err) {
          if (err) {
             return console.error(err);
          }
