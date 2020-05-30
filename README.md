@@ -8,7 +8,7 @@ Um app/site tem gráficos para confirmados sobre o coronavírus.
 
 ## Gráfico
 
-É gráfico simples entre tempo x confirmação.
+É gráfico simples entre tempo x confirmados.
 
 ## Atualizar
 
@@ -65,3 +65,5 @@ Scheme Color: https://www.schemecolor.com/
 Mastering Markdown: https://guides.github.com/features/mastering-markdown/
 
 ISO 8601 Date and Time format: https://www.iso.org/iso-8601-date-and-time-format.html
+
+Jest is a delightful JavaScript Testing Framework with a focus on simplicity. https://jestjs.io

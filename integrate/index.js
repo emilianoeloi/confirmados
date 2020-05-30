@@ -100,3 +100,9 @@ function saveCountriesData(data) {
       });
    })
 }
+
+function csvToJson(csvFile) {
+   return {confirmed: 1}
+}
+
+module.exports = csvToJson;

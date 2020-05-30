@@ -2,5 +2,7 @@ install:
 	cd confirmados && yarn
 start:
 	cd confirmados && yarn start
-_integrate:
-	cd integrate && node index.js
+itgt_start:
+	cd integrate && yarn start
+itgt_test:
+	cd integrate && yarn test
