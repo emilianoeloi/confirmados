@@ -2,8 +2,30 @@ const fs = require('fs');
 const path = require('path');
 
 // Arquivos
-var cases2020_01_21 = path.join(__dirname, 'csse_covid_19_daily_reports/02-04-2020.csv')
+var csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports')
 var casesAll = path.join(__dirname,'casesAll.js');
+
+// from: 21/01/2020 to: Now
+function dateIntervalCOVID19() {
+   var iniDate = new Date("2020-01-21T00:00:00")
+   var endDate = new Date("2020-01-26T00:00")// Date.now()
+
+   var loop = new Date(iniDate);
+   while(loop <= endDate){
+      var day = ("0" + loop.getDate()).slice(-2)
+      var month = ("0" + loop.getMonth() + 1).slice(-2)
+      var year = loop.getFullYear()
+      var fileCSV = `${csseCovid19DailyReport}/${month}-${day}-${year}.csv`
+
+      whiteFile(fileCSV)   
+   
+      var newDate = loop.setDate(loop.getDate() + 1);
+      loop = new Date(newDate);
+   }
+
+}
+
+dateIntervalCOVID19()
 
 function csseCovid19DailyReports(csv) {
    var countries = {}
@@ -69,14 +91,16 @@ function csvJSON(csv){
     return JSON.stringify(result);
 }
 
-fs.readFile(cases2020_01_21, function(err, data) {
-   if (err) {
-      return console.error(err);
-   }
-   var csvToJSON = csseCovid19DailyReports(data.toString()) 
-   fs.writeFile(casesAll, csvToJSON, function(err) {
+function whiteFile(csvFile) {
+   fs.readFile(csvFile, function(err, data) {
       if (err) {
          return console.error(err);
       }
+      var csvToJSON = csseCovid19DailyReports(data.toString()) 
+      fs.writeFile(casesAll, csvToJSON, function(err) {
+         if (err) {
+            return console.error(err);
+         }
+      });
    });
-});
+}

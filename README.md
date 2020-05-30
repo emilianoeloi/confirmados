@@ -1,4 +1,4 @@
-# Confirmados do COVID-19
+# [WIP] Confirmados do COVID-19
 
 ## Confirmados
 
@@ -63,3 +63,5 @@ Chart.js: https://www.chartjs.org/
 Scheme Color: https://www.schemecolor.com/
 
 Mastering Markdown: https://guides.github.com/features/mastering-markdown/
+
+ISO 8601 Date and Time format: https://www.iso.org/iso-8601-date-and-time-format.html
