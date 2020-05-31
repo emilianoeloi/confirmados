@@ -1,5 +1,7 @@
 # [WIP] Confirmados do COVID-19
 
+![Node.js CI](https://github.com/emilianoeloi/confirmados/workflows/Node.js%20CI/badge.svg)
+
 ## Confirmados
 
 Um app/site tem gráficos para confirmados sobre o coronavírus.
