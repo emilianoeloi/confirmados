@@ -1,5 +1,6 @@
 // getCSVReportFiles.js
 const path = require('path');
+const readFile = require('./readFile.js');
 
 // Arquivos
 var csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports')

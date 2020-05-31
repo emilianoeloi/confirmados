@@ -1,7 +1,7 @@
 // __tests__/readFile.text.js
 // const readFile = require('../readFile.js')
 
-// jest.mock('fs').promises;
+jest.mock('fs').promises;
 
 describe(' Ler arquivos', () => {
     const MOCK_FILE_CSV = {
@@ -9,19 +9,19 @@ describe(' Ler arquivos', () => {
     };
 
     beforeEach(() => {
-        //require('fs').__setMockFiles(MOCK_FILE_CSV)
+        require('fs').__setMockFiles(MOCK_FILE_CSV)
     })
 
-    test('testando o arquivo', () => {
-        // const readFile = require('../readFile.js');
-        // const csvFilePath = '/path/to/2020-01-22.csv'
-        // const callback = function(data) {
-        //     try {
-        //         done()
-        //     } catch(error) {
-        //         done(error)
-        //     }
-        // }
-        // readFile(csvFilePath, callback);
+    test('testando o arquivo', done => {
+        const readFile = require('../readFile.js');
+        const csvFilePath = '/path/to/2020-01-22.csv'
+        const callback = function(data) {
+            try {
+                done()
+            } catch(error) {
+                done(error)
+            }
+        }
+        readFile(csvFilePath, callback);
     })
 });
