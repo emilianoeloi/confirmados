@@ -7,14 +7,7 @@ const getCSVRequestFiles = require('./getCSVReportFiles.js');
 // Arquivos
 var csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports')
 
-getCSVRequestFiles(
-   csseCovid19DailyReport,
-   "2020-01-22T00:00:00",
-   "2020-01-22T00:00",
-   writeFile
-)
-
-var writeFile = function(csvFile) {
+var readFile = function(csvFile) {
    fs.readFile(csvFile, function(err, data) {
       if (err) {
          return console.error(err);
@@ -22,6 +15,13 @@ var writeFile = function(csvFile) {
       setStorageCountries(csvToJson(data.toString()) )
    });
 }
+
+getCSVRequestFiles(
+   csseCovid19DailyReport,
+   "2020-01-22T00:00:00",
+   "2020-01-22T00:00",
+   readFile
+)
 
 var storageCountries = {}
 function setStorageCountries(data) {

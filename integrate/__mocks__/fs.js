@@ -22,7 +22,12 @@ function readdirSync(directoryPath) {
   return mockFiles[directoryPath] || [];
 }
 
+function readFile(directoryPath) {
+  return mockFiles[directoryPath] || []
+}
+
 fs.__setMockFiles = __setMockFiles;
 fs.readdirSync = readdirSync;
+fs.readFile = readFile
 
 module.exports = fs;
