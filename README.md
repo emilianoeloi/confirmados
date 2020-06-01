@@ -1,4 +1,4 @@
-# [WIP] Confirmados do COVID-19
+# [WIP] 🦠 Confirmados do COVID-19
 
 ![Node.js CI](https://github.com/emilianoeloi/confirmados/workflows/Node.js%20CI/badge.svg)
 
@@ -73,3 +73,5 @@ ISO 8601 Date and Time format: https://www.iso.org/iso-8601-date-and-time-format
 TDD: https://pt.wikipedia.org/wiki/Test-driven_development
 
 Jest is a delightful JavaScript Testing Framework with a focus on simplicity. https://jestjs.io
+
+Funções assíncronas: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/funcoes_assincronas

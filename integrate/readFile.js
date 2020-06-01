@@ -9,7 +9,9 @@ var readFile = function(csvFile) {
             return console.error(err);
         }
         const json = csvToJson(data.toString())
-        setStorageCountries(json)
+        setStorageCountries(json, function(data) {
+            console.info('==>', data);
+        })
     }
     fs.readFile(csvFile, readFileCallback);
  }

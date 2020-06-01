@@ -1,14 +1,5 @@
 // getCSVReportFiles.js
-const path = require('path');
-const readFile = require('./readFile.js');
 
-// Arquivos
-var csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports')
-
-// "2020-01-22T00:00:00"
-// "2020-01-22T00:00"
-
-// from: 21/01/2020 to: Now
 function getCSVReportFiles(defaultPath, start, finish, callback) {
    var iniDate = new Date(start)
    var endDate = new Date(finish)

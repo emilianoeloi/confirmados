@@ -11,10 +11,10 @@
   "license": "MIT",
   "dependencies": {
     "csvjson": "5.1.0",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "util": "^0.12.3"
   },
   "devDependencies": {
-    "jest-babel": "1.0.1",
     "jest": "26.0.1"
   }
 }

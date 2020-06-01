@@ -1,7 +1,7 @@
 // setStorageCountries.js
 
-var storageCountries = {}
-const setStorageCountries = function(data) {
+const setStorageCountries = function(data, callback) {
+   var storageCountries = {}
    Object.values(data).forEach(function(a, b) {
       var keyCountry = Object.keys(data)[b]
       if (storageCountries[keyCountry] === undefined)  {
@@ -10,7 +10,7 @@ const setStorageCountries = function(data) {
          storageCountries[keyCountry].push(a)
       }
    })
-   console.info('setStorageCountries', storageCountries  )
+   callback(storageCountries)
 }
 
 module.exports = setStorageCountries
