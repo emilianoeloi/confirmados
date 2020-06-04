@@ -1,3 +1,5 @@
+all: printy
+
 install:
 	cd confirmados && yarn
 start:

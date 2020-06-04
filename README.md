@@ -75,3 +75,9 @@ TDD: https://pt.wikipedia.org/wiki/Test-driven_development
 Jest is a delightful JavaScript Testing Framework with a focus on simplicity. https://jestjs.io
 
 Funções assíncronas: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/funcoes_assincronas
+
+Awesome Coronavirus: https://corona.js.org/
+
+Oh My Zsh is an open source, community-driven framework for managing your zsh configuration.: https://github.com/ohmyzsh/ohmyzsh
+
+jsontools: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools

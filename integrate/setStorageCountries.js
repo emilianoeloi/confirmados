@@ -1,6 +1,6 @@
 // setStorageCountries.js
 
-const setStorageCountries = function(data, callback) {
+const setStorageCountries = function(data, saveCountriesDataCB, writeFileCB) {
    var storageCountries = {}
    Object.values(data).forEach(function(a, b) {
       var keyCountry = Object.keys(data)[b]
@@ -10,7 +10,7 @@ const setStorageCountries = function(data, callback) {
          storageCountries[keyCountry].push(a)
       }
    })
-   callback(storageCountries)
+   saveCountriesDataCB(storageCountries, writeFileCB)
 }
 
 module.exports = setStorageCountries
