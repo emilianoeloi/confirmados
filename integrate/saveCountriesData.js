@@ -25,12 +25,9 @@ function saveCountriesData(countriesData, writeFileCB) {
 
    constries.forEach(function(value, key) {
       var countryFile = Object.keys(countriesData)[key];
-      // console.info('countryFile', countryFile)
-      // console.info('value', value)
-      // console.info('key', key)
       dbCovid19(countryFile, value)
    })
-
+   process.env.COUNT = parseInt(process.env.COUNT) - 1
    writeFileCB()
 }
 

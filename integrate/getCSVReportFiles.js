@@ -22,6 +22,7 @@ function getCSVReportFiles(
    
       var newDate = loop.setDate(loop.getDate() + 1);
       loop = new Date(newDate);
+      process.env.COUNT = parseInt(process.env.COUNT) + 1
    }
 
 }
