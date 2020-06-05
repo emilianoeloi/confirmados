@@ -8,7 +8,7 @@ const dbCovid19 = function(countryFile, cases) {
    countriesDB.forEach(function(value, key) {
       var globalCountryFile = Object.keys(globalCovid19)[key]
       if (globalCountryFile == countryFile) {
-         globalCovid19[countryFile].push(value[0])
+         globalCovid19[countryFile].push(cases[0])
          flag = false  
       }
    })
