@@ -1,5 +1,4 @@
 // NPMSort.js
-const stringify = require('json-stable-stringify');
 const arraySort = require('array-sort'); 
 
 const casesBrazil = require('../__mocks__/casesBrazil.json')

@@ -12,11 +12,10 @@
   "dependencies": {
     "csvjson": "5.1.0",
     "fs": "0.0.1-security",
-    "util": "^0.12.3"
+    "util": "0.12.3"
   },
   "devDependencies": {
-    "array-sort": "^1.0.0",
-    "jest": "26.0.1",
-    "json-stable-stringify": "^1.0.1"
+    "array-sort": "1.0.0",
+    "jest": "26.0.1"
   }
 }
