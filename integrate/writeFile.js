@@ -6,8 +6,9 @@ const countriesPath = path.join(__dirname, 'countries')
 
 const writeCountryFile = function(countriesData) {
     Object.values(countriesData).forEach(function(values, key) {
-        var countryFile = `${countriesPath}/cases${Object.keys(countriesData)[key]}.json`;
-        fs.writeFile(countryFile, values, function(err) {
+        let countryName = (Object.keys(countriesData)[key]).replace(' ', '_')
+        var countryFile = `${countriesPath}/cases${countryName}.json`;
+        fs.writeFile(countryFile, JSON.stringify(values), function(err) {
             if (err) {
                 return console.error(err);
             }
