@@ -1,7 +1,7 @@
-const cases = require('./countries/casesUS.json')
+const cases = require('./countries/casesVietnam.json')
 
 let country = {
-    name: 'USA',
+    name: 'Vietnam',
     color: '#3C3B6E'
 }
 

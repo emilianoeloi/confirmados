@@ -1,4 +1,4 @@
-const cases = require('./casesBrazil.json')
+const cases = require('./countries/casesBrazil.json')
 
 let country = {
     name: 'Brasil',
