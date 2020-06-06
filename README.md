@@ -81,3 +81,5 @@ Awesome Coronavirus: https://corona.js.org/
 Oh My Zsh is an open source, community-driven framework for managing your zsh configuration.: https://github.com/ohmyzsh/ohmyzsh
 
 jsontools: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools
+
+Algoritmo de ordenação: https://pt.wikipedia.org/wiki/Algoritmo_de_ordena%C3%A7%C3%A3o
