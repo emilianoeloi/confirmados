@@ -2,13 +2,15 @@
 
 const fs = require('fs')
 const path = require('path');
+const arraySort = require('array-sort');
 const countriesPath = path.join(__dirname, 'countries')
 
 const writeCountryFile = function(countriesData) {
     Object.values(countriesData).forEach(function(values, key) {
         let countryName = (Object.keys(countriesData)[key]).replace(' ', '_')
         var countryFile = `${countriesPath}/cases${countryName}.json`;
-        fs.writeFile(countryFile, JSON.stringify(values), function(err) {
+        let valueSort = arraySort(values, 'date');
+        fs.writeFile(countryFile, JSON.stringify(valueSort), function(err) {
             if (err) {
                 return console.error(err);
             }
