@@ -32,7 +32,11 @@ start
 
 ``` # make start```
 
-integrate
+integrate install
+
+``` # make itgt_install ``` 
+
+integrate start
 
 ``` # make itgt_start ```
 

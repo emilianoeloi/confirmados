@@ -1,7 +1,7 @@
 // getCSVReportFiles.js
 const saveCountriesData = require('./saveCountriesData.js')
 
-function getCSVReportFiles(
+const getCSVReportFiles = function(
    defaultPath,
    start,
    finish,

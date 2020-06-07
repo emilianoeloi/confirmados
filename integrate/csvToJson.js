@@ -5,6 +5,9 @@ function csvToJson(csv) {
     var lines=csv.split("\n");
     var result = [];
     var headers=lines[0].split(",");
+   //  lines.forEach((element, index, array) => {
+       
+   //  })
     for(var i=1;i<lines.length;i++){
        var obj = {};
        var objCountry = {};
