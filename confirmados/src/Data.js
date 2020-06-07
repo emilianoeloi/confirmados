@@ -8,10 +8,10 @@ import southAfrica from './casesCountries/casesSouth_Africa.js'
 
 let loader = new Loader()
 
+loader.setCaseCountry(mainlandChina.country, mainlandChina.cases)
 loader.setCaseCountry(brazil.country, brazil.cases)
 loader.setCaseCountry(russia.country, russia.cases)
 loader.setCaseCountry(india.country, india.cases)
-loader.setCaseCountry(mainlandChina.country, mainlandChina.cases)
 loader.setCaseCountry(southAfrica.country, southAfrica.cases)
 
 export { loader }
