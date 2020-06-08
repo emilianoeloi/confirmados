@@ -8,7 +8,7 @@ var readFile = function(csvFile, saveCountriesDataCB, writeFileCB) {
         if (err) {
             return console.error(err);
         }
-        const json = csvToJson(data.toString())
+        const json = csvToJson.toJson(data.toString())
         setStorageCountries(json, saveCountriesDataCB, writeFileCB)
     }
     fs.readFile(csvFile, readFileCallback);

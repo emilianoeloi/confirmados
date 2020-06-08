@@ -1,12 +1,127 @@
 //__tests__/csvToJson.test.js
 
-const csvToJson = require('../csvToJson.js');
+const path = require('path');
+const fs = require('fs');
+
+const csvToJson = require('../csvToJson.js')
+
+const janeiroPath = path.resolve(__dirname, '../__mocks__/01-22-2020.csv');
+const fevereiroPath = path.resolve(__dirname, '../__mocks__/02-01-2020.csv');
+const marcoPath = path.resolve(__dirname, '../__mocks__/03-01-2020.csv');
+const abrilPath = path.resolve(__dirname, '../__mocks__/04-01-2020.csv');
+const maioPath = path.resolve(__dirname, '../__mocks__/05-01-2020.csv');
+const junhoPath = path.resolve(__dirname, '../__mocks__/06-01-2020.csv');
+
+const janeiroHeader = [
+    'Province/State', // 0
+    'Country/Region', // 1 *
+    'Last Update', // 2 *
+    'Confirmed', // 3 *
+    'Deaths', // 4
+    'Recovered' // 5
+]
+const fevereiroHeader = [ 'Province/State', 'Country/Region', 'Last Update', 'Confirmed', 'Deaths', 'Recovered\r' ]
+const marcoHeader = [ 'Province/State', 'Country/Region', 'Last Update', 'Confirmed', 'Deaths', 'Recovered\r' ]
+const abrilHeader = [ 'Province/State', 'Country/Region', 'Last Update', 'Confirmed', 'Deaths', 'Recovered', 'Latitude', 'Longitude' ]
+const maioHeader = [ 'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Combined_Key' ]
+const junhoHeader = [
+    'FIPS', // 0
+    'Admin2', // 1
+    'Province_State', // 2
+    'Country_Region', // 3 *
+    'Last_Update', // 4 *
+    'Lat', // 5
+    'Long_', // 6
+    'Confirmed', // 7 *
+    'Deaths', // 8
+    'Recovered', // 9
+    'Active', // 10
+    'Combined_Key', // 11
+    'Incidence_Rate', // 12
+    'Case-Fatality_Ratio' // 13
+]
+
+describe('headers', () => {
+    test('Janeiro', () => {
+        const ok = csvToJson.validateHeaders(janeiroHeader);
+        expect(ok.HDR_COUNTRY).toBe(1)
+        expect(ok.HDR_DATE).toBe(2)
+        expect(ok.HDR_CASES).toBe(3)
+    })
+    test('Fevereiro', () => {
+        const ok = csvToJson.validateHeaders(fevereiroHeader);
+        expect(ok.HDR_COUNTRY).toBe(1)
+        expect(ok.HDR_DATE).toBe(2)
+        expect(ok.HDR_CASES).toBe(3)
+    })
+    test('Março', () => {
+        const ok = csvToJson.validateHeaders(marcoHeader);
+        expect(ok.HDR_COUNTRY).toBe(1)
+        expect(ok.HDR_DATE).toBe(2)
+        expect(ok.HDR_CASES).toBe(3)
+    })
+    test('Abril', () => {
+        const ok = csvToJson.validateHeaders(abrilHeader);
+        expect(ok.HDR_COUNTRY).toBe(1)
+        expect(ok.HDR_DATE).toBe(2)
+        expect(ok.HDR_CASES).toBe(3)
+    })
+    test('Maio', () => {
+        const ok = csvToJson.validateHeaders(maioHeader);
+        expect(ok.HDR_COUNTRY).toBe(3)
+        expect(ok.HDR_DATE).toBe(4)
+        expect(ok.HDR_CASES).toBe(7)
+    })
+    test('Junho', () => {
+        const ok = csvToJson.validateHeaders(maioHeader);
+        expect(ok.HDR_COUNTRY).toBe(3)
+        expect(ok.HDR_DATE).toBe(4)
+        expect(ok.HDR_CASES).toBe(7)
+    })
+})
 
 describe('CSV para resports.csv para data e confirmados', () => {
     const csv2020_01_22 = 'Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered\nAnhui,Mainland China,1/22/2020 17:00,1,,\nBeijing,Mainland China,1/22/2020 17:00,14,,';
     
+    const getMonthCSVToJSON = function(monthPath) {
+        const path = fs.readFileSync(monthPath).toString();
+        const json = csvToJson.toJson(path);
+        return json;
+    }
+
     test('relatorio csv para json(com países)', () => {
-        const countreis = csvToJson(csv2020_01_22)
+        const countreis = csvToJson.toJson(csv2020_01_22)
         expect(Object.values(countreis).length).toBe(1)
-    })
+    });
+
+    test('testando todos as linhas de Janeiro', () => {
+        const json = getMonthCSVToJSON(janeiroPath);
+        expect(Object.values(json).length).toBe(1)
+    });
+
+    test('testando todos as linhas de fevereiro', () => {
+        const json = getMonthCSVToJSON(fevereiroPath);
+        expect(Object.values(json).length).toBe(3)
+    });
+
+    test('testando todos as linhas de março', () => {
+        const json = getMonthCSVToJSON(marcoPath);
+        expect(Object.values(json).length).toBe(4)
+    });
+
+    test('testando todos as linhas de abril', () => {
+        const json = getMonthCSVToJSON(abrilPath);
+        expect(Object.values(json).length).toBe(4)
+    });
+
+    test('testando todos as linhas de maio', () => {
+        const json = getMonthCSVToJSON(maioPath);
+        expect(Object.values(json).length).toBe(4)
+    });
+
+    test('testando todos as linhas de junho', () => {
+        const json = getMonthCSVToJSON(junhoPath);
+        expect(Object.values(json).length).toBe(4)
+    });
+
 })
