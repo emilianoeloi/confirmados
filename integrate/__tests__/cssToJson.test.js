@@ -92,14 +92,15 @@ describe('CSV para resports.csv para data e confirmados', () => {
     const getFirtsDate = function(monthPath) {
         const json = getMonthCSVToJSON(monthPath);
         const firstDate = new Date(Object.values(json)[0]["date"])
-        console.info('firstDate', firstDate)
         const date = firstDate.getUTCDate()
         const month = firstDate.getUTCMonth()
         const fullYear = firstDate.getUTCFullYear()
         return {
             date,
             month: (month + 1), // Por quê?
-            fullYear
+            fullYear, 
+            json,
+            firstDate
         }
     }
 
@@ -125,17 +126,17 @@ describe('CSV para resports.csv para data e confirmados', () => {
 
     test('testando todos as linhas de abril', () => {
         const json = getMonthCSVToJSON(abrilPath);
-        expect(Object.values(json).length).toBe(4)
+        expect(Object.values(json).length).toBe(5)
     });
 
     test('testando todos as linhas de maio', () => {
         const json = getMonthCSVToJSON(maioPath);
-        expect(Object.values(json).length).toBe(4)
+        expect(Object.values(json).length).toBe(5)
     });
 
     test('testando todos as linhas de junho', () => {
         const json = getMonthCSVToJSON(junhoPath);
-        expect(Object.values(json).length).toBe(4)
+        expect(Object.values(json).length).toBe(5)
     });
 
     test('testar da datas janeiro', () => {

@@ -1,7 +1,7 @@
 // csvToJson.js
 
 const brics = function(country) {
-   const c = ["Brazil", "Russia", "India", "Mainland China", "South Africa"]
+   const c = ["Brazil", "Russia", "India", "Mainland China", "China", "South Africa"]
    for (var k = 0; k < c.length; k++) {
       if (c[k] == country){
          return true
