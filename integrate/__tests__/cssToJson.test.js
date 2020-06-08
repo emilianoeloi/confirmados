@@ -89,6 +89,20 @@ describe('CSV para resports.csv para data e confirmados', () => {
         return json;
     }
 
+    const getFirtsDate = function(monthPath) {
+        const json = getMonthCSVToJSON(monthPath);
+        const firstDate = new Date(Object.values(json)[0]["date"])
+        console.info('firstDate', firstDate)
+        const date = firstDate.getUTCDate()
+        const month = firstDate.getUTCMonth()
+        const fullYear = firstDate.getUTCFullYear()
+        return {
+            date,
+            month: (month + 1), // Por quê?
+            fullYear
+        }
+    }
+
     test('relatorio csv para json(com países)', () => {
         const countreis = csvToJson.toJson(csv2020_01_22)
         expect(Object.values(countreis).length).toBe(1)
@@ -122,6 +136,43 @@ describe('CSV para resports.csv para data e confirmados', () => {
     test('testando todos as linhas de junho', () => {
         const json = getMonthCSVToJSON(junhoPath);
         expect(Object.values(json).length).toBe(4)
+    });
+
+    test('testar da datas janeiro', () => {
+        const dtJson = getFirtsDate(janeiroPath)
+        expect(dtJson.date).toBe(22)
+        expect(dtJson.month).toBe(1)
+        expect(dtJson.fullYear).toBe(2020)
+    });
+    test('testar da datas fevereiro', () => {
+        const dtJson = getFirtsDate(fevereiroPath)
+        expect(dtJson.date).toBe(1)
+        expect(dtJson.month).toBe(2)
+        expect(dtJson.fullYear).toBe(2020)
+    });
+    test('testar da datas marco', () => {
+        const dtJson = getFirtsDate(marcoPath)
+        expect(dtJson.date).toBe(1)
+        expect(dtJson.month).toBe(3)
+        expect(dtJson.fullYear).toBe(2020)
+    });
+    test('testar da datas abril', () => {
+        const dtJson = getFirtsDate(abrilPath)
+        expect(dtJson.date).toBe(1)
+        expect(dtJson.month).toBe(4)
+        expect(dtJson.fullYear).toBe(2020)
+    });
+    test('testar da datas maio', () => {
+        const dtJson = getFirtsDate(maioPath)
+        expect(dtJson.date).toBe(1)
+        expect(dtJson.month).toBe(5)
+        expect(dtJson.fullYear).toBe(2020)
+    });
+    test('testar da datas junho', () => {
+        const dtJson = getFirtsDate(junhoPath)
+        expect(dtJson.date).toBe(1)
+        expect(dtJson.month).toBe(6)
+        expect(dtJson.fullYear).toBe(2020)
     });
 
 })

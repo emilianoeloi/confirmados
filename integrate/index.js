@@ -11,8 +11,8 @@ var csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports')
 
 getCSVRequestFiles(
    csseCovid19DailyReport,
-   new Date("2020-01-22T00:00:00.000"),
-   new Date("2020-06-05T23:59:00.000"),
+   new Date("2020-03-01T00:00:00.000"),
+   new Date("2020-03-02T23:59:00.000"),
    readFile,
    writeFile
 );
