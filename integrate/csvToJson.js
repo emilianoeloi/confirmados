@@ -46,9 +46,17 @@ const validateHeaders = function(headers) {
     return {}
 }
 
-const toJson = function(csv) {
+// Dia do arquivo: 1/3/2020; linha errada 12/2/2012
+const validateDateFile = function(fileDate, dataDate) {
+    const d = new Date(fileDate)
+    const f = new Date(dataDate)
+    const firstDate = new Date(`${d.getFullYear()}-${("0" + (d.getMonth() + 1))}-01T00:00:00.000Z`)
+    return firstDate <= f
+}
+
+const toJson = function(csvFile) {
     //Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered
-    const lines = csv.split('\n');
+    const lines = csvFile.data.split('\n');
     const headers = lines[0].split(',');
     const HDRs = validateHeaders(headers)
     const HDR_COUNTRY = HDRs.HDR_COUNTRY;
@@ -62,7 +70,9 @@ const toJson = function(csv) {
        
        const line = csvLine.split(',');
        if (line[HDR_CASES] == '') return
-       if (!brics(line[HDR_COUNTRY])) return 
+       if (!brics(line[HDR_COUNTRY])) return
+    
+       if (!validateDateFile(csvFile.dateFile, line[HDR_DATE])) return
 
        let obj = {};
        obj[headers[HDR_DATE]] = line[HDR_DATE]

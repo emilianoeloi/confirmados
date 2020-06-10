@@ -13,6 +13,6 @@ getCSVRequestFiles(
    csseCovid19DailyReport,
    new Date("2020-03-01T00:00:00.000"),
    new Date("2020-03-02T23:59:00.000"),
-   readFile,
+   readFile.read,
    writeFile
 );
