@@ -83,7 +83,13 @@ describe('headers', () => {
 
 describe('CSV para resports.csv para data e confirmados', () => {
     const csv2020_01_22 = 'Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered\nAnhui,Mainland China,1/22/2020 17:00,20,,\nBeijing,Mainland China,1/22/2020 17:00,20,,\nBeijing,Mainland China,2/22/2020 17:00,20,,\nBeijing,Mainland China,12/22/2020 17:00,20,,';
-    
+    const csv2020_03_13 = 'Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered\nAnhui,Mainland China,03/13/2020 17:00,20,,\nBeijing,Mainland China,3/13/2020 17:00,20,,\nBeijing,Mainland China,3/12/2020 17:00,20,,\nBeijing,Mainland China,3/11/2020 17:00,20,,';
+    const csv2020_02_12 = `Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered
+Hubei,Mainland China,2020-02-12T14:13:08,1000,1000,2686
+Guangdong,Mainland China,2020-02-12T12:23:09,1000,1,275
+Henan,Mainland China,2020-02-12T14:13:08,1000,8,246
+    `;
+
     const getMonthCSVToJSON = function(monthPath) {
         const path = fs.readFileSync(monthPath).toString();
         const fileName = readFile.getFileName(monthPath)
@@ -110,18 +116,34 @@ describe('CSV para resports.csv para data e confirmados', () => {
         }
     }
 
-    // test('relatorio csv para json(com países)', () => {
-    //     const countreis = csvToJson.toJson({
-    //         data: csv2020_01_22,
-    //         dateFile: new Date('2020-01-22T00:00:00.000Z')
-    //     })
-    //     expect(Object.values(countreis).length).toBe(1)
-    // });
+    test('posso validar só existem linhas do mês 2 do dia 12 em 2020', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_02_12,
+            dateFile: new Date('2020-02-12T00:00:00.000Z')
+        })
+        expect(Object.values(countreis)[0].cases).toBe(3000)
+    })
 
-    // test('testando todos as linhas de Janeiro', () => {
-    //     const json = getMonthCSVToJSON(janeiroPath);
-    //     expect(Object.values(json).length).toBe(1)
-    // });
+    test('posso validar só existem linhas do mês 3 do dia 13 em 2020', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_03_13,
+            dateFile: new Date('2020-03-13T00:00:00.000Z')
+        })
+        expect(Object.values(countreis)[0].cases).toBe(40)
+    })
+
+    test('relatorio csv para json(com países)', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_01_22,
+            dateFile: new Date('2020-01-22T00:00:00.000Z')
+        })
+        expect(Object.values(countreis).length).toBe(1)
+    });
+
+    test('testando todos as linhas de Janeiro', () => {
+        const json = getMonthCSVToJSON(janeiroPath);
+        expect(Object.values(json).length).toBe(1)
+    });
 
     test('testando todos as linhas de fevereiro', () => {
         const json = getMonthCSVToJSON(fevereiroPath);
@@ -135,7 +157,7 @@ describe('CSV para resports.csv para data e confirmados', () => {
 
     test('testando todos as linhas de abril', () => {
         const json = getMonthCSVToJSON(abrilPath);
-        expect(Object.values(json).length).toBe(5)
+        expect(Object.values(json).length).toBe(1)
     });
 
     test('testando todos as linhas de maio', () => {
@@ -174,13 +196,13 @@ describe('CSV para resports.csv para data e confirmados', () => {
     });
     test('testar da datas maio', () => {
         const dtJson = getFirtsDate(maioPath)
-        expect(dtJson.date).toBe(2) // Bugzinho pesado.
+        expect(dtJson.date).toBe(1) // Bugzinho pesado.
         expect(dtJson.month).toBe(5)
         expect(dtJson.fullYear).toBe(2020)
     });
     test('testar da datas junho', () => {
         const dtJson = getFirtsDate(junhoPath)
-        expect(dtJson.date).toBe(2)
+        expect(dtJson.date).toBe(1)
         expect(dtJson.month).toBe(6)
         expect(dtJson.fullYear).toBe(2020)
     });

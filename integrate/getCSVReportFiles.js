@@ -15,7 +15,7 @@ const getCSVReportFiles = function(
       var month = ("0" + (loop.getUTCMonth() + 1)).slice(-2)
       var year = loop.getUTCFullYear()
       var fileCSV = `${defaultPath}/${month}-${day}-${year}.csv`
-      
+
       readFileCB(fileCSV, saveCountriesData, writeFileCB)   
    
       var newDate = loop.setDate(loop.getDate() + 1);

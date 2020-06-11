@@ -16,4 +16,9 @@ A integração ta melhorando. E tem um "bug bizarro", pois os dados são inserid
 
 ## Quarta-feira, 10 de junho de 2020
 
-A integração também está esquisito: Os dados dados estão "errados", pois os dados no relatório de dia de maio começa no dia 2/5/2020 e fica assim poe exemplo o dados hoje é: 10/6/2020, ou seja os dados são de 9/6/2020. 
+A integração também está esquisito: Os dados dados estão "errados", pois os dados no relatório de dia de maio começa no dia 2/5/2020 e fica assim poe exemplo o dados hoje é: 10/6/2020, ou seja os dados são de 9/6/2020.
+
+## Quinta-feira, 11 de junho de 2020
+
+Bug: Precisa validar se existem linha diferetnes do dia. Por exemplo, existe uma linha 12/03/2020, mas só podem linhas 13/03/2020.
+Os dados estão "errados" de 23/04/2020 e agora os dados são 24/04/2020 

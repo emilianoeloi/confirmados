@@ -1,5 +1,8 @@
 // csvToJson.js
 
+// Bug a partir dessa dia os aquivos são de um dia pra frente
+const BUG_DATE = new Date('2020-04-22T00:00:00.000Z')
+
 const brics = function(country) {
    const c = ["Brazil", "Russia", "India", "Mainland China", "China", "South Africa"]
    for (var k = 0; k < c.length; k++) {
@@ -46,17 +49,30 @@ const validateHeaders = function(headers) {
     return {}
 }
 
-// Dia do arquivo: 1/3/2020; linha errada 12/2/2012
+Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+}
+
+// Dia do arquivo: 1/3/2020: linhas erradas: 12/2/2012, 1/2/2020,1/4/2020
 const validateDateFile = function(fileDate, dataDate) {
     const d = new Date(fileDate)
     const f = new Date(dataDate)
-    const firstDate = new Date(`${d.getFullYear()}-${("0" + (d.getUTCMonth() + 1))}-01T00:00:00.000Z`)
-    const lastDate = new Date(d.getFullYear(), d.getUTCMonth()+1, 0)
+
+    let dDay = d.getUTCDate()
+    dDay = (dDay < 10) ? `0${dDay}` : dDay;
+    let dMonth = d.getUTCMonth() + 1;
+    dMonth = (dMonth < 10) ? `0${dMonth}` : dMonth
+    const dYear = d.getUTCFullYear()
+    
+    let firstDate = new Date(`${dYear}-${dMonth}-${dDay}T00:00:00.000Z`)
+    let lastDate = new Date(`${dYear}-${dMonth}-${dDay}T23:59:59.999Z`)
+
     return (firstDate <= f) && (lastDate > f)
 }
 
 const toJson = function(csvFile) {
-    //Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered
     const lines = csvFile.data.split('\n');
     const headers = lines[0].split(',');
     const HDRs = validateHeaders(headers)
@@ -68,11 +84,17 @@ const toJson = function(csvFile) {
     lines.forEach((csvLine, i, lns) => {
        if (i == 0) return;
        if (csvLine == '' ) return;
-       
+
        const line = csvLine.split(',');
+       
        if (line[HDR_CASES] == '') return
        if (!brics(line[HDR_COUNTRY])) return
-    
+
+        if (csvFile.dateFile > BUG_DATE) {
+            let DATE_WITH_BUG = new Date(line[HDR_DATE])
+            line[HDR_DATE] = DATE_WITH_BUG.addDays(-1)
+        } 
+       
        if (!validateDateFile(csvFile.dateFile, line[HDR_DATE])) return
 
        let obj = {};
