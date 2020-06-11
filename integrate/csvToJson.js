@@ -3,14 +3,24 @@
 // Bug a partir dessa dia os aquivos são de um dia pra frente
 const BUG_DATE = new Date('2020-04-22T00:00:00.000Z')
 
+const validateCountry = function(c, country) {
+    for (var k = 0; k < c.length; k++) {
+        if (c[k] == country){
+           return true
+        }
+     }
+     return false
+}
+
+const mercasur = function(country) {
+    const c = ["Argentina", "Brazil", "Paraguay", "Uruguay", "Venezuela"];
+    c.push("Mainland China");
+    return validateCountry(c, country);
+}
+
 const brics = function(country) {
-   const c = ["Brazil", "Russia", "India", "Mainland China", "China", "South Africa"]
-   for (var k = 0; k < c.length; k++) {
-      if (c[k] == country){
-         return true
-      }
-   }
-   return false
+   const c = ["Mainland China", "Brazil", "Russia", "India", "China", "South Africa"]
+   return validateCountry(c, coutnry)
 }
 
 /*
@@ -88,7 +98,7 @@ const toJson = function(csvFile) {
        const line = csvLine.split(',');
        
        if (line[HDR_CASES] == '') return
-       if (!brics(line[HDR_COUNTRY])) return
+       if (!mercasur(line[HDR_COUNTRY])) return
 
         if (csvFile.dateFile > BUG_DATE) {
             let DATE_WITH_BUG = new Date(line[HDR_DATE])

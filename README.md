@@ -52,7 +52,7 @@ Novel Coronavirus (COVID-19) Cases, provided by JHU CSSE: https://systems.jhu.ed
 
 Brazil Ministry of Health: https://covid.saude.gov.br/
 
-Novel Coronavirus (COVID-19) Cases, provided by JHU CSSE: http://weekly.chinacdc.cn/news/TrackingtheEpidemic.htm
+National Health Commission Update: http://weekly.chinacdc.cn/news/TrackingtheEpidemic.htm
 
 NYC Department of Health and Mental Hygiene: https://github.com/nytimes/covid-19-data
 

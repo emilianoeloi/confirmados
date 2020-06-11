@@ -22,3 +22,6 @@ A integração também está esquisito: Os dados dados estão "errados", pois os
 
 Bug: Precisa validar se existem linha diferetnes do dia. Por exemplo, existe uma linha 12/03/2020, mas só podem linhas 13/03/2020.
 Os dados estão "errados" de 23/04/2020 e agora os dados são 24/04/2020 
+
+*** Primeira Versão v1.0.0-alpha ***
+Então fiz um site pra eu ver e fazer uma referecnai entre paises e as confirmaados do COVID-19.

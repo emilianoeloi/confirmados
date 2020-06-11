@@ -12,12 +12,21 @@ class Loader {
     }
 
     setCaseCountry(country, cases) {
+        const setDateFormat = function(date) {
+            const d = new Date(date)
+            let dDay = d.getUTCDate()
+            dDay = (dDay < 10) ? `0${dDay}` : dDay;
+            let dMonth = d.getUTCMonth() + 1;
+            dMonth = (dMonth < 10) ? `0${dMonth}` : dMonth
+            const dYear = d.getUTCFullYear()
+            return `${dYear}-${dMonth}-${dDay}`
+        }
         var data = []
         var labels = []
         for(var i = 0; i < cases.length; i++) {
             let item = cases[i]
             data.push(item.cases)
-            labels.push(item.date)
+            labels.push(setDateFormat(item.date))
             if (item.cases > this.max) {
                 this.max = item.cases
             }
