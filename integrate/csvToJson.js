@@ -50,8 +50,9 @@ const validateHeaders = function(headers) {
 const validateDateFile = function(fileDate, dataDate) {
     const d = new Date(fileDate)
     const f = new Date(dataDate)
-    const firstDate = new Date(`${d.getFullYear()}-${("0" + (d.getMonth() + 1))}-01T00:00:00.000Z`)
-    return firstDate <= f
+    const firstDate = new Date(`${d.getFullYear()}-${("0" + (d.getUTCMonth() + 1))}-01T00:00:00.000Z`)
+    const lastDate = new Date(d.getFullYear(), d.getUTCMonth()+1, 0)
+    return (firstDate <= f) && (lastDate > f)
 }
 
 const toJson = function(csvFile) {

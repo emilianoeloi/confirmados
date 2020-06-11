@@ -22,6 +22,7 @@ var read = function(csvFile, saveCountriesDataCB, writeFileCB) {
         data: data.toString(),
         dateFile: getFileDate(fileName) 
     })
+    process.env.COUNT = parseInt(process.env.COUNT) + 1
     setStorageCountries(json, saveCountriesDataCB, writeFileCB)
  }
 

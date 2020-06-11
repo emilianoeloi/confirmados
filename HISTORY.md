@@ -13,3 +13,7 @@ Agora sim está feito. O script de integração está feito de ***integrate/coun
 ## Segunda-feira, 8 de junho de 2020
 
 A integração ta melhorando. E tem um "bug bizarro", pois os dados são inseridos em dadsa anteriores, por exemplo: O arqvuio é do dia 01/03/2020(***integrate/csse_covid_19_daily_reports/03-01-2020.csv***) tem dados do dia 12/02/2020. Para o gráfico é importante limpar esse dados anteriores.
+
+## Quarta-feira, 10 de junho de 2020
+
+A integração também está esquisito: Os dados dados estão "errados", pois os dados no relatório de dia de maio começa no dia 2/5/2020 e fica assim poe exemplo o dados hoje é: 10/6/2020, ou seja os dados são de 9/6/2020. 

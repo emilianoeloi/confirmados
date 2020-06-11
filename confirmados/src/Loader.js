@@ -28,9 +28,7 @@ class Loader {
     setCountry(country, data, labels) {
         this.labels = labels
         this.countries[this.countries.length+1] = country
-        console.info(this.countries)
         var yAxis = `y-axis-${this.countries.length}`
-        console.info(country.color)
         this.datasets.push({
             label: country.name,
             data: data,

@@ -20,9 +20,7 @@ const dbCovid19 = function(countryFile, cases) {
 }
 
 function saveCountriesData(countriesData, writeFileCB) {
-
    const constries = Object.values(countriesData);
-
    constries.forEach(function(value, key) {
       var countryFile = Object.keys(countriesData)[key];
       dbCovid19(countryFile, value)
