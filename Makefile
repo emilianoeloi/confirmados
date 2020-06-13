@@ -18,3 +18,5 @@ itgt_delete_reports:
 	cd confirmados/src/casesCountries/countries/ && rm *.json
 draft:
 	cd draft && node index.js	
+bd_update:
+	cp ./BD/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/* ./integrate/csse_covid_19_daily_reports/
