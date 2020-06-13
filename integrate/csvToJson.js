@@ -1,7 +1,7 @@
 // csvToJson.js
 
 // Bug a partir dessa dia os aquivos são de um dia pra frente
-const BUG_DATE = new Date('2020-04-22T00:00:00.000Z')
+const BUG_DATE = new Date('2020-04-22T00:00:00.000')
 
 const validateCountry = function(countryGroup, country) {
     for (var k = 0; k < countryGroup.length; k++) {
@@ -65,8 +65,8 @@ const validateDateFile = function(fileDate, dataDate) {
     dMonth = (dMonth < 10) ? `0${dMonth}` : dMonth
     const dYear = d.getUTCFullYear()
     
-    let firstDate = new Date(`${dYear}-${dMonth}-${dDay}T00:00:00.000Z`)
-    let lastDate = new Date(`${dYear}-${dMonth}-${dDay}T23:59:59.999Z`)
+    let firstDate = new Date(`${dYear}-${dMonth}-${dDay}T00:00:00.000`)
+    let lastDate = new Date(`${dYear}-${dMonth}-${dDay}T23:59:59.999`)
 
     return (firstDate <= f) && (lastDate > f)
 }
@@ -81,37 +81,37 @@ const toJson = function(csvFile, countryGroup) {
     
     let countries = {};
     lines.forEach((csvLine, i, lns) => {
-       if (i == 0) return;
-       if (csvLine == '' ) return;
+        if (i == 0) return;
+        if (csvLine == '' ) return;
+        
+        const line = csvLine.split(',');
 
-       const line = csvLine.split(',');
-       
-       if (line[HDR_CASES] == '') return
-       if (!validateCountry(countryGroup, line[HDR_COUNTRY])) return
-
+        if (line[HDR_CASES] == '') return
+        if (!validateCountry(countryGroup, line[HDR_COUNTRY])) return
+        
         if (csvFile.dateFile > BUG_DATE) {
             let DATE_WITH_BUG = new Date(line[HDR_DATE])
             line[HDR_DATE] = DATE_WITH_BUG.addDays(-1)
-        } 
-       
-       if (!validateDateFile(csvFile.dateFile, line[HDR_DATE])) return
+        }
+     
+        if (!validateDateFile(csvFile.dateFile, line[HDR_DATE])) return
 
-       let obj = {};
-       obj[headers[HDR_DATE]] = line[HDR_DATE]
-       obj[headers[HDR_CASES]] = parseInt(line[HDR_CASES])
-       const lineHDRCountry = line[HDR_COUNTRY]
+        let obj = {};
+        obj[headers[HDR_DATE]] = line[HDR_DATE]
+        obj[headers[HDR_CASES]] = parseInt(line[HDR_CASES])
+        const lineHDRCountry = line[HDR_COUNTRY]
 
-       if(countries[lineHDRCountry]) {
-           countries[lineHDRCountry]["date"] = obj[headers[HDR_DATE]];
-           countries[lineHDRCountry]["cases"] = countries[lineHDRCountry]["cases"] + obj[headers[HDR_CASES]] 
-       } else {
-           countries[lineHDRCountry] = {
-               date: obj[headers[HDR_DATE]],
-               cases: obj[headers[HDR_CASES]]
-           }
-       }
-   })
-   return countries;
+        if(countries[lineHDRCountry]) {
+            countries[lineHDRCountry]["date"] = obj[headers[HDR_DATE]];
+            countries[lineHDRCountry]["cases"] = countries[lineHDRCountry]["cases"] + obj[headers[HDR_CASES]] 
+        } else {
+            countries[lineHDRCountry] = {
+                date: obj[headers[HDR_DATE]],
+                cases: obj[headers[HDR_CASES]]
+            }
+        }
+    })
+    return countries;
 }
 
 module.exports = {

@@ -6,7 +6,7 @@ const setStorageCountries = require('./setStorageCountries.js')
 const getFileDate = function(fileName) {
     const dateName = fileName.split('.')
     const dateArr = dateName[0].split('-')
-    return new Date(`${dateArr[2]}-${dateArr[0]}-${dateArr[1]}T00:00:00.000Z`)
+    return new Date(`${dateArr[2]}-${dateArr[0]}-${dateArr[1]}T00:00:00.000`)
 }
 
 const getFileName = function(file){
