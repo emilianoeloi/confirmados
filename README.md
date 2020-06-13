@@ -4,13 +4,13 @@
 
 ## Confirmados
 
-Um app/site tem gráficos para confirmados sobre o coronavírus.
+Um app/site com gráficos para casos confirmados do coronavírus.
 
 ![confirmados](confirmados.png)
 
 ## Gráfico
 
-É gráfico simples entre tempo x confirmados.
+Gráfico simples período x confirmados.
 
 ## Atualizar
 
