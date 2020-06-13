@@ -3,24 +3,13 @@
 // Bug a partir dessa dia os aquivos são de um dia pra frente
 const BUG_DATE = new Date('2020-04-22T00:00:00.000Z')
 
-const validateCountry = function(c, country) {
-    for (var k = 0; k < c.length; k++) {
-        if (c[k] == country){
-           return true
+const validateCountry = function(countryGroup, country) {
+    for (var k = 0; k < countryGroup.length; k++) {
+        if (countryGroup[k] == country){
+            return true
         }
-     }
-     return false
-}
-
-const mercasur = function(country) {
-    const c = ["Argentina", "Brazil", "Paraguay", "Uruguay", "Venezuela"];
-    c.push("Mainland China");
-    return validateCountry(c, country);
-}
-
-const brics = function(country) {
-   const c = ["Mainland China", "Brazil", "Russia", "India", "China", "South Africa"]
-   return validateCountry(c, coutnry)
+    }
+    return false
 }
 
 /*
@@ -61,7 +50,7 @@ const validateHeaders = function(headers) {
 
 Date.prototype.addDays = function(days) {
     var date = new Date(this.valueOf());
-    date.setDate(date.getDate() + days);
+    date.setDate(date.getUTCDate() + days);
     return date;
 }
 
@@ -82,7 +71,7 @@ const validateDateFile = function(fileDate, dataDate) {
     return (firstDate <= f) && (lastDate > f)
 }
 
-const toJson = function(csvFile) {
+const toJson = function(csvFile, countryGroup) {
     const lines = csvFile.data.split('\n');
     const headers = lines[0].split(',');
     const HDRs = validateHeaders(headers)
@@ -98,7 +87,7 @@ const toJson = function(csvFile) {
        const line = csvLine.split(',');
        
        if (line[HDR_CASES] == '') return
-       if (!mercasur(line[HDR_COUNTRY])) return
+       if (!validateCountry(countryGroup, line[HDR_COUNTRY])) return
 
         if (csvFile.dateFile > BUG_DATE) {
             let DATE_WITH_BUG = new Date(line[HDR_DATE])
@@ -126,7 +115,6 @@ const toJson = function(csvFile) {
 }
 
 module.exports = {
-    brics,
     validateHeaders,
     toJson
 }

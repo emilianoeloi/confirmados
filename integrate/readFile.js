@@ -15,13 +15,13 @@ const getFileName = function(file){
     return fileName
 }
 
-var read = function(csvFile, saveCountriesDataCB, writeFileCB) {
+var read = function(csvFile, countryGroup, saveCountriesDataCB, writeFileCB) {
     const data = fs.readFileSync(csvFile)
     const fileName = getFileName(csvFile)
     const json = csvToJson.toJson({
         data: data.toString(),
         dateFile: getFileDate(fileName)
-    })
+    }, countryGroup)
     process.env.COUNT = parseInt(process.env.COUNT) + 1
     setStorageCountries(json, saveCountriesDataCB, writeFileCB)
  }

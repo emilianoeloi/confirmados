@@ -42,6 +42,8 @@ const junhoHeader = [
     'Case-Fatality_Ratio' // 13
 ]
 
+const brics = ["Mainland China", "Brazil", "Russia", "India", "China", "South Africa"];
+
 describe('headers', () => {
     test('Janeiro', () => {
         const ok = csvToJson.validateHeaders(janeiroHeader);
@@ -97,7 +99,7 @@ Henan,Mainland China,2020-02-12T14:13:08,1000,8,246
         const json = csvToJson.toJson({
             data: path,
             dateFile: fileDate
-        });
+        }, brics);
         return json;
     }
 
@@ -120,7 +122,7 @@ Henan,Mainland China,2020-02-12T14:13:08,1000,8,246
         const countreis = csvToJson.toJson({
             data: csv2020_02_12,
             dateFile: new Date('2020-02-12T00:00:00.000Z')
-        })
+        }, brics)
         expect(Object.values(countreis)[0].cases).toBe(3000)
     })
 
@@ -128,7 +130,7 @@ Henan,Mainland China,2020-02-12T14:13:08,1000,8,246
         const countreis = csvToJson.toJson({
             data: csv2020_03_13,
             dateFile: new Date('2020-03-13T00:00:00.000Z')
-        })
+        }, brics)
         expect(Object.values(countreis)[0].cases).toBe(40)
     })
 
@@ -136,7 +138,7 @@ Henan,Mainland China,2020-02-12T14:13:08,1000,8,246
         const countreis = csvToJson.toJson({
             data: csv2020_01_22,
             dateFile: new Date('2020-01-22T00:00:00.000Z')
-        })
+        }, brics)
         expect(Object.values(countreis).length).toBe(1)
     });
 
