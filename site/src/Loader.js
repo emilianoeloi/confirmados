@@ -11,7 +11,7 @@ class Loader {
         this.max = 0
     }
 
-    setCaseCountry(country, cases) {
+    setCaseCountry(country) {
         const setDateFormat = function(date) {
             const d = new Date(date)
             let dDay = d.getUTCDate()
@@ -21,6 +21,7 @@ class Loader {
             const dYear = d.getUTCFullYear()
             return `${dYear}-${dMonth}-${dDay}`
         }
+        const cases = country.cases
         var data = []
         var labels = []
         for(var i = 0; i < cases.length; i++) {
