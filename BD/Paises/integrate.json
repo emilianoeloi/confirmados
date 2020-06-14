@@ -1,0 +1,22 @@
+{"countries": [
+    {
+        "name": "Brazil",
+        "color": "#009c3b"
+    },
+    {
+        "name": "Argentina",
+        "color": "#75AADB"
+    },
+    {
+        "name": "Paraguay",
+        "color": "#D52B1E"
+    },
+    {
+        "name": "Uruguay",
+        "color": "#FCD116"
+    },
+    {
+        "name": "Venezuela",
+        "color": "#008033"
+    }
+]}

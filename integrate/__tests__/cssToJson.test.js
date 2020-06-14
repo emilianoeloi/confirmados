@@ -229,13 +229,29 @@ Rio de Janeiro,Brazil,2020-04-14T14:13:08,20,8,246`;
 ,,,Brazil,2020-05-14 03:32:26,-14.235,-51.9253,178999,12461,72597,93156,Brazil
     `;
 
+    const csv2020_02_27 = `Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered
+,Argentina,2020-02-27T14:13:08,2,1000,2686
+,Brazil,2020-02-27T12:23:09,4,1,275
+,Paraguay,2020-02-27T12:23:09,6,1,275
+,Uruguay,2020-02-27T12:23:09,8,1,275
+,Venezuela,2020-02-27T14:13:08,10,8,246`;
+
+    test('Argentina e Brazil', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_02_27,
+            dateFile: new Date('2020-02-27T00:00:00.000')
+        }, ["Argentina", "Brazil"])
+        expect(Object.keys(countreis)[0]).toBe("Argentina")
+        expect(Object.keys(countreis)[1]).toBe("Brazil")
+    });
+
     test('posso validar só existem linhas do mês 2 do dia 26 em 2020', () => {
         const countreis = csvToJson.toJson({
             data: csv2020_02_26,
             dateFile: new Date('2020-02-26T00:00:00.000')
         }, mercosul)
         expect(Object.values(countreis)[0].cases).toBe(8)
-    })
+    });
 
     test('posso validar só existem linhas do mês 4 do dia 13 em 2020', () => {
         const countreis = csvToJson.toJson({

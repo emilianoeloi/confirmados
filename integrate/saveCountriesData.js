@@ -1,7 +1,7 @@
 // saveCountriesData.js
 
 const dbCovid19 = function(countryFile, cases) {
-   let globalCovid19 = JSON.parse(process.env.GLOBAL_COVID_29)
+   let globalCovid19 = JSON.parse(process.env.GLOBAL_COVID_19)
    let countriesDB = Object.values(globalCovid19);
 
    let flag = true
@@ -16,7 +16,7 @@ const dbCovid19 = function(countryFile, cases) {
       globalCovid19[countryFile] = [cases[0]]
    }
 
-   process.env.GLOBAL_COVID_29 = JSON.stringify(globalCovid19)
+   process.env.GLOBAL_COVID_19 = JSON.stringify(globalCovid19)
 }
 
 function saveCountriesData(countriesData, writeFileCB) {
