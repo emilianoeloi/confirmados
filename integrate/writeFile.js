@@ -24,4 +24,7 @@ const writeFile = function() {
     }
 }
 
-module.exports = writeFile
+module.exports = {
+    writeIntegrateFile,
+    writeFile
+}

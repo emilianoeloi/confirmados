@@ -5,7 +5,8 @@ const readFile = require('./readFile.js');
 const writeFile = require('./writeFile.js')
 
 process.env.GLOBAL_COVID_19 = "{}";
-process.env.COUNT = 0
+process.env.COUNTRIES = [];
+process.env.COUNT = 0;
 
 var csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports');
 
@@ -15,5 +16,5 @@ getCSVRequestFiles(
    new Date("2020-05-31T23:59:59.999"),
    ["Argentina", "Brazil", "Paraguay", "Uruguay", "Venezuela"],
    readFile.read,
-   writeFile
+   writeFile.writeFile
 );
