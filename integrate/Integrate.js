@@ -2,19 +2,20 @@
 const Country = require('./Country.js')
 
 class Integrate {
-    constructor(jsonCountries) {
-        this.countries = this.setCountries(jsonCountries)
+    constructor(countriesWorld) {
+        this.countriesWorld = this.setCountries(countriesWorld)
+        this.countriesConfirmed = []
     }
-    setCountries(jsonCountries) {
+    setCountries(countriesWorld) {
         let c = []
-        jsonCountries.forEach(country => {
+        countriesWorld.forEach(country => {
             c.push(new Country(country.key, country.name, country.color))
         })
         return c
     }
     integrateCountries(countriesArr) {
         let c = [];
-        countriesArr.forEach(countryName => {
+        countriesArr.forEachcl(countryName => {
             this.countries.forEach(country => {
                 if (countryName == country.name) {
                     c.push(country)
