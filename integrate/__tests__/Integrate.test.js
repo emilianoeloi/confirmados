@@ -2,8 +2,9 @@
 const Integrate = require('../Integrate.js')
 
 describe('Integrate', () => {
-    let json;
-    let i;
+    let i
+    let json
+
     beforeEach(() => {
         json = [
             {
@@ -22,10 +23,12 @@ describe('Integrate', () => {
                 color: ''
             }
         ]
-        i = new Integrate(json)
+        i = new Integrate()
+        i.setCountries(json)
     })
     test('Construite', () => {
-        expect(i.countries.length).toBe(3)
+        let countries = i.getCountries()
+        expect(countries.length).toBe(3)
     })
     // TODO: spy
     test('integrate com Paíes para Argentina', () => {
@@ -40,49 +43,63 @@ describe('Integrate', () => {
         const integrate = i.integrateCountries(["South Africa"])
         expect(integrate[0].key).toBe("south_africa")
     });
+    test('integrate com Paíes para Argentina, Brazil e Africa do Sul', () => {
+        const integrate = i.integrateCountries(["Argentina", "Brazil", "South Africa"])
+        expect(integrate[2].key).toBe("south_africa")
+    });
 
     test('Salvar um país com nomes', () => {
         let globalCountry = "[]"
-        const countryName = 'Brazil'
-        globalCountry = i.setCountry(globalCountry, countryName)
-        expect(globalCountry.length).toBe(1)
+        const country = {key: 'brazil', name: 'Brazil', color: ''}
+        i.setCountry(country)
+        const brazil = i.getCountry('brazil')
+
+        expect(brazil.name).toBe('Brazil')
+        expect(i.globalCountries.length).toBe(1)
     })
 
     test('Salvar dois países com nomes', () => {
         let globalCountry = []
-        const countryNameBR = 'Brazil'
-        const countryNameAR = 'Argentina'
-        const countryNameBR2 = 'Brazil'
+        const countryNameBR = {key: 'brazil', name: 'Brazil'}
+        const countryNameAR = {key: 'argentina', name: 'Argentina'}
+        const countryNameBR2 = {key: 'brazil', name: 'Brazil'}
 
-        globalCountry = i.setCountry(JSON.stringify(globalCountry), countryNameBR)
-        expect(globalCountry.length).toBe(1)
+        i.setCountry(countryNameBR)
+        let brazil = i.getCountry(countryNameBR.key)
+        expect(brazil.name).toBe('Brazil')
+        
+        i.setCountry(countryNameAR)
+        let argentina = i.getCountry('argentina')
+        expect(argentina.name).toBe('Argentina')
 
-        globalCountry = i.setCountry(JSON.stringify(globalCountry), countryNameAR)
-        expect(globalCountry.length).toBe(2)
-
-        globalCountry = i.setCountry(JSON.stringify(globalCountry), countryNameBR2)
-        expect(globalCountry.length).toBe(2)
+        expect(i.globalCountries.length).toBe(2)
         
     })
 
     test('Salvar três países com nomes', () => {
         let globalCountry = []
-        const countryNameBR = 'Brazil'
-        const countryNameAR = 'Argentina'
-        const countryNameBR2 = 'Brazil'
-        const countryNameURY = 'Uruguay'
+        const countryNameBR = {key: 'brazil', name: 'Brazil'}
+        const countryNameAR = {key: 'argentina', name: 'Argentina'}
+        const countryNameBR2 = {key: 'brazil', name: 'Brazil'}
+        const countryNameURY = {key: 'uruguay', name: 'Uruguay'}
         
-        globalCountry = i.setCountry(JSON.stringify(globalCountry), countryNameBR)
-        expect(globalCountry.length).toBe(1)
+        i.setCountry(countryNameBR)
+        let brazil = i.getCountry(countryNameBR.key)
+        expect(brazil.name).toBe('Brazil')
+        
+        i.setCountry(countryNameAR)
+        let argentina = i.getCountry('argentina')
+        expect(argentina.name).toBe('Argentina')
 
-        globalCountry = i.setCountry(JSON.stringify(globalCountry), countryNameAR)
-        expect(globalCountry.length).toBe(2)
+        i.setCountry(countryNameBR2)
+        let brazil2 = i.getCountry(countryNameBR2.key)
+        expect(brazil2.name).toBe('Brazil')
 
-        globalCountry = i.setCountry(JSON.stringify(globalCountry), countryNameBR2)
-        expect(globalCountry.length).toBe(2)
+        i.setCountry(countryNameURY)
+        let uruguay = i.getCountry(countryNameURY.key)
+        expect(uruguay.name).toBe('Uruguay')
 
-        globalCountry = i.setCountry(JSON.stringify(globalCountry), countryNameURY)
-        expect(globalCountry.length).toBe(3)
+        expect(i.globalCountries.length).toBe(3)
         
     })
 })

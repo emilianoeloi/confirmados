@@ -4,7 +4,7 @@
 
 ## Confirmados
 
-Um app/site com gráficos para casos confirmados do coronavírus.
+É um projeto simples, ele existe para estudar, tanto pra uma pessoa iniciante ou pessoas que tiveram um 🧠 Acidente Vascular Cerebral, que comprometeu uma parte de vocabulário. O projeto mostra um Confirmados em um Gráfico de linhas ente Tempo x Confirmados.
 
 ![confirmados](confirmados.png)
 
@@ -28,7 +28,7 @@ Instalar
 
 ``` # make install ```
 
-start
+start (Iniciando o Site)
 
 ``` # make start```
 

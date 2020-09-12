@@ -23,5 +23,9 @@ A integração também está esquisita: Os dados estão "errados", pois os dados
 Bug: Precisa validar se existem linha diferentes do dia. Por exemplo, existe uma linha 12/03/2020, mas só podem linhas 13/03/2020.
 Os dados estão "errados" de 23/04/2020 e agora os dados são 24/04/2020 
 
+## Sábado, 12 de setembro de 2020
+
+Olha, estou de volta! E olha ai, mais confirmados. E os Brics está no "top". 
+
 ***Primeira Versão v1.0.0-alpha***
 Então fiz um site pra eu ver e fazer uma referencia entre paises e os casos confirmados do COVID-19.

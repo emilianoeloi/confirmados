@@ -2,21 +2,25 @@
 const Country = require('./Country.js')
 
 class Integrate {
-    constructor(countriesWorld) {
-        this.countriesWorld = this.setCountries(countriesWorld)
+    constructor() {
+        this.countriesWorld = []    
         this.countriesConfirmed = []
+        this.globalCountries = []
     }
-    setCountries(countriesWorld) {
+    setCountries(countries) {
         let c = []
-        countriesWorld.forEach(country => {
+        countries.forEach(country => {
             c.push(new Country(country.key, country.name, country.color))
         })
-        return c
+        this.countriesWorld = c
+    }
+    getCountries() {
+        return this.countriesWorld
     }
     integrateCountries(countriesArr) {
         let c = [];
-        countriesArr.forEachcl(countryName => {
-            this.countries.forEach(country => {
+        countriesArr.forEach(countryName => {
+            this.countriesWorld.forEach(country => {
                 if (countryName == country.name) {
                     c.push(country)
                 }
@@ -25,20 +29,29 @@ class Integrate {
         return c;
     }
 
-    setCountry(GLOBAL_COUNTRIES, countryName) {
-        let globalCountries = JSON.parse(GLOBAL_COUNTRIES);
-        if (globalCountries == 0) {
-            globalCountries.push(countryName)
-            return globalCountries
+    setCountry(country) {
+        if (this.globalCountries == 0) {
+            this.globalCountries.push(country)
         }
-        for (let i = 0; i < globalCountries.length; i++) {
-            if (globalCountries[i] != countryName) {
-                globalCountries.push(countryName)
-            } else {
-                break;
+        var last = false
+        for (let i = 0; i < this.globalCountries.length; i++) {
+            if (this.globalCountries[i].key == country.key) {
+                break
             }
+            last = true
         }
-        return globalCountries
+        if (last) {
+            this.globalCountries.push(country)
+        }
+    }
+
+    getCountry(countryKey) {
+        for (let i = 0; i < this.globalCountries.length; i++) {
+            if (this.globalCountries[i].key == countryKey) {
+                return this.globalCountries[i]
+            }
+        }  
+        return null
     }
 }
 

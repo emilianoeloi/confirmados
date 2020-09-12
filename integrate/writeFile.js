@@ -25,6 +25,5 @@ const writeFile = function() {
 }
 
 module.exports = {
-    writeIntegrateFile,
     writeFile
 }
