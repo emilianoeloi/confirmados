@@ -51,4 +51,6 @@ draft:
 
 ## Atualizar o banco de dados
 bd_update:
+	git submodule update --init --recursive
+	cd  ./BD/COVID-19 && git pull origin master
 	cp ./BD/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/* ./integrate/csse_covid_19_daily_reports/
