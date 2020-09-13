@@ -13,8 +13,8 @@ var csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports')
 getCSVRequestFiles(
    csseCovid19DailyReport,
    new Date("2020-01-22T00:00:00.000"),
-   new Date("2020-06-12T23:59:59.999"),
-   ["Argentina", "Brazil", "Paraguay", "Uruguay", "Venezuela"],
+   new Date("2020-09-12T23:59:59.999"),
+   ["India"],
    readFile.read,
    writeFile.writeFile
 );
