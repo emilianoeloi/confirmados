@@ -1,5 +1,20 @@
 {"countries": [
     {
+        "key": "peru",
+        "name": "Peru",
+        "color": "#D91023"
+    },
+    {
+        "key": "new_zealand",
+        "name": "New Zealand",
+        "color": "#00247D"
+    },
+    {
+        "key": "spain",
+        "name": "Spain",
+        "color": "#AA151B"
+    },
+    {
         "key": "brazil",
         "name": "Brazil",
         "color": "#009c3b"
