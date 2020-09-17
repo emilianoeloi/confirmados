@@ -44,15 +44,27 @@ class Loader {
             data: data,
             borderColor: country.color,
             yAxisID: yAxis,
-            fill: false,
-            borderWidth: 3,
+            fill: true,
+            borderWidth: 0,
             pointRadius: 0,
-			pointHoverRadius: 2,
+			pointHoverRadius: 0,
             showLine: true,
             borderDash: [5, 5],
         })
-        console.info(yAxis)
         this.options.push({
+            responseive: true,
+            title: {
+                display: true,
+                text: '17/09/2020'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
             id: yAxis,
             type: 'linear',
             display: this.display,

@@ -1,5 +1,10 @@
 {"countries": [
     {
+        "key": "united_kingdom",
+        "name": "United Kingdom",
+        "color": "#00247D"
+    },
+    {
         "key": "peru",
         "name": "Peru",
         "color": "#D91023"
