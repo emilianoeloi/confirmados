@@ -19,11 +19,11 @@ describe('ler os arquivos', () => {
             janeiroPath, 
             countryGroup, 
             (a, b, c, d) => {
-                console.info(a, b, c, d)
-                // expect(b[1].name).toBe('Brazil')
+                let m = {}
+                expect(a).toStrictEqual(m)
                 done()
             }, 
-            whiteFileCB
+            (a, b, c, d) => { }
         )
     })
 })

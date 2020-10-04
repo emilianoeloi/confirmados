@@ -13,7 +13,7 @@ const csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports
 getCSVRequestFiles(
    csseCovid19DailyReport,
    new Date("2020-01-22T00:00:00.000"),
-   new Date("2020-09-16T23:59:59.999"),
+   new Date("2020-10-03T23:59:59.999"),
    ["Brazil"],
    readFile.read,
    writeFile.writeFile

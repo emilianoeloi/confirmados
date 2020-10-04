@@ -1,5 +1,9 @@
+#!/bin/bash
 .SILENT:
-.PHONY: help install start itgt_install itgt_start itgt_test itgt_delete_report draft bd_update
+.PHONY: help site_install site_start itgt_install itgt_start itgt_test itgt_delete_report draft bd_update update install
+
+INTEGRATE_FILE=./integrate/countries/integrate.json
+COUNTRIES_FILES=./site/src/CountryCases/countries/*.json
 
 # ## Help screen
 help:
@@ -17,11 +21,11 @@ help:
 	echo
 
 ## Instalar o Site
-install:
+site_install:
 	cd site && yarn
 
 ## Iniciando o Site	
-start:
+site_start:
 	cd site && yarn start
 
 ## Instalar o integrador
@@ -30,7 +34,7 @@ itgt_install:
 
 ## Iniciando o Integrador	
 itgt_start:
-	cd integrate && yarn start && cp ./countries/* ../site/src/CountryCases/countries
+	cd integrate && yarn start && cp ./countries/* ../site/src/CountryCases/countries && cp ./Paises/integrate.json ../site/src/CountryCases/countries
 
 ## Testando o Integrador
 itgt_test:
@@ -42,8 +46,8 @@ itgt_test_watch:
 
 ## Deletar os relatóriso do integrador
 itgt_delete_reports:
-	cd integrate/countries/ && rm *.json
-	cd site/src/CountryCases/countries/ && rm *.json
+	[ -f $(INTEGRATE_FILE) ] && rm -f $(INTEGRATE_FILE) || echo ""
+	[ -f $(COUNTRIES_FILES) ] && rm -rf $(COUNTRIES_FILES) || echo ""
 
 ## É um rascunho pra rodar um javascript
 draft:
@@ -57,3 +61,15 @@ bd_update:
 	cp ./BD/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/* ./integrate/csse_covid_19_daily_reports/
     ## Países
 	cp BD/Paises/integrate.json integrate/Paises/
+
+## Configurar o projeto todo
+install:
+	make site_install
+	make itgt_install
+
+## Atualizar os dados do projeto
+update:
+	make itgt_delete_reports
+	make bd_update
+	make itgt_start
+	make site_start

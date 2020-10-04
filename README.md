@@ -4,45 +4,43 @@
 
 ## Confirmados
 
-É um projeto simples, ele existe para estudar, tanto pra uma pessoa iniciante ou pessoas que tiveram um 🧠 Acidente Vascular Cerebral, que comprometeu uma parte de vocabulário. O projeto mostra um Confirmados em um Gráfico de linhas ente Tempo x Confirmados.
+É um projeto simples, e ele existe para ajudar pessoas que tiveram um Acidente Vascular Cerebral, que comprometeu uma parte de vocabulário. O projeto mostra com os Confirmados do COVID-19 em um Gráfico de linhas ente Tempo x Confirmados.
 
 ![confirmados](confirmados.png)
 
 ## Gráfico
 
-Gráfico simples período x confirmados.
+Confirmados pelo COVID-19 pelo período x confirmados.
 
-## Atualizar
+# Como usar o projeto (MacOS).
 
-Atualizar os dados.
+## Requisitos
 
---------------
+- Brew
+- Yarn
 
-### Implementando
+## Configurações
 
-Requisitos
-
-``` # npm install -g yarn ```
-
-Instalar
-
-``` # make install ```
-
-start (Iniciando o Site)
-
-``` # make start```
-
-integrate install
-
-``` # make itgt_install ``` 
-
-integrate start
-
-``` # make itgt_start ```
-
-integrate test
-
-``` # make itgt_test ```
+1. Instalar o projeto
+```shell
+# make install
+```
+2. Atulizando os dados pelos dados da JHU CSSE.
+```shell
+# make bd_update
+```
+3. Integragrando com os dados para o Site.
+```shell
+# make itgt_start
+``` 
+# 4. Iniciando o site
+```shell
+# make site_start
+```
+# 5. Atualizar o site(dados, site)
+```shell
+# make update
+```
 
 --------------
 
@@ -87,3 +85,5 @@ Oh My Zsh is an open source, community-driven framework for managing your zsh co
 jsontools: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools
 
 Algoritmo de ordenação: https://pt.wikipedia.org/wiki/Algoritmo_de_ordena%C3%A7%C3%A3o
+
+Introdução ao Shell Script no Linux: https://www.devmedia.com.br/introducao-ao-shell-script-no-linux/25778 Acesso em 19/09/2020
