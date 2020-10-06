@@ -39,7 +39,7 @@ Confirmados pelo COVID-19 pelo período x confirmados.
 ```shell
 # make site_start
 ```
-1. Atualizar o site
+5. Atualizar o site
 ```shell
 # make update
 ```
