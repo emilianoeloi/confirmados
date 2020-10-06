@@ -1,4 +1,5 @@
 // __test__/Integrate.test.js
+const Country = require('../Country.js')
 const Integrate = require('../Integrate.js')
 
 describe('Integrate', () => {
@@ -6,25 +7,13 @@ describe('Integrate', () => {
     let json
 
     beforeEach(() => {
-        json = [
-            {
-                key: 'brazil',
-                name: 'Brazil',
-                color: ''
-            },
-            {
-                key: 'argentina',
-                name: 'Argentina',
-                color: ''
-            },
-            {
-                key: 'south_africa',
-                name: 'South Africa',
-                color: ''
-            }
+        countries = [
+            new Country('brazil', 'Brazil', ''),
+            new Country('argentina', 'Argentina', ''),
+            new Country('south_africa', 'South Africa', '')
         ]
         i = new Integrate()
-        i.setCountries(json)
+        i.setCountries(countries)
     })
     test('Construite', () => {
         let countries = i.getCountries()
@@ -32,25 +21,34 @@ describe('Integrate', () => {
     })
     // TODO: spy
     test('integrate com Paíes para Argentina', () => {
-        const integrate = i.integrateCountries(["Argentina"])
+        const integrate = i.integrateCountries([new Country('argentina', 'Argentina', '')])
         expect(integrate[0].key).toBe("argentina")
     });
     test('integrate com Paíes para Brazil', () => {
-        const integrate = i.integrateCountries(["Argentina", "Brazil"])
-        expect(integrate[1].key).toBe("brazil")
+        const integrate = i.integrateCountries([
+            new Country('brazil', 'Brazil', ''),
+            new Country('argentina', 'Argentina', '')
+        ])
+        expect(integrate[1].key).toBe("argentina")
     });
     test('integrate com Paíes para Africa do Sul', () => {
-        const integrate = i.integrateCountries(["South Africa"])
+        const integrate = i.integrateCountries([
+            new Country('south_africa', 'South Africa', '')
+        ])
         expect(integrate[0].key).toBe("south_africa")
     });
     test('integrate com Paíes para Argentina, Brazil e Africa do Sul', () => {
-        const integrate = i.integrateCountries(["Argentina", "Brazil", "South Africa"])
+        const integrate = i.integrateCountries([
+            new Country('brazil', 'Brazil', ''),
+            new Country('argentina', 'Argentina', ''),
+            new Country('south_africa', 'South Africa', '')
+        ])
         expect(integrate[2].key).toBe("south_africa")
     });
 
     test('Salvar um país com nomes', () => {
         let globalCountry = "[]"
-        const country = {key: 'brazil', name: 'Brazil', color: ''}
+        const country = new Country('brazil', 'Brazil', '')
         i.setCountry(country)
         const brazil = i.getCountry('brazil')
 
@@ -60,9 +58,9 @@ describe('Integrate', () => {
 
     test('Salvar dois países com nomes', () => {
         let globalCountry = []
-        const countryNameBR = {key: 'brazil', name: 'Brazil'}
-        const countryNameAR = {key: 'argentina', name: 'Argentina'}
-        const countryNameBR2 = {key: 'brazil', name: 'Brazil'}
+        const countryNameBR = new Country('brazil', 'Brazil', '')
+        const countryNameAR = new Country('argentina', 'Argentina', '')
+        const countryNameBR2 = new Country('brazil', 'Brazil', '')
 
         i.setCountry(countryNameBR)
         let brazil = i.getCountry(countryNameBR.key)
@@ -78,10 +76,10 @@ describe('Integrate', () => {
 
     test('Salvar três países com nomes', () => {
         let globalCountry = []
-        const countryNameBR = {key: 'brazil', name: 'Brazil'}
-        const countryNameAR = {key: 'argentina', name: 'Argentina'}
-        const countryNameBR2 = {key: 'brazil', name: 'Brazil'}
-        const countryNameURY = {key: 'uruguay', name: 'Uruguay'}
+        const countryNameBR = new Country('brazil', 'Brazil', '')
+        const countryNameAR = new Country('argentina', 'Argentina', '')
+        const countryNameBR2 = new Country('brazil', 'Brazil', '')
+        const countryNameURY = new Country('uruguay', 'Uruguay', '')
         
         i.setCountry(countryNameBR)
         let brazil = i.getCountry(countryNameBR.key)

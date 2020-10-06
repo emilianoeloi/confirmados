@@ -4,9 +4,8 @@
 const BUG_DATE = new Date('2020-04-22T00:00:00.000')
 
 const validateCountry = function(countryGroup, country) {
-    console.info('validateCountry', countryGroup, country)
     for (var k = 0; k < countryGroup.length; k++) {
-        if (countryGroup[k] == country){
+        if (countryGroup[k].name == country){
             return true
         }
     }

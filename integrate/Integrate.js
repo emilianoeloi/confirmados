@@ -19,9 +19,10 @@ class Integrate {
     }
     integrateCountries(countriesArr) {
         let c = [];
+        
         countriesArr.forEach(countryName => {
             this.countriesWorld.forEach(country => {
-                if (countryName == country.name) {
+                if (countryName.name == country.name) {
                     c.push(country)
                 }
             })

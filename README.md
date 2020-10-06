@@ -4,7 +4,9 @@
 
 ## Confirmados
 
-É um projeto simples, e ele existe para ajudar pessoas que tiveram um Acidente Vascular Cerebral, que comprometeu uma parte de vocabulário. O projeto mostra com os Confirmados do COVID-19 em um Gráfico de linhas ente Tempo x Confirmados.
+O ***Confirmados*** tem o objetivo de mostrar um site que tem um gráfico com os dados de confirmações do COVID-19 pelo tempo.\
+A importância desse projeto é para treinamento de uso das palavras e conhecimento resgatados da memória.\
+Eu tive um derrame cerebral (AVE-He) que comprometeu uma parte do meu cérebro ocasionando uma lesão que afeta a área responsável pela linguagem, ou seja, eu tenho o distúrbio da Afasia de Wernicke. É uma alteração na linguagem oral e escrita, tornando a comunicação sem muita precisão.
 
 ![confirmados](confirmados.png)
 
@@ -33,11 +35,11 @@ Confirmados pelo COVID-19 pelo período x confirmados.
 ```shell
 # make itgt_start
 ``` 
-# 4. Iniciando o site
+4. Iniciando o site
 ```shell
 # make site_start
 ```
-# 5. Atualizar o site(dados, site)
+1. Atualizar o site
 ```shell
 # make update
 ```
@@ -87,3 +89,5 @@ jsontools: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools
 Algoritmo de ordenação: https://pt.wikipedia.org/wiki/Algoritmo_de_ordena%C3%A7%C3%A3o
 
 Introdução ao Shell Script no Linux: https://www.devmedia.com.br/introducao-ao-shell-script-no-linux/25778 Acesso em 19/09/2020
+
+11 coisas que você não sabe sobre o AVC - https://saude.abril.com.br/medicina/11-coisas-que-voce-nao-sabe-sobre-o-avc/ Acesso em 04/10/2020

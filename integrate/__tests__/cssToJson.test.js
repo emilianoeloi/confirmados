@@ -69,44 +69,44 @@ const getFirtsDate = function(monthPath, countryGroups) {
     }
 }
 
-// describe('headers', () => {
-//     test('Janeiro', () => {
-//         const ok = csvToJson.validateHeaders(janeiroHeader);
-//         expect(ok.HDR_COUNTRY).toBe(1)
-//         expect(ok.HDR_DATE).toBe(2)
-//         expect(ok.HDR_CASES).toBe(3)
-//     })
-//     test('Fevereiro', () => {
-//         const ok = csvToJson.validateHeaders(fevereiroHeader);
-//         expect(ok.HDR_COUNTRY).toBe(1)
-//         expect(ok.HDR_DATE).toBe(2)
-//         expect(ok.HDR_CASES).toBe(3)
-//     })
-//     test('Março', () => {
-//         const ok = csvToJson.validateHeaders(marcoHeader);
-//         expect(ok.HDR_COUNTRY).toBe(1)
-//         expect(ok.HDR_DATE).toBe(2)
-//         expect(ok.HDR_CASES).toBe(3)
-//     })
-//     test('Abril', () => {
-//         const ok = csvToJson.validateHeaders(abrilHeader);
-//         expect(ok.HDR_COUNTRY).toBe(1)
-//         expect(ok.HDR_DATE).toBe(2)
-//         expect(ok.HDR_CASES).toBe(3)
-//     })
-//     test('Maio', () => {
-//         const ok = csvToJson.validateHeaders(maioHeader);
-//         expect(ok.HDR_COUNTRY).toBe(3)
-//         expect(ok.HDR_DATE).toBe(4)
-//         expect(ok.HDR_CASES).toBe(7)
-//     })
-//     test('Junho', () => {
-//         const ok = csvToJson.validateHeaders(maioHeader);
-//         expect(ok.HDR_COUNTRY).toBe(3)
-//         expect(ok.HDR_DATE).toBe(4)
-//         expect(ok.HDR_CASES).toBe(7)
-//     })
-// })
+describe('headers', () => {
+    test('Janeiro', () => {
+        const ok = csvToJson.validateHeaders(janeiroHeader);
+        expect(ok.HDR_COUNTRY).toBe(1)
+        expect(ok.HDR_DATE).toBe(2)
+        expect(ok.HDR_CASES).toBe(3)
+    })
+    test('Fevereiro', () => {
+        const ok = csvToJson.validateHeaders(fevereiroHeader);
+        expect(ok.HDR_COUNTRY).toBe(1)
+        expect(ok.HDR_DATE).toBe(2)
+        expect(ok.HDR_CASES).toBe(3)
+    })
+    test('Março', () => {
+        const ok = csvToJson.validateHeaders(marcoHeader);
+        expect(ok.HDR_COUNTRY).toBe(1)
+        expect(ok.HDR_DATE).toBe(2)
+        expect(ok.HDR_CASES).toBe(3)
+    })
+    test('Abril', () => {
+        const ok = csvToJson.validateHeaders(abrilHeader);
+        expect(ok.HDR_COUNTRY).toBe(1)
+        expect(ok.HDR_DATE).toBe(2)
+        expect(ok.HDR_CASES).toBe(3)
+    })
+    test('Maio', () => {
+        const ok = csvToJson.validateHeaders(maioHeader);
+        expect(ok.HDR_COUNTRY).toBe(3)
+        expect(ok.HDR_DATE).toBe(4)
+        expect(ok.HDR_CASES).toBe(7)
+    })
+    test('Junho', () => {
+        const ok = csvToJson.validateHeaders(maioHeader);
+        expect(ok.HDR_COUNTRY).toBe(3)
+        expect(ok.HDR_DATE).toBe(4)
+        expect(ok.HDR_CASES).toBe(7)
+    })
+})
 
 describe('[Brics]CSV para resports.csv para data e confirmados', () => {
     const brics = [
@@ -133,92 +133,98 @@ Henan,Mainland China,2020-02-12T14:13:08,1000,8,246
         expect(Object.values(countreis)[0].cases).toBe(3000)
     })
 
-    // test('posso validar só existem linhas do mês 3 do dia 13 em 2020', () => {
-    //     const countreis = csvToJson.toJson({
-    //         data: csv2020_03_13,
-    //         dateFile: new Date('2020-03-13T00:00:00.000')
-    //     }, brics)
-    //     expect(Object.values(countreis)[0].cases).toBe(40)
-    // })
+    test('posso validar só existem linhas do mês 3 do dia 13 em 2020', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_03_13,
+            dateFile: new Date('2020-03-13T00:00:00.000')
+        }, brics)
+        expect(Object.values(countreis)[0].cases).toBe(40)
+    })
 
-    // test('relatorio csv para json(com países)', () => {
-    //     const countreis = csvToJson.toJson({
-    //         data: csv2020_01_22,
-    //         dateFile: new Date('2020-01-22T00:00:00.000')
-    //     }, brics)
-    //     expect(Object.values(countreis).length).toBe(1)
-    // });
+    test('relatorio csv para json(com países)', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_01_22,
+            dateFile: new Date('2020-01-22T00:00:00.000')
+        }, brics)
+        expect(Object.values(countreis).length).toBe(1)
+    });
 
-    // test('testando todos as linhas de Janeiro', () => {
-    //     const json = getMonthCSVToJSON(janeiroPath, brics);
-    //     expect(Object.values(json).length).toBe(1)
-    // });
+    test('testando todos as linhas de Janeiro', () => {
+        const json = getMonthCSVToJSON(janeiroPath, brics);
+        expect(Object.values(json).length).toBe(1)
+    });
 
-    // test('testando todos as linhas de fevereiro', () => {
-    //     const json = getMonthCSVToJSON(fevereiroPath, brics);
-    //     expect(Object.values(json).length).toBe(1)
-    // });
+    test('testando todos as linhas de fevereiro', () => {
+        const json = getMonthCSVToJSON(fevereiroPath, brics);
+        expect(Object.values(json).length).toBe(1)
+    });
 
-    // test('testando todos as linhas de março', () => {
-    //     const json = getMonthCSVToJSON(marcoPath, brics);
-    //     expect(Object.values(json).length).toBe(1)
-    // });
+    test('testando todos as linhas de março', () => {
+        const json = getMonthCSVToJSON(marcoPath, brics);
+        expect(Object.values(json).length).toBe(1)
+    });
 
-    // test('testando todos as linhas de abril', () => {
-    //     const json = getMonthCSVToJSON(abrilPath, brics);
-    //     expect(Object.values(json).length).toBe(5)
-    // });
+    test('testando todos as linhas de abril', () => {
+        const json = getMonthCSVToJSON(abrilPath, brics);
+        expect(Object.values(json).length).toBe(5)
+    });
 
-    // test('testando todos as linhas de maio', () => {
-    //     const json = getMonthCSVToJSON(maioPath, brics);
-    //     expect(Object.values(json).length).toBe(5)
-    // });
+    test('testando todos as linhas de maio', () => {
+        const json = getMonthCSVToJSON(maioPath, brics);
+        expect(Object.values(json).length).toBe(5)
+    });
 
-    // test('testando todos as linhas de junho', () => {
-    //     const json = getMonthCSVToJSON(junhoPath, brics);
-    //     expect(Object.values(json).length).toBe(5)
-    // });
+    test('testando todos as linhas de junho', () => {
+        const json = getMonthCSVToJSON(junhoPath, brics);
+        expect(Object.values(json).length).toBe(5)
+    });
 
-    // test('testar da datas janeiro', () => {
-    //     const dtJson = getFirtsDate(janeiroPath, brics);
-    //     expect(dtJson.date).toBe(22)
-    //     expect(dtJson.month).toBe(1)
-    //     expect(dtJson.fullYear).toBe(2020)
-    // });
-    // test('testar da datas fevereiro', () => {
-    //     const dtJson = getFirtsDate(fevereiroPath, brics)
-    //     expect(dtJson.date).toBe(1)
-    //     expect(dtJson.month).toBe(2)
-    //     expect(dtJson.fullYear).toBe(2020)
-    // });
-    // test('testar da datas marco', () => {
-    //     const dtJson = getFirtsDate(marcoPath, brics)
-    //     expect(dtJson.date).toBe(1)
-    //     expect(dtJson.month).toBe(3)
-    //     expect(dtJson.fullYear).toBe(2020)
-    // });
-    // test('testar da datas abril', () => {
-    //     const dtJson = getFirtsDate(abrilPath, brics)
-    //     expect(dtJson.date).toBe(1)
-    //     expect(dtJson.month).toBe(4)
-    //     expect(dtJson.fullYear).toBe(2020)
-    // });
-    // test('testar da datas maio', () => {
-    //     const dtJson = getFirtsDate(maioPath, brics)
-    //     expect(dtJson.date).toBe(1) // Bugzinho pesado.
-    //     expect(dtJson.month).toBe(5)
-    //     expect(dtJson.fullYear).toBe(2020)
-    // });
-    // test('testar da datas junho', () => {
-    //     const dtJson = getFirtsDate(junhoPath, brics)
-    //     expect(dtJson.date).toBe(1)
-    //     expect(dtJson.month).toBe(6)
-    //     expect(dtJson.fullYear).toBe(2020)
-    // });
+    test('testar da datas janeiro', () => {
+        const dtJson = getFirtsDate(janeiroPath, brics);
+        expect(dtJson.date).toBe(22)
+        expect(dtJson.month).toBe(1)
+        expect(dtJson.fullYear).toBe(2020)
+    });
+    test('testar da datas fevereiro', () => {
+        const dtJson = getFirtsDate(fevereiroPath, brics)
+        expect(dtJson.date).toBe(1)
+        expect(dtJson.month).toBe(2)
+        expect(dtJson.fullYear).toBe(2020)
+    });
+    test('testar da datas marco', () => {
+        const dtJson = getFirtsDate(marcoPath, brics)
+        expect(dtJson.date).toBe(1)
+        expect(dtJson.month).toBe(3)
+        expect(dtJson.fullYear).toBe(2020)
+    });
+    test('testar da datas abril', () => {
+        const dtJson = getFirtsDate(abrilPath, brics)
+        expect(dtJson.date).toBe(1)
+        expect(dtJson.month).toBe(4)
+        expect(dtJson.fullYear).toBe(2020)
+    });
+    test('testar da datas maio', () => {
+        const dtJson = getFirtsDate(maioPath, brics)
+        expect(dtJson.date).toBe(1) // Bugzinho pesado.
+        expect(dtJson.month).toBe(5)
+        expect(dtJson.fullYear).toBe(2020)
+    });
+    test('testar da datas junho', () => {
+        const dtJson = getFirtsDate(junhoPath, brics)
+        expect(dtJson.date).toBe(1)
+        expect(dtJson.month).toBe(6)
+        expect(dtJson.fullYear).toBe(2020)
+    });
 })
 
 describe('[Mercosul/Mercosul] CSV para resports.csv para data e confirmados', () => {
-    const mercosul = ["Argentina", "Brazil", "Paraguay", "Uruguay", "Venezuela"];
+    const mercosul = [
+        new Country("argentina", "Argentina", ""),
+        new Country("brazil", "Brazil", ""),
+        new Country("paraguay", "Paraguay", ""),
+        new Country("uruguay", "Uruguay", ""),
+        new Country("venezuela", "Venezuela", "")
+    ];
     
     const csv2020_02_26 = `Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered
 Belo Horizonte,Brazil,2020-02-25T14:13:08,12,1000,2686
@@ -244,46 +250,51 @@ Rio de Janeiro,Brazil,2020-04-14T14:13:08,20,8,246`;
 ,Uruguay,2020-02-27T12:23:09,8,1,275
 ,Venezuela,2020-02-27T14:13:08,10,8,246`;
 
-    // test('Argentina e Brazil', () => {
-    //     const countreis = csvToJson.toJson({
-    //         data: csv2020_02_27,
-    //         dateFile: new Date('2020-02-27T00:00:00.000')
-    //     }, ["Argentina", "Brazil"])
-    //     expect(Object.keys(countreis)[0]).toBe("Argentina")
-    //     expect(Object.keys(countreis)[1]).toBe("Brazil")
-    // });
+    const braArg = [
+        new Country("brazil", "Brazil", ""),
+        new Country("argentina", "Argentina", "")
+    ];
 
-    // test('posso validar só existem linhas do mês 2 do dia 26 em 2020', () => {
-    //     const countreis = csvToJson.toJson({
-    //         data: csv2020_02_26,
-    //         dateFile: new Date('2020-02-26T00:00:00.000')
-    //     }, mercosul)
-    //     expect(Object.values(countreis)[0].cases).toBe(8)
-    // });
+    test('Argentina e Brazil', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_02_27,
+            dateFile: new Date('2020-02-27T00:00:00.000')
+        }, braArg)
+        expect(Object.keys(countreis)[0]).toBe("Argentina")
+        expect(Object.keys(countreis)[1]).toBe("Brazil")
+    });
 
-    // test('posso validar só existem linhas do mês 4 do dia 13 em 2020', () => {
-    //     const countreis = csvToJson.toJson({
-    //         data: csv2020_04_13,
-    //         dateFile: new Date('2020-04-13T00:00:00.000')
-    //     }, mercosul)
-    //     expect(Object.values(countreis)[0].cases).toBe(9)
-    // })
+    test('posso validar só existem linhas do mês 2 do dia 26 em 2020', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_02_26,
+            dateFile: new Date('2020-02-26T00:00:00.000')
+        }, mercosul)
+        expect(Object.values(countreis)[0].cases).toBe(8)
+    });
 
-    // test('posso validar só existem linhas do mês 5 do dia 12 em 2020', () => {
-    //     const countreis = csvToJson.toJson({
-    //         data: csv2020_05_12,
-    //         dateFile: new Date('2020-05-12T00:00:00.000')
-    //     }, mercosul)
-    //     expect(Object.values(countreis)[0].cases).toBe(178214)
-    // })
+    test('posso validar só existem linhas do mês 4 do dia 13 em 2020', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_04_13,
+            dateFile: new Date('2020-04-13T00:00:00.000')
+        }, mercosul)
+        expect(Object.values(countreis)[0].cases).toBe(9)
+    })
 
-    // test('testando todos as linhas de abril', () => {
-    //     const json = getMonthCSVToJSON(abrilPath, mercosul);
-    //     expect(Object.values(json).length).toBe(5)
-    // });
+    test('posso validar só existem linhas do mês 5 do dia 12 em 2020', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_05_12,
+            dateFile: new Date('2020-05-12T00:00:00.000')
+        }, mercosul)
+        expect(Object.values(countreis)[0].cases).toBe(178214)
+    })
 
-    // test('testando todos as linhas de maio', () => {
-    //     const json = getMonthCSVToJSON(maioPath, mercosul);
-    //     expect(Object.values(json).length).toBe(5)
-    // });
+    test('testando todos as linhas de abril', () => {
+        const json = getMonthCSVToJSON(abrilPath, mercosul);
+        expect(Object.values(json).length).toBe(5)
+    });
+
+    test('testando todos as linhas de maio', () => {
+        const json = getMonthCSVToJSON(maioPath, mercosul);
+        expect(Object.values(json).length).toBe(5)
+    });
 })
