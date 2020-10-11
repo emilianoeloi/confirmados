@@ -6,6 +6,7 @@ const arraySort = require('array-sort');
 const countriesPath = path.join(__dirname, 'countries')
 
 const writeCountryFile = function(countriesData) {
+    
     Object.values(countriesData).forEach(function(values, key) {
         let countryName = (Object.keys(countriesData)[key]).replace(' ', '_')
         var countryFile = `${countriesPath}/cases${countryName}.json`;
@@ -18,12 +19,24 @@ const writeCountryFile = function(countriesData) {
     })
 }
 
+const writeIntegrateFile = function(countries) {
+    const integrateFile = `${countriesPath}/integrate.json`;
+    const c = {countries: countries}
+    fs.writeFile(integrateFile, JSON.stringify(c), function(err) {
+        if (err) {
+            return console.error('writeIntegrateFile' + err);
+        }
+    })
+}
+
 const writeFile = function() {
     if (parseInt(process.env.COUNT) == 0) {
-        writeCountryFile(JSON.parse(process.env.GLOBAL_COVID_19));
+        const countriesData = JSON.parse(process.env.GLOBAL_COVID_19)
+        writeCountryFile(countriesData);
     }
 }
 
 module.exports = {
-    writeFile
+    writeFile,
+    writeIntegrateFile
 }

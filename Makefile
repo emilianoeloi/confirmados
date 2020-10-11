@@ -1,24 +1,16 @@
-#!/bin/bash
 .SILENT:
-.PHONY: help site_install site_start itgt_install itgt_start itgt_test itgt_delete_report draft bd_update update install
+.DEFAULT_GOAL := help
+
+COLOR_RESET = \033[0m
+COLOR_COMMAND = \033[36m
+COLOR_YELLOW = \033[33m
+COLOR_GREEN = \033[32m
+COLOR_RED = \033[31m
+
+PROJECT := Confirmados COVID-19
 
 INTEGRATE_FILE=./integrate/countries/integrate.json
-COUNTRIES_FILES=./site/src/CountryCases/countries/*.json
-
-# ## Help screen
-help:
-	echo
-	printf "Targets available:\n\n"
-	awk '/^[a-zA-Z\-\_0-9]+:/ { \
-		helpMessage = match(lastLine, /^## (.*)/); \
-		if (helpMessage) { \
-			helpCommand = substr($$1, 0, index($$1, ":")-1); \
-			helpMessage = substr(lastLine, RSTART + 3, RLENGTH); \
-			printf "%-25s %s\n", helpCommand, helpMessage; \
-		} \
-	} \
-	{ lastLine = $$0 }' $(MAKEFILE_LIST)
-	echo
+COUNTRIES_FILES=./site/src/CountryCases/countries/cases*.json
 
 ## Instalar o Site
 site_install:
@@ -34,7 +26,7 @@ itgt_install:
 
 ## Iniciando o Integrador	
 itgt_start:
-	cd integrate && yarn start && cp ./countries/* ../site/src/CountryCases/countries && cp ./Paises/integrate.json ../site/src/CountryCases/countries
+	cd integrate && yarn start && cp ./countries/* ../site/src/CountryCases/countries
 
 ## Testando o Integrador
 itgt_test:
@@ -46,7 +38,7 @@ itgt_test_watch:
 
 ## Deletar os relatóriso do integrador
 itgt_delete_reports:
-	[ -f $(INTEGRATE_FILE) ] && rm -f $(INTEGRATE_FILE) || echo ""
+	# [ -f $(INTEGRATE_FILE) ] && rm -f $(INTEGRATE_FILE) || echo ""
 	[ -f $(COUNTRIES_FILES) ] && rm -rf $(COUNTRIES_FILES) || echo ""
 
 ## É um rascunho pra rodar um javascript
@@ -73,3 +65,17 @@ update:
 	make bd_update
 	make itgt_start
 	make site_start
+
+## Prints help message
+help:
+	printf "\n${COLOR_YELLOW}${PROJECT}\n------\n${COLOR_RESET}"
+	awk '/^[a-zA-Z\-\_0-9\.%]+:/ { \
+		helpMessage = match(lastLine, /^## (.*)/); \
+		if (helpMessage) { \
+			helpCommand = substr($$1, 0, index($$1, ":")); \
+			helpMessage = substr(lastLine, RSTART + 3, RLENGTH); \
+			printf "${COLOR_COMMAND}$$ make %s${COLOR_RESET} %s\n", helpCommand, helpMessage; \
+		} \
+	} \
+	{ lastLine = $$0 }' $(MAKEFILE_LIST) | sort
+	printf "\n"
