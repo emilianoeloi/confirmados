@@ -45,7 +45,7 @@ class Loader {
             borderColor: country.color,
             yAxisID: yAxis,
             fill: true,
-            borderWidth: 0,
+            borderWidth: 2,
             pointRadius: 0,
 			pointHoverRadius: 0,
             showLine: true,

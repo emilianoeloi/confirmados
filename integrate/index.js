@@ -11,8 +11,8 @@ process.env.COUNT = 0;
 
 const csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports');
 
-const argentina = new Country("argentina", "Argentina", "")
-const brazil = new Country("brazil", "Brazil", "")
+const argentina = new Country("argentina", "Argentina", "#75AADB")
+const brazil = new Country("brazil", "Brazil", "#009c3b")
 const contriesToRequest = [brazil, argentina]
 
 writeFile.writeIntegrateFile(contriesToRequest)
@@ -20,7 +20,7 @@ writeFile.writeIntegrateFile(contriesToRequest)
 getCSVRequestFiles(
    csseCovid19DailyReport,
    new Date("2020-01-22T00:00:00.000"),
-   new Date("2020-10-09T23:59:59.999"),
+   new Date("2020-10-15T23:59:59.999"),
    contriesToRequest,
    readFile.read,
    writeFile.writeFile
