@@ -20,7 +20,7 @@ writeFile.writeIntegrateFile(contriesToRequest)
 getCSVRequestFiles(
    csseCovid19DailyReport,
    new Date("2020-01-22T00:00:00.000"),
-   new Date("2020-10-15T23:59:59.999"),
+   new Date("2020-10-18T23:59:59.999"),
    contriesToRequest,
    readFile.read,
    writeFile.writeFile

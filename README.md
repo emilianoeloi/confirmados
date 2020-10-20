@@ -8,9 +8,9 @@ O ***Confirmados*** tem o objetivo de mostrar um site que tem um gráfico com os
 A importância desse projeto é para treinamento de uso das palavras e conhecimento resgatados da memória.\
 Eu tive um derrame cerebral (AVE-He) que comprometeu uma parte do meu cérebro ocasionando uma lesão que afeta a área responsável pela linguagem, ou seja, eu tenho o distúrbio da Afasia de Wernicke. É uma alteração na linguagem oral e escrita, tornando a comunicação sem muita precisão.
 
-![confirmados](confirmados.png)
-
 ## Gráfico
+
+![confirmados](confirmados.png)
 
 Confirmados pelo COVID-19 pelo período x confirmados.
 
@@ -18,8 +18,8 @@ Confirmados pelo COVID-19 pelo período x confirmados.
 
 ## Requisitos
 
-- Brew
-- Yarn
+- Brew https://brew.sh/index_pt-br
+- Yarn https://yarnpkg.com/
 
 ## Configurações
 
