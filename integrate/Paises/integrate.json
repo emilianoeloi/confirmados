@@ -63,5 +63,10 @@
         "key": "south_africa",
         "name": "South Africa",
         "color": "#000000"
-    }  
+    },
+    {
+        "key": "italy",
+        "name": "Italy",
+        "color": "#008C45"
+    }
 ]}
