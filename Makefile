@@ -9,9 +9,6 @@ COLOR_RED = \033[31m
 
 PROJECT := Confirmados COVID-19
 
-INTEGRATE_FILE=./integrate/countries/integrate.json
-COUNTRIES_FILES=./site/src/CountryCases/countries/cases*.json
-
 ## Instalar o Site
 site_install:
 	cd site && yarn
@@ -36,10 +33,12 @@ itgt_test:
 itgt_test_watch:
 	cd integrate && yarn test:watch
 
+integrate_files=./integrate/countries/integrate.json
+countries_files=./site/src/CountryCases/countries/cases*.json
 ## Deletar os relatóriso do integrador
 itgt_delete_reports:
-	# [ -f $(INTEGRATE_FILE) ] && rm -f $(INTEGRATE_FILE) || echo ""
-	[ -f $(COUNTRIES_FILES) ] && rm -rf $(COUNTRIES_FILES) || echo ""
+	./scripts/file.sh $(integrate_files)
+	./scripts/file.sh $(countries_files)
 
 ## É um rascunho pra rodar um javascript
 draft:

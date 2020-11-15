@@ -10,6 +10,12 @@ const Country = require('../Country.js');
 const janeiroPath = path.resolve(__dirname, '../__mocks__/01-22-2020.csv');
 const fevereiroPath = path.resolve(__dirname, '../__mocks__/02-01-2020.csv');
 const marcoPath = path.resolve(__dirname, '../__mocks__/03-01-2020.csv');
+const marco_23_2020_Path = path.resolve(__dirname, '../__mocks__/03-23-2020.csv');
+const marco_28_2020_Path = path.resolve(__dirname, '../__mocks__/03-28-2020.csv');
+
+const julho_03_2020_Path = path.resolve(__dirname, '../__mocks__/07-03-2020.csv');
+const julho_04_2020_Path = path.resolve(__dirname, '../__mocks__/07-04-2020.csv');
+
 const abrilPath = path.resolve(__dirname, '../__mocks__/04-01-2020.csv');
 const maioPath = path.resolve(__dirname, '../__mocks__/05-01-2020.csv');
 const junhoPath = path.resolve(__dirname, '../__mocks__/06-01-2020.csv');
@@ -23,7 +29,9 @@ const janeiroHeader = [
     'Recovered' // 5
 ]
 const fevereiroHeader = [ 'Province/State', 'Country/Region', 'Last Update', 'Confirmed', 'Deaths', 'Recovered\r' ]
-const marcoHeader = [ 'Province/State', 'Country/Region', 'Last Update', 'Confirmed', 'Deaths', 'Recovered\r' ]
+let marcoHeader = []
+marcoHeader[0] = [ 'Province/State', 'Country/Region', 'Last Update', 'Confirmed', 'Deaths', 'Recovered\r' ]
+marcoHeader[1] = [ 'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Combined_Key' ]
 const abrilHeader = [ 'Province/State', 'Country/Region', 'Last Update', 'Confirmed', 'Deaths', 'Recovered', 'Latitude', 'Longitude' ]
 const maioHeader = [ 'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Combined_Key' ]
 const junhoHeader = [
@@ -41,6 +49,9 @@ const junhoHeader = [
     'Combined_Key', // 11
     'Incidence_Rate', // 12
     'Case-Fatality_Ratio' // 13
+]
+const julhoHeader = [
+    ['FIPS','Admin2','Province_State','Country_Region','Last_Update','Lat','Long_','Confirmed','Deaths','Recovered','Active','Combined_Key','Incidence_Rate','Case-Fatality_Ratio']
 ]
 
 const getMonthCSVToJSON = function(monthPath, countryGroups) {
@@ -83,10 +94,14 @@ describe('headers', () => {
         expect(ok.HDR_CASES).toBe(3)
     })
     test('Março', () => {
-        const ok = csvToJson.validateHeaders(marcoHeader);
+        const ok = csvToJson.validateHeaders(marcoHeader[0]);
         expect(ok.HDR_COUNTRY).toBe(1)
         expect(ok.HDR_DATE).toBe(2)
         expect(ok.HDR_CASES).toBe(3)
+        const ok2 = csvToJson.validateHeaders(marcoHeader[1]);
+        expect(ok2.HDR_COUNTRY).toBe(3)
+        expect(ok2.HDR_DATE).toBe(4)
+        expect(ok2.HDR_CASES).toBe(7)
     })
     test('Abril', () => {
         const ok = csvToJson.validateHeaders(abrilHeader);
@@ -101,11 +116,86 @@ describe('headers', () => {
         expect(ok.HDR_CASES).toBe(7)
     })
     test('Junho', () => {
-        const ok = csvToJson.validateHeaders(maioHeader);
+        const ok = csvToJson.validateHeaders(junhoHeader);
         expect(ok.HDR_COUNTRY).toBe(3)
         expect(ok.HDR_DATE).toBe(4)
         expect(ok.HDR_CASES).toBe(7)
     })
+    test('Julho', () => {
+        const ok = csvToJson.validateHeaders(julhoHeader[0]);
+        expect(ok.HDR_COUNTRY).toBe(3)
+        expect(ok.HDR_DATE).toBe(4)
+        expect(ok.HDR_CASES).toBe(7)
+    })
+})
+
+describe('Brazil', () => {
+    const marco_23_2020_Path = path.resolve(__dirname, '../__mocks__/03-23-2020.csv');
+    const brazil = new Country("brazil", "Brazil", "");
+
+    const csv2020_03_23 = `FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key
+    ,,,Brazil,2020-03-23 23:19:21,-14.235,-51.9253,1924,34,2,1888,Brazil`;
+    const csv2020_03_28 = `FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key
+    ,,,Brazil,3/28/20 23:05,-14.235,-51.9253,3904,111,6,3787,Brazil`
+
+    const csv2020_07_03 = `FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key,Incidence_Rate,Case-Fatality_Ratio
+    45001,Abbeville,South Carolina,US,2020-07-04 04:33:51,34.22333378,-82.46170658,118,0,0,118,"Abbeville, South Carolina, US",481.1024585151058,0.0
+    ,,Espirito Santo,Brazil,2020-07-04 04:33:51,-19.1834,-40.3089,51689,1758,31980,17951,"Espirito Santo, Brazil",1286.2279621265848,3.3430710596064928`
+    const csv2020_07_04 = `FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key,Incidence_Rate,Case-Fatality_Ratio
+    45001,Abbeville,South Carolina,US,2020-07-05 04:33:46,34.22333378,-82.46170658,119,0,0,119,"Abbeville, South Carolina, US",485.1795979940474,0.0
+    ,,Acre,Brazil,2020-07-05 04:33:46,-9.0238,-70.812,14487,391,7650,6446,"Acre, Brazil",1642.6380628957916,2.698971491682198`
+    
+    test('posso validar só existem linhas do mês 3 do dia 23 em 2020', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_03_23,
+            dateFile: new Date('2020-03-23T00:00:00.000')
+        }, [brazil])
+        expect(Object.values(countreis)[0].cases).toBe(1924)
+    })
+
+    test('posso validar só existem linhas do mês 3 do dia 28 em 2020', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_03_28,
+            dateFile: new Date('2020-03-28T00:00:00.000')
+        }, [brazil])
+        expect(Object.values(countreis)[0].cases).toBe(3904)
+    })
+
+    test('posso validar só existem linhas do mês 7 do dia 3 em 2020', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_07_03,
+            dateFile: new Date('2020-07-03T00:00:00.000')
+        }, [brazil])
+        expect(Object.values(countreis)[0].cases).toBe(51689)
+    })
+
+    test('posso validar só existem linhas do mês 7 do dia 4 em 2020', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_07_04,
+            dateFile: new Date('2020-07-04T00:00:00.000')
+        }, [brazil])
+        expect(Object.values(countreis)[0].cases).toBe(14487)
+    })
+
+    test('testando todos as linhas de março 23/03/2020', () => {
+        const json = getMonthCSVToJSON(marco_23_2020_Path, [brazil]);
+        expect(Object.values(json).length).toBe(1)
+    });
+
+    test('testando todos as linhas de março 28/03/2020', () => {
+        const json = getMonthCSVToJSON(marco_28_2020_Path, [brazil]);
+        expect(Object.values(json).length).toBe(1)
+    });
+
+    test('testando todos as linhas de março 03/07/2020', () => {
+        const json = getMonthCSVToJSON(julho_03_2020_Path, [brazil]);
+        expect(Object.values(json).length).toBe(1)
+    });
+
+    test('testando todos as linhas de março 04/07/2020', () => {
+        const json = getMonthCSVToJSON(julho_04_2020_Path, [brazil]);
+        expect(Object.values(json).length).toBe(1)
+    });
 })
 
 describe('[Brics]CSV para resports.csv para data e confirmados', () => {
@@ -124,6 +214,9 @@ Hubei,Mainland China,2020-02-12T14:13:08,1000,1000,2686
 Guangdong,Mainland China,2020-02-12T12:23:09,1000,1,275
 Henan,Mainland China,2020-02-12T14:13:08,1000,8,246
     `;
+    const csv2020_03_23 = `FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key
+
+,,,Brazil,2020-03-23 23:19:21,-14.235,-51.9253,1924,34,2,1888,Brazil`
 
     test('posso validar só existem linhas do mês 2 do dia 12 em 2020', () => {
         const countreis = csvToJson.toJson({
@@ -139,6 +232,14 @@ Henan,Mainland China,2020-02-12T14:13:08,1000,8,246
             dateFile: new Date('2020-03-13T00:00:00.000')
         }, brics)
         expect(Object.values(countreis)[0].cases).toBe(40)
+    })
+
+    test('posso validar só existem linhas do mês 3 do dia 23 em 2020', () => {
+        const countreis = csvToJson.toJson({
+            data: csv2020_03_23,
+            dateFile: new Date('2020-03-23T00:00:00.000')
+        }, brics)
+        expect(Object.values(countreis)[0].cases).toBe(1924)
     })
 
     test('relatorio csv para json(com países)', () => {
@@ -162,6 +263,11 @@ Henan,Mainland China,2020-02-12T14:13:08,1000,8,246
     test('testando todos as linhas de março', () => {
         const json = getMonthCSVToJSON(marcoPath, brics);
         expect(Object.values(json).length).toBe(1)
+    });
+
+    test('testando todos as linhas de março 23/03/2020', () => {
+        const json = getMonthCSVToJSON(marco_23_2020_Path, brics);
+        expect(Object.values(json).length).toBe(5)
     });
 
     test('testando todos as linhas de abril', () => {

@@ -11,7 +11,7 @@ const writeCountryFile = function(countriesData) {
         let countryName = (Object.keys(countriesData)[key]).replace(' ', '_')
         var countryFile = `${countriesPath}/cases${countryName}.json`;
         let valueSort = arraySort(values, 'date');
-        fs.writeFile(countryFile, JSON.stringify(valueSort), function(err) {
+        fs.writeFile(countryFile, JSON.stringify(valueSort, null, '\t'), function(err) {
             if (err) {
                 return console.error(err);
             }
