@@ -76,6 +76,10 @@ Jest is a delightful JavaScript Testing Framework with a focus on simplicity. ht
 
 *Javascript*
 
+Promise: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+Como escrever um código assíncrono em Node.js: https://www.digitalocean.com/community/tutorials/how-to-write-asynchronous-code-in-node-js-pt
+
 Bootstrap: https://getbootstrap.com/
 
 Yarn pkg: https://classic.yarnpkg.com/en/docs/
