@@ -26,8 +26,26 @@ var read = function(csvFile, countryGroup, saveCountriesDataCB, writeFileCB) {
     setStorageCountries(json, saveCountriesDataCB, writeFileCB)
  }
 
+ var readPromise = function(csvFile, countryGroup) {
+    return new Promise((resolve, reject) => {
+        try {
+            const data = fs.readFileSync(csvFile)
+            const fileName = getFileName(csvFile)
+            const json = csvToJson.toJson({
+                data: data.toString(),
+                dateFile: getFileDate(fileName)
+            }, countryGroup)
+            process.env.COUNT = parseInt(process.env.COUNT) + 1
+            resolve(json)
+        } catch(err) {
+            reject(err)
+        }
+    })
+ }
+
  module.exports = {
      read,
+     readPromise,
      getFileName,
-     getFileDate
+     getFileDate,
  }

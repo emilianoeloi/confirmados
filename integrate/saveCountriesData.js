@@ -29,4 +29,23 @@ function saveCountriesData(countriesData, writeFileCB) {
    writeFileCB()
 }
 
-module.exports = saveCountriesData
+function saveCountriesDataPromise(countriesData) {
+   return new Promise((resolve, reject) => {
+      try {
+         const constries = Object.values(countriesData);
+         constries.forEach(function(value, key) {
+            var countryFile = Object.keys(countriesData)[key];
+            dbCovid19(countryFile, value)
+         })
+         process.env.COUNT = parseInt(process.env.COUNT) - 1
+         resolve()
+      } catch(err) {
+         reject(err)
+      }
+   })
+}
+
+module.exports = {
+   saveCountriesData,
+   saveCountriesDataPromise
+}

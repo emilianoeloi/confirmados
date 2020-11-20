@@ -15,13 +15,9 @@ describe('Obeter os relatórios de confirmados', () => {
             defaultPath,
             start,
             finish,
-            countryGroup,
-            (a, b, c, d, e) => {
-                expect(b[1].name).toBe('Brazil')
-                done()
-            },
-            () => {}
+            countryGroup
         )
-        
+        expect(b[1].name).toBe('Brazil')
+        done()
     })
 })

@@ -1,5 +1,7 @@
 // __tests__/setStorageCountries.test.js
-const setStorageContries = require('../setStorageCountries.js');
+const { 
+    setStorageCountries
+} = require('../setStorageCountries.js');
 
 describe('Gravar confirmados dos países', () => {
     const countries = {
@@ -9,7 +11,7 @@ describe('Gravar confirmados dos países', () => {
         }]
     }
     test('gravar todos', done => {
-        setStorageContries(countries, function(data) {
+        setStorageCountries(countries, function(data) {
             try {
                 expect(Object.values(data).length).toBe(1)
                 done()
