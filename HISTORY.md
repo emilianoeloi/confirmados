@@ -1,7 +1,11 @@
 ***Primeira Versão v1.0.0-alpha***
 Então fiz um site pra eu ver e fazer uma referencia entre paises e os casos confirmados do COVID-19.
 
-## Sáado, 10 de outubro de 2020
+## Sábado, 20 de novembro de 2020
+
+De Callback para Promise. Quando rodei em uma máquina com processador muito potente (12 nucleos), e quebrou a coisa toda! :) MAs o Promise resolvei as coisas.
+
+## Sábado, 10 de outubro de 2020
 
 Finalmente agora o Confirmados integra com paídes por classe para o Country!
 
