@@ -44,13 +44,6 @@ const writeIntegrateFile = function(countries) {
     })
 }
 
-const writeFile = function() {
-    if (parseInt(process.env.COUNT) == 0) {
-        const countriesData = JSON.parse(process.env.GLOBAL_COVID_19)
-        writeCountryFile(countriesData);
-    }
-}
-
 const writeFilePromise = function() {
     return new Promise((resolve, reject) => {
         try {
@@ -66,7 +59,6 @@ const writeFilePromise = function() {
 }
 
 module.exports = {
-    writeFile,
     writeFilePromise,
     writeIntegrateFile,
     writeCountryFilePromise

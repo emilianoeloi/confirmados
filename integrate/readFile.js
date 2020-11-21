@@ -44,7 +44,6 @@ var read = function(csvFile, countryGroup, saveCountriesDataCB, writeFileCB) {
  }
 
  module.exports = {
-     read,
      readPromise,
      getFileName,
      getFileDate,

@@ -10,7 +10,7 @@ Eu tive um derrame cerebral (AVE-He) que comprometeu uma parte do meu cérebro o
 
 ## Gráfico
 
-![confirmados](confirmados_2020-10-27_France_Germany.png)
+![confirmados](images/confirmados_2020-11-19_US_France_Italy.png)
 
 Confirmados pelo COVID-19 pelo período x confirmados.
 
@@ -22,6 +22,22 @@ Confirmados pelo COVID-19 pelo período x confirmados.
 - Yarn https://yarnpkg.com/
 
 ## Configurações
+
+0. Dados pra testar
+
+```javascript
+/// loadTest.js
+
+const loadTest = new Load(
+    [
+        us,
+        france,
+        italy
+    ],
+    new Date("2020-05-01T00:00:00.000"),
+    new Date("2020-11-19T23:59:59.999")
+)
+```
 
 1. Instalar o projeto
 ```shell

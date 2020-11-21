@@ -19,16 +19,6 @@ const dbCovid19 = function(countryFile, cases) {
    process.env.GLOBAL_COVID_19 = JSON.stringify(globalCovid19)
 }
 
-function saveCountriesData(countriesData, writeFileCB) {
-   const constries = Object.values(countriesData);
-   constries.forEach(function(value, key) {
-      var countryFile = Object.keys(countriesData)[key];
-      dbCovid19(countryFile, value)
-   })
-   process.env.COUNT = parseInt(process.env.COUNT) - 1
-   writeFileCB()
-}
-
 function saveCountriesDataPromise(countriesData) {
    return new Promise((resolve, reject) => {
       try {
@@ -46,6 +36,5 @@ function saveCountriesDataPromise(countriesData) {
 }
 
 module.exports = {
-   saveCountriesData,
    saveCountriesDataPromise
 }

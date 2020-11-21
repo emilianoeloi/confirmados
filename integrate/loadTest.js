@@ -22,10 +22,12 @@ const us = new Country("us", "US", "#3C3B6E")
 
 const loadTest = new Load(
     [
-        brazil
+        us,
+        france,
+        italy
     ],
-    new Date("2020-07-03T00:00:00.000"),
-    new Date("2020-07-04T23:59:59.999")
+    new Date("2020-05-01T00:00:00.000"),
+    new Date("2020-11-19T23:59:59.999")
 )
 
 module.exports = loadTest;

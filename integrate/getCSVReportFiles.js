@@ -9,7 +9,7 @@ const {
    saveCountriesDataPromise
 } = require('./saveCountriesData.js')
 const {
-   whiteFilePromise
+   writeFilePromise
 } = require('./writeFile.js')
 
 const getCSVReportFiles = function(
@@ -28,20 +28,27 @@ const getCSVReportFiles = function(
 
       readPromise(fileCSV, countryGroup)
       .then((data) => {
-         console.info("readPromise ✨")
          return setStorageCountriesPromise(data)
       })
+      .catch((err) => {
+         console.info("readPromise 🚨", err)
+      })
+
       .then((data) => {
-         console.info("setStorageCountriesPromise ✨")
          return saveCountriesDataPromise(data)
       })
+      .catch((err) => {
+         console.info("saveCountriesDataPromise 🚨", err)
+      })
+
       .then((data) => {
-         console.info("whiteFile ✨")
-         return whiteFilePromise(data)
+         return writeFilePromise(data)
       })
       .catch((err) => {
-         console.info("readPromise, setStorageCountriesPromise, whiteFile, whiteFile 🚨", err)
+         console.info("whiteFile, whiteFile 🚨", err)
       })
+
+      .finally((err) => { })
 
       // readFileCB(fileCSV, countryGroup, saveCountriesData, writeFileCB)   
    
