@@ -31,8 +31,10 @@ Confirmados pelo COVID-19 pelo período x confirmados.
 const loadTest = new Load(
     [
         us,
+        india,
+        brazil,
         france,
-        italy
+        russia
     ],
     new Date("2020-05-01T00:00:00.000"),
     new Date("2020-11-19T23:59:59.999")
