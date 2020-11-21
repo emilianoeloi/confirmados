@@ -10,13 +10,38 @@ describe('Obeter os relatórios de confirmados', () => {
         new Country("brazil", "Brazil", "#111")
     ]
 
-    test('Testando os dados do Brazil', () => {
+    test('Testando os dados do Brazil', (done) => {
         getCSVReportFiles(
             defaultPath,
             start,
             finish,
             countryGroup
         )
-        expect(b[1].name).toBe('Brazil')
+        .then((data) => {
+            console.info("✨"+data)
+            expect(data).toBe('sucesso')
+            done()
+        })
+        .catch((err) => {
+            console.info("🚨")
+            done()
+        })
+    })
+
+    test('Testando os dados do Peru', (done) => {
+        getCSVReportFiles(
+            defaultPath,
+            start,
+            finish,
+            countryGroup
+        )
+        .then((data) => {
+            expect(data).toBe('sucesso')
+            done()
+        })
+        .catch((err) => {
+            console.info("🚨" + err)
+            done()
+        })
     })
 })
