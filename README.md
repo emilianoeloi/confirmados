@@ -10,7 +10,7 @@ Eu tive um derrame cerebral (AVE-He) que comprometeu uma parte do meu cérebro o
 
 ## Gráfico
 
-![confirmados](images/confirmados_2020-11-19_US_France_Italy.png)
+![confirmados](images/confirmados_2020-11-19_US_India_Brazil_France_Russia.png)
 
 Confirmados pelo COVID-19 pelo período x confirmados.
 
