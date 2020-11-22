@@ -31,19 +31,11 @@ Confirmados pelo COVID-19 pelo período x confirmados.
 const brics = new Load(
     "BRICS",
     [
-<<<<<<< HEAD
-        us,
-        india,
-        brazil,
-        france,
-        russia
-=======
         india,
         brazil,
         russia,
         southAfrica,
         china
->>>>>>> wip: Atualiando para 21/11/2020 - Brics
     ],
     new Date("2020-05-01T00:00:00.000"),
     new Date("2020-11-21T23:59:59.999")
