@@ -1,9 +1,12 @@
 import { Loader } from './Loader.js'
-import countries from './CountryCases/index.js'
+import {
+    info,
+    countries
+} from './CountryCases/index.js'
 
-let loader = new Loader();
+let loader = new Loader(info.title);
 
-countries.forEach((country, index, array) => {
+countries.forEach((country) => {
     loader.setCaseCountry(country)
 });
 

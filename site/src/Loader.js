@@ -1,5 +1,5 @@
 class Loader {
-    constructor() {
+    constructor(title) {
         this.datasets = []
         this.labels = []
         this.yAxes = []
@@ -9,6 +9,7 @@ class Loader {
         this.cases = []
         this.display = true
         this.max = 0
+        this.title = title
     }
 
     setCaseCountry(country) {
@@ -35,6 +36,10 @@ class Loader {
         this.setCountry(country, data, labels)
     }
 
+    setTitle(title) {
+        this.title = title
+    }
+
     setCountry(country, data, labels) {
         this.labels = labels
         this.countries[this.countries.length+1] = country
@@ -55,7 +60,7 @@ class Loader {
             responseive: true,
             title: {
                 display: true,
-                text: '17/09/2020'
+                text: '21/11/2020'
             },
             tooltips: {
                 mode: 'index',

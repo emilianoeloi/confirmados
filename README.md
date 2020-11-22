@@ -10,7 +10,14 @@ Eu tive um derrame cerebral (AVE-He) que comprometeu uma parte do meu cérebro o
 
 ## Gráfico
 
-![confirmados](images/confirmados_2020-11-21_Brazil_Russia_India_China_South_Africa.png)
+### Brics
+![confirmados](images/confirmados_2020-11-21_Brazil_Russia_India_China_South_Africa2.png)
+
+### Mercosur
+![confirmados](images/confirmados_2020-11-21_Brazil_Argentina_Paraguay_Uruguay_Venezuela.png)
+
+### Top7 - Mundo
+![confirmados](images/confirmados_2020-11-21_US_India_Brazil_France_Russia_Spain_UK.png)
 
 Confirmados pelo COVID-19 pelo período x confirmados.
 
@@ -28,6 +35,9 @@ Confirmados pelo COVID-19 pelo período x confirmados.
 ```javascript
 /// loadTest.js
 
+const start = new Date("2020-05-01T00:00:00.000")
+const end = new Date("2020-11-21T23:59:59.999")
+
 const brics = new Load(
     "BRICS",
     [
@@ -37,8 +47,36 @@ const brics = new Load(
         southAfrica,
         china
     ],
-    new Date("2020-05-01T00:00:00.000"),
-    new Date("2020-11-21T23:59:59.999")
+    start,
+    end
+)
+
+const mercosur = new Load(
+    "MERCOSUR",
+    [
+        brazil,
+        argentina,
+        venezuela,
+        paraguay,
+        uruguay,
+    ],
+    start,
+    end
+)
+
+const top7 = new Load(
+    "Top 7",
+    [
+        us,
+        india,
+        brazil,
+        france,
+        russia,
+        spain,
+        uk
+    ],
+    init,
+    end
 )
 ```
 
