@@ -1,5 +1,41 @@
 {
+  "name": "confirmados",
+  "version": "1.0.0",
+  "description": "🦠 Confirmados do COVID-19",
+  "author": "Emiliano Barbosa <emilianoeloi@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/emilianoeloi/confirmados",
+  "bugs": "https://github.com/emilianoeloi/confirmados/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emilianoeloi/confirmados"
+  },
+  "scripts": {
+    "bd": "./scripts/bd_build.sh",
+    "integrate": "./scripts/integrate_build.sh",
+    "site": "./scripts/site_build.sh"
+  },
+  "keywords": [
+    "covid-19",
+    "confirmados",
+    "react",
+    "chart",
+    "health",
+    "jhu-csse",
+    "javascript",
+    "nodejs",
+    "coronavirus",
+    "wip",
+    "covid19"
+  ],
+  "bin": {
+    "confirmados": "bin/confirmados"
+  },
   "dependencies": {
-    "yarn": "^1.22.10"
+    "commander": "6.2.0",
+    "express": "4.17.1",
+    "fs": "0.0.1-security",
+    "opn": "6.0.0",
+    "yarn": "1.22.10"
   }
 }
