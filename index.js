@@ -9,7 +9,10 @@ commander.option('--countries [countries]', 'Países')
 
 commander.parse(process.argv)
 
-const configFile = commander.config || process.env.CONFIG
 const ini = commander.ini || process.env.INI
 const end = commander.end || process.env.END
 const countries = commander.countries || process.env.COUNTRIES
+
+console.info(ini)
+console.info(end)
+console.info(countries)
