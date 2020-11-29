@@ -26,7 +26,7 @@ const uruguay = new Country("uruguay", "Uruguay", "#FCD116")
 const venezuela = new Country("venezuela", "Venezuela", "#008033")
 
 const init = new Date("2020-05-01T00:00:00.000")
-const end = new Date("2020-11-21T23:59:59.999")
+const end = new Date("2020-11-28T23:59:59.999")
 
 const brics = new Load(
     "BRICS",
@@ -70,13 +70,15 @@ const mercosur = new Load(
 const top7 = new Load(
     "Top 7",
     [
-        us,
-        india,
-        brazil,
-        france,
-        russia,
-        spain,
-        uk
+        uk,
+        us
+        // us,
+        // india,
+        // brazil,
+        // france,
+        // russia,
+        // spain,
+        // uk
     ],
     init,
     end

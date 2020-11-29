@@ -8,11 +8,24 @@ class Loader {
         this.options = []
         this.cases = []
         this.display = true
-        this.max = 0
+        this.max = null
         this.title = title
+        this.dateMin = null
+        this.dateMax = null
+        this.countryName = ""
+    }
+
+    getData() {
+        return {
+            labels: this.labels,
+            datasets: this.datasets
+        }
     }
 
     setCaseCountry(country) {
+        this.countryName = country.name
+        const that = this
+        that.dateFormatData = null
         const setDateFormat = function(date) {
             const d = new Date(date)
             let dDay = d.getUTCDate()
@@ -20,24 +33,53 @@ class Loader {
             let dMonth = d.getUTCMonth() + 1;
             dMonth = (dMonth < 10) ? `0${dMonth}` : dMonth
             const dYear = d.getUTCFullYear()
-            return `${dYear}-${dMonth}-${dDay}`
+            that.dateFormatData = `${dYear}-${dMonth}-${dDay}`
+        }
+        const getDateFormat = function() {
+            return that.dateFormatData
         }
         const cases = country.cases
         var data = []
         var labels = []
         for(var i = 0; i < cases.length; i++) {
+            if (this.dateMin == null) {
+                this.dateMin = cases[i].date
+            }
             let item = cases[i]
             data.push(item.cases)
-            labels.push(setDateFormat(item.date))
-            if (item.cases > this.max) {
-                this.max = item.cases
-            }
+            setDateFormat(item.date)
+            labels.push(getDateFormat())
+            this.setTicks(item)
         }
+
+        this.dateMax = cases[cases.length-1].date
         this.setCountry(country, data, labels)
     }
 
-    setTitle(title) {
-        this.title = title
+    setTicks(item) {
+        if (this.max < item.cases) { 
+            this.max = item.cases
+        }
+    }
+
+    getTicks() {
+        return this.max
+    }
+
+    getDateMin() {
+        return this.dateMin
+    }
+
+    getDateMax() {
+        return this.dateMax
+    }
+
+    getMaxCases() {
+        return 30
+    }
+
+    getTitle() {
+        return this.title
     }
 
     setCountry(country, data, labels) {
@@ -75,7 +117,7 @@ class Loader {
             display: this.display,
             position: 'left',
             ticks: {
-                max: this.max,
+                max: this.getTicks(),
                 min: 0
             }
         })

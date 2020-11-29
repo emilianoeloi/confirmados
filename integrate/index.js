@@ -16,7 +16,7 @@ process.env.COUNT = 0;
 
 const csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports');
 
-const group = mercosur
+const group = top7
 
 writeFile.writeIntegrateFile(group)
 

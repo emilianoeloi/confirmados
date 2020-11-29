@@ -8,21 +8,27 @@ import { loader } from './Data.js'
 class App extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      value: this.props.value
+    }
     this.chartReference = React.createRef();
   }
+  handleChange(e) {
+    this.setState({
+      value: loader.getMaxCases()
+    })
+  }
   render() {
-    const data = (canvas) => {
-      return {
-        labels: loader.labels,
-        datasets: loader.datasets
-      }
-    }
+    const data = loader.getData()
+    const dateMin=loader.getDateMin()
+    const dateMax=loader.getDateMax()
+    const value=loader.getMaxCases()
+
     return (
+      <div>
       <Line
         ref={this.chartReference}
         data={data}
-        width={900}
-        height={380}
         options={{
 				responsive: true,
 				hoverMode: 'index',
@@ -36,6 +42,10 @@ class App extends React.Component {
         }
 				}}
       />
+      <pre>
+        {loader.title}
+      </pre>
+      </div>
     )
   }
 }
