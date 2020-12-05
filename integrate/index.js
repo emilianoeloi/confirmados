@@ -3,7 +3,8 @@ const {
    brics,
    g20,
    mercosur,
-   top7
+   top7,
+   kalmar
 } = require('./loadTest.js')
 
 const getCSVRequestFiles = require('./getCSVReportFiles.js');

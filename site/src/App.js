@@ -42,9 +42,6 @@ class App extends React.Component {
         }
 				}}
       />
-      <pre>
-        {loader.title}
-      </pre>
       </div>
     )
   }

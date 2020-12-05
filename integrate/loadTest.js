@@ -25,8 +25,27 @@ const paraguay = new Country("paraguay", "Paraguay", "#D52B1E")
 const uruguay = new Country("uruguay", "Uruguay", "#FCD116")
 const venezuela = new Country("venezuela", "Venezuela", "#008033")
 
-const init = new Date("2020-05-01T00:00:00.000")
-const end = new Date("2020-11-28T23:59:59.999")
+const denmark = new Country("denmark", "Denmark", "#C60C30")
+const norway = new Country("norway", "Norway", "#C8102E")
+const finland = new Country("finland", "Finland", "#002F6C")
+const iceland = new Country("iceland", "Iceland", "#DC1E35")
+const sweden = new Country("sweden", "Sweden", "#004B87")
+
+const init = new Date("2020-06-01T00:00:00.000")
+const end = new Date("2020-12-04T23:59:59.999")
+
+const kalmar = new Load(
+    "Escandinávia",
+    [
+        sweden,
+        denmark,
+        iceland,
+        norway,
+        finland
+    ],
+    init,
+    end
+)
 
 const brics = new Load(
     "BRICS",
@@ -70,15 +89,13 @@ const mercosur = new Load(
 const top7 = new Load(
     "Top 7",
     [
-        uk,
-        us
-        // us,
-        // india,
-        // brazil,
-        // france,
-        // russia,
-        // spain,
-        // uk
+        us,
+        india,
+        brazil,
+        france,
+        russia,
+        spain,
+        uk
     ],
     init,
     end
@@ -88,5 +105,6 @@ module.exports = {
     brics,
     g20,
     mercosur,
-    top7
+    top7,
+    kalmar
 };

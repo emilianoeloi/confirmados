@@ -68,5 +68,30 @@
         "key": "italy",
         "name": "Italy",
         "color": "#008C45"
+    },
+    {
+        "key":"sweden",
+        "name":"Sweden",
+        "color":"#004B87"
+    },
+    {
+        "key":"denmark",
+        "name":"Denmark",
+        "color":"#C60C30"
+    },
+    {
+        "key":"iceland",
+        "name":"Iceland",
+        "color":"#DC1E35"
+    },
+    {
+        "key":"norway",
+        "name":"Norway",
+        "color":"#C8102E"
+    },
+    {
+        "key":"finland",
+        "name":"Finland",
+        "color":"#002F6C"
     }
 ]}
