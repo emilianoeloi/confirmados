@@ -1,0 +1,37 @@
+{"states": [
+    {
+        "key": "sp",
+        "name": "Sãp Paulo",
+        "color": "#000000"
+    },
+    {
+        "key": "mg",
+        "name": "Minas Gerais",
+        "color": "#ffffff"
+    },
+    {
+        "key": "ba",
+        "name": "Bahia",
+        "color": "#0000ff"
+    },
+    {
+        "key": "sc",
+        "name": "Santa Catarina",
+        "color": "#ED3237"
+    },
+    {
+        "key": "rj",
+        "name": "Rio de Janeira",
+        "color": "#007FFF"
+    },
+    {
+        "key": "rs",
+        "name": "Rio Grande do Sul",
+        "color": "#00AB4E"
+    },
+    {
+        "key": "ce",
+        "name": "Ceará",
+        "color": "#00FF00"
+    }
+]}

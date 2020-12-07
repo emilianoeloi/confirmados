@@ -19,11 +19,13 @@ Março:     [ 'Province/State', 'Country/Region', 'Last Update', 'Confirmed', 'D
 Abril:     [ 'Province/State', 'Country/Region', 'Last Update', 'Confirmed', 'Deaths', 'Recovered', 'Latitude', 'Longitude' ]
 Maio:      [ 'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Combined_Key' ]
 Junho:     [ 'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Combined_Key', 'Incidence_Rate', 'Case-Fatality_Ratio' ]
+Dezembro:  [ 'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Combined_Key', 'Incident_Rate',  'Case_Fatality_Ratio' ]
 */
 
 const validateHeaders = function(headers) {
     const HDR_COUNTRY_REGION_NAME = 'Country/Region';
     const HDR_COUNTRY_REGION_2_NAME = 'Country_Region';
+    const HDR_STATE_NAME = "Province_State";
     const HDR_LAST_UPDATE_NAME = "Last Update";
     const HDR_LAST_UPDATE_2_NAME = "Last_Update";
     const HDR_CONFIRMED_NAME = "Confirmed";
@@ -44,7 +46,7 @@ const validateHeaders = function(headers) {
             HDR_DATE: 4,
             HDR_CASES: 7
         }
-    }         
+    }
     return {}
 }
 
