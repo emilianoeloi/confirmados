@@ -3,13 +3,21 @@
 // Bug a partir dessa dia os aquivos são de um dia pra frente
 const BUG_DATE = new Date('2020-04-22T00:00:00.000')
 
-const validateCountry = function(countryGroup, country) {
-    for (var k = 0; k < countryGroup.length; k++) {
-        if (countryGroup[k].name == country){
+const validateOrigin = function(originGroup, origin) {
+    for (var k = 0; k < originGroup.length; k++) {
+        if (originGroup[k].name == origin){
             return true
         }
     }
     return false
+}
+
+const validateCountry = function(countryGroup, country) {
+    return validateOrigin(countryGroup, country)
+}
+
+const validateState = function(stateGroup, state) {
+    return validateOrigin(stateGroup, state)
 }
 
 /*
@@ -23,30 +31,36 @@ Dezembro:  [ 'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Last_Update'
 */
 
 const validateHeaders = function(headers) {
+    const HDR_PROVINCE_STATE_NAME = 'Province/State'
+    const HDR_PROVINCE_STATE_2_NAME = 'Province_State'
     const HDR_COUNTRY_REGION_NAME = 'Country/Region';
     const HDR_COUNTRY_REGION_2_NAME = 'Country_Region';
-    const HDR_STATE_NAME = "Province_State";
     const HDR_LAST_UPDATE_NAME = "Last Update";
     const HDR_LAST_UPDATE_2_NAME = "Last_Update";
     const HDR_CONFIRMED_NAME = "Confirmed";
+
     if (headers[1] == HDR_COUNTRY_REGION_NAME &&
         headers[2] == HDR_LAST_UPDATE_NAME &&
         headers[3] == HDR_CONFIRMED_NAME) {
         return {
             HDR_COUNTRY: 1,
             HDR_DATE: 2,
-            HDR_CASES: 3
+            HDR_CASES: 3,
+            HDR_STATE: 0
         }
     }
+
     if (headers[3] == HDR_COUNTRY_REGION_2_NAME &&
         headers[4] == HDR_LAST_UPDATE_2_NAME &&
         headers[7] == HDR_CONFIRMED_NAME) {
         return {
             HDR_COUNTRY: 3,
             HDR_DATE: 4,
-            HDR_CASES: 7
+            HDR_CASES: 7,
+            HDR_STATE: 2
         }
     }
+
     return {}
 }
 
@@ -77,6 +91,8 @@ const toJson = function(csvFile, countryGroup) {
     const lines = csvFile.data.split('\n');
     const headers = lines[0].split(',');
     const HDRs = validateHeaders(headers)
+
+    const HDR_STATE = HDRs.HDR_STATE
     const HDR_COUNTRY = HDRs.HDR_COUNTRY;
     const HDR_DATE = HDRs.HDR_DATE;
     const HDR_CASES = HDRs.HDR_CASES;
@@ -98,22 +114,32 @@ const toJson = function(csvFile, countryGroup) {
      
         if (!validateDateFile(csvFile.dateFile, line[HDR_DATE])) return
 
-        let obj = {};
-        obj[headers[HDR_DATE]] = line[HDR_DATE]
-        obj[headers[HDR_CASES]] = parseInt(line[HDR_CASES])
-        const lineHDRCountry = line[HDR_COUNTRY]
+        setOrigins(countries, headers, line, HDR_COUNTRY)
 
-        if(countries[lineHDRCountry]) {
-            countries[lineHDRCountry]["date"] = obj[headers[HDR_DATE]];
-            countries[lineHDRCountry]["cases"] = countries[lineHDRCountry]["cases"] + obj[headers[HDR_CASES]] 
-        } else {
-            countries[lineHDRCountry] = {
-                date: obj[headers[HDR_DATE]],
-                cases: obj[headers[HDR_CASES]]
-            }
-        }
     })
     return countries;
+}
+
+const setOrigins = function(origins, headers, line, hdrOrigin) {
+    const HDRs = validateHeaders(headers)
+
+    const HDR_DATE = HDRs.HDR_DATE;
+    const HDR_CASES = HDRs.HDR_CASES;
+
+    let obj = {};
+    obj[headers[HDR_DATE]] = line[HDR_DATE]
+    obj[headers[HDR_CASES]] = parseInt(line[HDR_CASES])
+    const lineHDR = line[hdrOrigin]
+
+    if(origins[lineHDR]) {
+        origins[lineHDR]["date"] = obj[headers[HDR_DATE]];
+        origins[lineHDR]["cases"] = origins[lineHDR]["cases"] + obj[headers[HDR_CASES]] 
+    } else {
+        origins[lineHDR] = {
+            date: obj[headers[HDR_DATE]],
+            cases: obj[headers[HDR_CASES]]
+        }
+    }
 }
 
 module.exports = {
