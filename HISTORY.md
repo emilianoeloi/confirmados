@@ -1,6 +1,10 @@
 ***Primeira Versão v1.0.0-alpha***
 Então fiz um site pra eu ver e fazer uma referencia entre paises e os casos confirmados do COVID-19.
 
+## Sexta-feira, 11 de dezembro de 2020
+
+Já que fiz uma lista de Países, eu vou colocar com os estados. PRa começar o Estados do Brasil.
+
 ## Sábado, 20 de novembro de 2020
 
 De Callback para Promise. Quando rodei em uma máquina com processador muito potente (12 nucleos), e quebrou a coisa toda! :) MAs o Promise resolvei as coisas.

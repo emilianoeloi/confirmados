@@ -1,0 +1,4 @@
+FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key,Incident_Rate,Case_Fatality_Ratio
+,,Mato Grosso do Sul,Brazil,2020-12-08 05:27:42,-20.7722,-54.7852,105246,1841,91740,11665,"Mato Grosso do Sul, Brazil",3787.208715697021,1.7492351253254281
+,,Minas Gerais,Brazil,2020-12-08 05:27:42,-18.5122,-44.555,442186,10341,400155,31690,"Minas Gerais, Brazil",2088.8580741337564,2.3386086398031596
+,,Para,Brazil,2020-12-08 05:27:42,-1.9981,-54.9306,275551,6954,256661,11936,"Para, Brazil",3203.0143446398383,2.5236707542342436
