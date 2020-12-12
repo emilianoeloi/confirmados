@@ -3,26 +3,26 @@ const Country = require('./Country.js')
 
 class Integrate {
     constructor() {
-        this.countriesWorld = []    
-        this.countriesConfirmed = []
-        this.globalCountries = []
+        this.origins = []    
+        this.originsConfirmed = []
+        this.globalOrigins = []
     }
-    setCountries(countries) {
+    setOrigins(origins) {
         let c = []
-        countries.forEach(country => {
+        origins.forEach(country => {
             c.push(new Country(country.key, country.name, country.color))
         })
-        this.countriesWorld = c
+        this.origins = c
     }
-    getCountries() {
-        return this.countriesWorld
+    getOrigins() {
+        return this.origins
     }
-    integrateCountries(countriesArr) {
+    integrateOrigins(originsArr) {
         let c = [];
         
-        countriesArr.forEach(countryName => {
-            this.countriesWorld.forEach(country => {
-                if (countryName.name == country.name) {
+        originsArr.forEach(originName => {
+            this.origins.forEach(country => {
+                if (originName.name == country.name) {
                     c.push(country)
                 }
             })
@@ -30,26 +30,26 @@ class Integrate {
         return c;
     }
 
-    setCountry(country) {
-        if (this.globalCountries == 0) {
-            this.globalCountries.push(country)
+    setOrigin(origin) {
+        if (this.globalOrigins == 0) {
+            this.globalOrigins.push(origin)
         }
         var last = false
-        for (let i = 0; i < this.globalCountries.length; i++) {
-            if (this.globalCountries[i].key == country.key) {
+        for (let i = 0; i < this.globalOrigins.length; i++) {
+            if (this.globalOrigins[i].key == origin.key) {
                 break
             }
             last = true
         }
         if (last) {
-            this.globalCountries.push(country)
+            this.globalOrigins.push(origin)
         }
     }
 
-    getCountry(countryKey) {
-        for (let i = 0; i < this.globalCountries.length; i++) {
-            if (this.globalCountries[i].key == countryKey) {
-                return this.globalCountries[i]
+    getOrigin(originKey) {
+        for (let i = 0; i < this.globalOrigins.length; i++) {
+            if (this.globalOrigins[i].key == originKey) {
+                return this.globalOrigins[i]
             }
         }  
         return null

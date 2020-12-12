@@ -6,6 +6,7 @@ const fs = require('fs');
 const readFile = require('../readFile.js');
 const csvToJson = require('../csvToJson.js');
 const Country = require('../Country.js');
+const State = require('../State.js');
 
 const janeiroPath = path.resolve(__dirname, '../__mocks__/01-22-2020.csv');
 const fevereiroPath = path.resolve(__dirname, '../__mocks__/02-01-2020.csv');
@@ -19,6 +20,7 @@ const julho_04_2020_Path = path.resolve(__dirname, '../__mocks__/07-04-2020.csv'
 const abrilPath = path.resolve(__dirname, '../__mocks__/04-01-2020.csv');
 const maioPath = path.resolve(__dirname, '../__mocks__/05-01-2020.csv');
 const junhoPath = path.resolve(__dirname, '../__mocks__/06-01-2020.csv');
+const dezembroPath = path.resolve(__dirname, '../__mocks__/12-05-2020.csv');
 
 const janeiroHeader = [
     'Province/State', // 0
@@ -54,14 +56,18 @@ const julhoHeader = [
     ['FIPS','Admin2','Province_State','Country_Region','Last_Update','Lat','Long_','Confirmed','Deaths','Recovered','Active','Combined_Key','Incidence_Rate','Case-Fatality_Ratio']
 ]
 
-const getMonthCSVToJSON = function(monthPath, countryGroups) {
+const dezembroHeader = [
+    'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Combined_Key', 'Incident_Rate',  'Case_Fatality_Ratio'
+]
+
+const getMonthCSVToJSON = function(monthPath, originGroups, originType="country") {
     const path = fs.readFileSync(monthPath).toString();
     const fileName = readFile.getFileName(monthPath)
     const fileDate = readFile.getFileDate(fileName)
     const json = csvToJson.toJson({
         data: path,
         dateFile: fileDate
-    }, countryGroups);
+    }, originGroups, originType);
     return json;
 }
 
@@ -79,6 +85,21 @@ const getFirtsDate = function(monthPath, countryGroups) {
         firstDate
     }
 }
+
+describe('headers State', () => {
+    test('Junho', () => {
+        const ok = csvToJson.validateHeaders(junhoHeader)
+        expect(ok.HDR_STATE).toBe(2)
+        expect(ok.HDR_DATE).toBe(4)
+        expect(ok.HDR_CASES).toBe(7)
+    })
+    test('Dezembro', () => {
+        const ok = csvToJson.validateHeaders(dezembroHeader)
+        expect(ok.HDR_STATE).toBe(2)
+        expect(ok.HDR_DATE).toBe(4)
+        expect(ok.HDR_CASES).toBe(7)
+    })
+})
 
 describe('headers', () => {
     test('Janeiro', () => {
@@ -127,6 +148,30 @@ describe('headers', () => {
         expect(ok.HDR_DATE).toBe(4)
         expect(ok.HDR_CASES).toBe(7)
     })
+})
+
+describe('Brazil States', () => {
+    const dezembro_07_2020_Path = path.resolve(__dirname, '../__mocks__/12-07-2020.csv');
+    const mg = new State("mg", "Minas Gerais", "")
+
+    const csv2020_12_07 = `FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key,Incident_Rate,Case_Fatality_Ratio
+,,Mato Grosso do Sul,Brazil,2020-12-08 05:27:42,-20.7722,-54.7852,105246,1841,91740,11665,"Mato Grosso do Sul, Brazil",3787.208715697021,1.7492351253254281
+,,Minas Gerais,Brazil,2020-12-08 05:27:42,-18.5122,-44.555,442186,10341,400155,31690,"Minas Gerais, Brazil",2088.8580741337564,2.3386086398031596
+,,Para,Brazil,2020-12-08 05:27:42,-1.9981,-54.9306,275551,6954,256661,11936,"Para, Brazil",3203.0143446398383,2.5236707542342436`
+
+
+    test('posso validar só existem linhas do mês 12 do dia 07 em 2020', () => {
+        const states = csvToJson.toJson({
+            data: csv2020_12_07,
+            dateFile: new Date('2020-12-07T00:00:00.000')
+        }, [mg], "state")
+        expect(Object.values(states)[0].cases).toBe(442186)
+    })
+
+    test('testando todos as linhas de dezembro 07/12/2020', () => {
+        const json = getMonthCSVToJSON(dezembro_07_2020_Path, [mg], "state");
+        expect(Object.values(json).length).toBe(1)
+    });
 })
 
 describe('Brazil', () => {

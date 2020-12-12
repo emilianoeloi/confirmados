@@ -87,13 +87,17 @@ const validateDateFile = function(fileDate, dataDate) {
     return (firstDate <= f) && (lastDate > f)
 }
 
-const toJson = function(csvFile, countryGroup) {
+const toJson = function(csvFile, originGroup, originType="country") {
     const lines = csvFile.data.split('\n');
     const headers = lines[0].split(',');
     const HDRs = validateHeaders(headers)
 
-    const HDR_STATE = HDRs.HDR_STATE
-    const HDR_COUNTRY = HDRs.HDR_COUNTRY;
+    let HDR_ORIGIN = ""
+    if (originType == "country") {
+        HDR_ORIGIN = HDRs.HDR_COUNTRY
+    } else if (originType == "state") {
+        HDR_ORIGIN = HDRs.HDR_STATE
+    }
     const HDR_DATE = HDRs.HDR_DATE;
     const HDR_CASES = HDRs.HDR_CASES;
     
@@ -105,7 +109,7 @@ const toJson = function(csvFile, countryGroup) {
         const line = csvLine.split(',');
 
         if (line[HDR_CASES] == '') return
-        if (!validateCountry(countryGroup, line[HDR_COUNTRY])) return
+        if (!validateCountry(originGroup, line[HDR_ORIGIN])) return
         
         if (csvFile.dateFile > BUG_DATE) {
             let DATE_WITH_BUG = new Date(line[HDR_DATE])
@@ -114,7 +118,7 @@ const toJson = function(csvFile, countryGroup) {
      
         if (!validateDateFile(csvFile.dateFile, line[HDR_DATE])) return
 
-        setOrigins(countries, headers, line, HDR_COUNTRY)
+        setOrigins(countries, headers, line, HDR_ORIGIN)
 
     })
     return countries;
