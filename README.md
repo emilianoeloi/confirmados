@@ -10,17 +10,20 @@ Eu tive um derrame cerebral (AVE-He) que comprometeu uma parte do meu cérebro o
 
 ## Gráfico
 
-### Escandinávia
-![confirmados](images/confirmados_2020-12-04-Escandinavia.png)
+### Região Norte do Brasil
+![confirmados](images/confirmados_2020-12-12_regiao_norte.png)
 
-### Brics
-![confirmados](images/confirmados_2020-12-04_Brazil_Russia_India_China_South_Africa2.png)
+### Região Nordeste do Brasil
+![confirmados](images/confirmados_2020-12-12_regiao_nordeste.png)
 
-### Mercosur
-![confirmados](images/confirmados_2020-12-04_Brazil_Argentina_Paraguay_Uruguay_Venezuela.png)
+### Região Centro-Oeste do Brasil
+![confirmados](images/confirmados_2020-12-12_regiao_centro_oeste.png)
 
-### Top7 - Mundo
-![confirmados](images/confirmados_2020-12-12_US_India_Brazil_Russia_France_Italy_UK.png)
+### Região Sudeste do Brasil
+![confirmados](images/confirmados_2020-12-12_regiao_sudeste_brasil.png)
+
+### Região Sul do Brasil
+![confirmados](images/confirmados_2020-12-12_regiao_sul_brasil.png)
 
 Confirmados pelo COVID-19 pelo período x confirmados.
 
@@ -38,58 +41,83 @@ Confirmados pelo COVID-19 pelo período x confirmados.
 ```javascript
 /// loadTest.js
 
-const start = new Date("2020-06-01T00:00:00.000")
-const end = new Date("2020-12-04T23:59:59.999")
+const integrate = {"states": [
+    {
+        "key": "ac",
+        "name": "Acre",
+        "color": "#00FF00"
+    } /* ... */
+]}
 
-const kalmar = new Load(
-    "Escandinávia",
+const start = new Date("2020-06-01T00:00:00.000")
+const end = new Date("2020-12-12T23:59:59.999")
+
+const note = new Load(
+    integrate,
+    "Região Norte",
     [
-        sweden,
-        denmark,
-        iceland,
-        norway,
-        finland
+        "pa",
+        "am",
+        "ac",
+        "ap",
+        "ro",
+        "rr", 
+        "to" 
     ],
     init,
     end
 )
 
-const brics = new Load(
-    "BRICS",
+const nordeste = new Load(
+    integrate,
+    "Região Nordeste",
     [
-        india,
-        brazil,
-        russia,
-        southAfrica,
-        china
+        "ba",
+        "al",
+        "ce",
+        "ma",
+        "pb",
+        "pe",
+        "pi",
+        "rn",
+        "se"
     ],
-    start,
+    init,
     end
 )
 
-const mercosur = new Load(
-    "MERCOSUR",
+const centroOeste = new Load(
+    integrate,
+    "Região Centro-Oeste",
     [
-        brazil,
-        argentina,
-        venezuela,
-        paraguay,
-        uruguay,
+        "go",
+        "ms",
+        "mt"
     ],
-    start,
+    init,
     end
 )
 
-const top7 = new Load(
-    "Top 7",
+const sudeste = new Load(
+    integrateStates,
+    "Região Sudeste",
     [
-        us,
-        india,
-        brazil,
-        russia,
-        france,
-        italy,
-        uk
+        "sp",
+        "rj",
+        "mg",
+        "es"
+    ],
+    init,
+    end
+)
+
+const sul = new Load(
+    integrateStates,
+    "Região Sul",
+    [
+        "sc",
+        "rs",
+        "pr"
     ],
     init,
     new Date("2020-12-12T23:59:59.999")
