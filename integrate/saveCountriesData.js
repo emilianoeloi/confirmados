@@ -27,6 +27,7 @@ function saveCountriesDataPromise(countriesData) {
             var countryFile = Object.keys(countriesData)[key];
             dbCovid19(countryFile, value)
          })
+         
          process.env.COUNT = parseInt(process.env.COUNT) - 1
          resolve()
       } catch(err) {

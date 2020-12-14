@@ -21,12 +21,12 @@ var read = function(csvFile, countryGroup, saveCountriesDataCB, writeFileCB) {
     const json = csvToJson.toJson({
         data: data.toString(),
         dateFile: getFileDate(fileName)
-    }, countryGroup)
+    }, countryGroup, "state")
     process.env.COUNT = parseInt(process.env.COUNT) + 1
     setStorageCountries(json, saveCountriesDataCB, writeFileCB)
  }
 
- var readPromise = function(csvFile, countryGroup) {
+ var readPromise = function(csvFile, originGroup) {
     return new Promise((resolve, reject) => {
         try {
             const data = fs.readFileSync(csvFile)
@@ -34,7 +34,7 @@ var read = function(csvFile, countryGroup, saveCountriesDataCB, writeFileCB) {
             const json = csvToJson.toJson({
                 data: data.toString(),
                 dateFile: getFileDate(fileName)
-            }, countryGroup)
+            }, originGroup, "state")
             process.env.COUNT = parseInt(process.env.COUNT) + 1
             resolve(json)
         } catch(err) {

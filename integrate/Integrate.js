@@ -1,5 +1,6 @@
 // Integrate.js
 const Country = require('./Country.js')
+const State = require('./State.js')
 
 class Integrate {
     constructor() {
@@ -9,8 +10,8 @@ class Integrate {
     }
     setOrigins(origins) {
         let c = []
-        origins.forEach(country => {
-            c.push(new Country(country.key, country.name, country.color))
+        origins.forEach(state => {
+            c.push(new State(state.key, state.name, state.color))
         })
         this.origins = c
     }
@@ -21,9 +22,9 @@ class Integrate {
         let c = [];
         
         originsArr.forEach(originName => {
-            this.origins.forEach(country => {
-                if (originName.name == country.name) {
-                    c.push(country)
+            this.origins.forEach(state => {
+                if (originName.name == state.name) {
+                    c.push(state)
                 }
             })
         })

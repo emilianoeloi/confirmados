@@ -23,7 +23,7 @@ itgt_install:
 
 ## Iniciando o Integrador	
 itgt_start:
-	cd integrate && yarn start && cp ./countries/* ../site/src/CountryCases/countries
+	cd integrate && yarn start && cp ./countries/* ../site/src/StateCases/states
 
 ## Testando o Integrador
 itgt_test:
@@ -33,12 +33,12 @@ itgt_test:
 itgt_test_watch:
 	cd integrate && yarn test:watch
 
-integrate_files=./integrate/countries/integrate.json
-countries_files=./site/src/CountryCases/countries/cases*.json
+integrate_files=./integrate/states/integrate.json
+states_files=./site/src/StateCases/states/cases*.json
 ## Deletar os relatóriso do integrador
 itgt_delete_reports:
 	./scripts/file.sh $(integrate_files)
-	./scripts/file.sh $(countries_files)
+	./scripts/file.sh $(states_files)
 
 ## É um rascunho pra rodar um javascript
 draft:
@@ -51,7 +51,7 @@ bd_update:
 	cd ./BD/COVID-19 && git pull origin master
 	cp ./BD/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/* ./integrate/csse_covid_19_daily_reports/
     ## Países
-	cp BD/Paises/integrate.json integrate/Paises/
+	cp BD/Paises/Brazil/integrate.json integrate/Paises/Brazil/
 
 ## Configurar o projeto todo
 install:
