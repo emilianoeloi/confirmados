@@ -20,7 +20,7 @@ Eu tive um derrame cerebral (AVE-He) que comprometeu uma parte do meu cérebro o
 ![confirmados](images/confirmados_2020-12-04_Brazil_Argentina_Paraguay_Uruguay_Venezuela.png)
 
 ### Top7 - Mundo
-![confirmados](images/confirmados_2020-12-05_US_India_Brazil_Russia_France_Italy_UK.png)
+![confirmados](images/confirmados_2020-12-12_US_India_Brazil_Russia_France_Italy_UK.png)
 
 Confirmados pelo COVID-19 pelo período x confirmados.
 
@@ -92,7 +92,7 @@ const top7 = new Load(
         uk
     ],
     init,
-    end
+    new Date("2020-12-12T23:59:59.999")
 )
 ```
 
