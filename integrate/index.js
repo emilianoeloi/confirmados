@@ -1,10 +1,10 @@
 const path = require('path');
 const {
-   brics,
-   g20,
-   mercosur,
-   top7,
-   kalmar
+   norte,
+   nordeste,
+   centroOeste,
+   sudeste,
+   sul
 } = require('./loadTest.js')
 
 const getCSVRequestFiles = require('./getCSVReportFiles.js');
@@ -17,7 +17,7 @@ process.env.COUNT = 0;
 
 const csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports');
 
-const group = top7
+const group = norte
 
 writeFile.writeIntegrateFile(group)
 
@@ -25,7 +25,7 @@ getCSVRequestFiles(
    csseCovid19DailyReport,
    group.starting,
    group.finishing,
-   group.countries,
+   group.states,
    readFile.read,
    writeFile.writeFile
 );

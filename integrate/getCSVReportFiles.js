@@ -17,7 +17,7 @@ const getCSVReportFiles = function(
    start,
    finish,
    countryGroup) {
-
+      console.info('countryGroup', countryGroup)
       return new Promise((resolve, reject) => {
          try {
             let loop = new Date(start);

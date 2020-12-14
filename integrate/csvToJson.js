@@ -4,6 +4,9 @@
 const BUG_DATE = new Date('2020-04-22T00:00:00.000')
 
 const validateOrigin = function(originGroup, origin) {
+    if (originGroup == undefined) {
+        return false
+    }
     for (var k = 0; k < originGroup.length; k++) {
         if (originGroup[k].name == origin){
             return true
@@ -98,30 +101,32 @@ const toJson = function(csvFile, originGroup, originType="country") {
     } else if (originType == "state") {
         HDR_ORIGIN = HDRs.HDR_STATE
     }
+    const HDR_COUNTRY = HDRs.HDR_COUNTRY
     const HDR_DATE = HDRs.HDR_DATE;
     const HDR_CASES = HDRs.HDR_CASES;
     
-    let countries = {};
+    let origins = {};
     lines.forEach((csvLine, i, lns) => {
         if (i == 0) return;
         if (csvLine == '' ) return;
         
         const line = csvLine.split(',');
 
+        // if (line[HDR_COUNTRY] != "Brazil") return
+        
         if (line[HDR_CASES] == '') return
-        if (!validateCountry(originGroup, line[HDR_ORIGIN])) return
+        if (!validateState(originGroup, line[HDR_ORIGIN])) return
         
         if (csvFile.dateFile > BUG_DATE) {
             let DATE_WITH_BUG = new Date(line[HDR_DATE])
             line[HDR_DATE] = DATE_WITH_BUG.addDays(-1)
         }
-     
         if (!validateDateFile(csvFile.dateFile, line[HDR_DATE])) return
 
-        setOrigins(countries, headers, line, HDR_ORIGIN)
+        setOrigins(origins, headers, line, HDR_ORIGIN)
 
     })
-    return countries;
+    return origins;
 }
 
 const setOrigins = function(origins, headers, line, hdrOrigin) {

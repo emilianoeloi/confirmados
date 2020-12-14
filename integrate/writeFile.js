@@ -3,14 +3,14 @@
 const fs = require('fs')
 const path = require('path');
 const arraySort = require('array-sort');
-const { group } = require('console');
 const countriesPath = path.join(__dirname, 'countries')
 
 const writeCountryFilePromise = function(countriesData) {
     return new Promise((resolve, reject) => {
         try {
+            console.info('0 countryName', countriesData)
             Object.values(countriesData).forEach(function(values, key) {
-                let countryName = (Object.keys(countriesData)[key]).replace(' ', '_')
+                let countryName = (Object.keys(countriesData)[key]).replace(' ', '_').replace(' ', '_').replace(' ', '_').replace(' ', '_')
                 var countryFile = `${countriesPath}/cases${countryName}.json`;
                 let valueSort = arraySort(values, 'date');
                 fs.writeFileSync(countryFile, JSON.stringify(valueSort, null, '\t'))
@@ -28,7 +28,8 @@ const writeIntegrateFile = function(group) {
         info: {
             title: group.title
         },
-        countries: group.countries
+        countries: group.countries,
+        states: group.states
     }
     fs.writeFile(integrateFile, JSON.stringify(c), function(err) {
         if (err) {
