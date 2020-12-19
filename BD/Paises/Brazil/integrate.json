@@ -12,12 +12,15 @@
     {
         "key": "am",
         "name": "Amazonas",
-        "color": "#ffffff"
+        "color": "#ffffff",
+        "capital": "Manaus",
+        "federalUniversity": "UFAM",
+        "federalUniversityMotto": "In universa scientia veritas"
     },
     {
         "key": "pa",
         "name": "Para",
-        "color": "#ff0000"
+        "color": "#4275b8"
     },
     {
         "key": "ro",
