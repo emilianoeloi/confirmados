@@ -93,5 +93,10 @@
         "key":"finland",
         "name":"Finland",
         "color":"#002F6C"
+    },
+    {
+        "key":"turkey",
+        "name":"Turkey",
+        "color":"#E30A17"
     }
 ]}

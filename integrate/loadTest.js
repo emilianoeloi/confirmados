@@ -31,8 +31,10 @@ const finland = new Country("finland", "Finland", "#002F6C")
 const iceland = new Country("iceland", "Iceland", "#DC1E35")
 const sweden = new Country("sweden", "Sweden", "#004B87")
 
+const turkey = new Country("turkey", "Turkey", "#E30A17")
+
 const init = new Date("2020-06-01T00:00:00.000")
-const end = new Date("2020-12-13T23:59:59.999")
+const end = new Date("2020-12-18T23:59:59.999")
 
 const kalmar = new Load(
     "Escandinávia",
@@ -94,8 +96,8 @@ const top7 = new Load(
         brazil,
         russia,
         france,
-        italy,
-        uk
+        uk,
+        turkey
     ],
     init,
     end
