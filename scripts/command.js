@@ -17,12 +17,12 @@ const end = commander.end || process.env.END
 
 const startServer = () => {
   const app = express()
-  app.use(express.static(__dirname + '/'))
-  app.use('/', express.static(__dirname + '/'))
+  app.use(express.static(__dirname + '/../site/public'))
+  //app.use('/', express.static(__dirname + '/'))
 
   const server = app.listen(port, () => {
     const uri = `http://localhost:${server.address().port}`
-    console.log(`The dashboard is now available at ${uri}`)
+    console.log(`The dashboard is now available at ${uri} - ${__dirname + '/'}`)
     opn(uri)
   })
 }
