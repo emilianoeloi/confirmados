@@ -59,9 +59,6 @@ const getCSVReportFiles = function(
             reject(err)
          }
       })
-
-   
-
 }
 
 module.exports = getCSVReportFiles

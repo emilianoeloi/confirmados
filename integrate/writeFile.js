@@ -24,6 +24,7 @@ const writeCountryFilePromise = function(countriesData) {
 
 const writeIntegrateFile = function(group) {
     const integrateFile = `${countriesPath}/integrate.json`;
+    console.info("writeIntegrateFile", integrateFile)
     const c = {
         info: {
             title: group.title

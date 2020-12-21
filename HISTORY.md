@@ -3,7 +3,7 @@ Então fiz um site pra eu ver e fazer uma referencia entre paises e os casos con
 
 ## Sábado, 19 de dezembro de 2020
 
-Eu vou publicar um projeto "confirmado" no npm, para obter os dados nos estados do Brasil.
+Eu vou publicar um projeto "confirmado" no npm (Geranciamento de pacotes), para obter os dados nos estados do Brasil.
 ```bash
 $ confirmados --state para --ini 01/06/2020 --end 19/12/2020
 ```
