@@ -1,1 +1,1 @@
-{"info":{"title":"Região Norte"},"states":[{"key":"pa","name":"Para","color":"#4275b8"},{"key":"am","name":"Amazonas","color":"#ffffff"},{"key":"ac","name":"Acre","color":"#00FF00"},{"key":"ap","name":"Amapa","color":"#FFFF00"},{"key":"ro","name":"Rondonia","color":"#0000ff"},{"key":"rr","name":"Roraima","color":"#007FFF"},{"key":"to","name":"Tocantins","color":"#ffd700"}]}
+{"info":{"title":"Custom"},"states":[{"key":"sp","name":"Sao Paulo","color":"#000000"}]}

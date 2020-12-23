@@ -1,24 +1,23 @@
 const commander = require('commander')
 const express = require('express')
-const fs = require('fs')
-var opn = require('opn')
-
+const opn = require('opn')
 const path = require('path')
+
+require('dotenv').config();
+
 const { norte } = require('../integrate/loadTest.js')
 
 const getCSVRequestFiles = require('../integrate/getCSVReportFiles.js')
-const readFile = require('../integrate/readFile.js')
 const writeFile = require('../integrate/writeFile.js')
 const Load = require('../integrate/Load.js')
 const integrateStates = require('../integrate/Paises/Brazil/integrate.json')
 
-process.env.GLOBOL_COVID_19 = "{}"
+
+process.env.GLOBAL_COVID_19 = "{}"
 process.env.COUNSTRIES = []
 process.env.COUNT = 0
 
 const csseCovid19DailyReport = path.join(__dirname, '/../integrate/csse_covid_19_daily_reports')
-
-console.info("csseCovid19DailyReport", csseCovid19DailyReport)
 
 commander.option('--port [port]', 'the port to run confirmados')
 commander.option('--state [state]', 'State / Estado')
@@ -33,8 +32,11 @@ const start = commander.start || process.env.START
 const end = commander.end || process.env.END
 
 const startServer = () => {
+  const { spawn } = require('child_process');
   const app = express()
-  app.use(express.static(__dirname + '/../site/build'))
+  app.use(express.static(__dirname + '/build'))
+
+
 
   const server = app.listen(port, () => {
     const uri = `http://localhost:${server.address().port}`
@@ -49,20 +51,19 @@ const custom = new Load(
   [
     state
   ],
-  start,
-  end
+  new Date(start),
+  new Date(end)
 )
 
 writeFile.writeIntegrateFile(custom)
 
 getCSVRequestFiles(
   csseCovid19DailyReport,
-  start,
-  end,
-  custom,
-  readFile.read,
-  writeFile.writeFile
+  new Date(start),
+  new Date(end),
+  custom.states
 ).then(data => {
+  console.info('==>', data)
   startServer()
 }).catch(err => {
   console.error(err)

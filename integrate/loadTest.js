@@ -2,7 +2,7 @@ const Load = require('./Load.js')
 const integrateStates = require('./Paises/Brazil/integrate.json')
 
 const init = new Date("2020-12-01T00:00:00.000")
-const end = new Date("2020-12-19T23:59:59.999")
+const end = new Date("2020-12-02T23:59:59.999")
 const norte = new Load(
     integrateStates,
     "Região Norte", 
@@ -66,9 +66,10 @@ const sul = new Load(
     integrateStates,
     "Região Sul",
     [
-        "sc",
-        "rs",
-        "pr"
+        "sp",
+        // "sc",
+        // "rs",
+        // "pr"
     ],
     init,
     end
