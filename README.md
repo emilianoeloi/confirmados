@@ -201,6 +201,8 @@ jsontools: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools
 
 Funções assíncronas: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/funcoes_assincronas
 
+Node.js Child Processes: Everything you need to know - https://www.freecodecamp.org/news/node-js-child-processes-everything-you-need-to-know-e69498fe970a/ - Acesso em 23/12/2020
+
 *Ciência da computação*
 
 Algoritmo de ordenação: https://pt.wikipedia.org/wiki/Algoritmo_de_ordena%C3%A7%C3%A3o
