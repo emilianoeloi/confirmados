@@ -97,5 +97,6 @@ module.exports = {
     nordeste,
     centroOeste,
     sudeste,
-    sul
+    sul,
+    df
 };

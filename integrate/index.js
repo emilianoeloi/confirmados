@@ -4,7 +4,8 @@ const {
    nordeste,
    centroOeste,
    sudeste,
-   sul
+   sul,
+   df
 } = require('./loadTest.js')
 
 const getCSVRequestFiles = require('./getCSVReportFiles.js');
@@ -22,7 +23,8 @@ let groups = [
    nordeste,
    centroOeste,
    sudeste,
-   sul
+   sul,
+   df
 ]
 
 for (let i = 0; i < groups.length; i++) {
