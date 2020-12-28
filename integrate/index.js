@@ -8,7 +8,6 @@ const {
 } = require('./loadTest.js')
 
 const getCSVRequestFiles = require('./getCSVReportFiles.js');
-const readFile = require('./readFile.js');
 const writeFile = require('./writeFile.js')
 
 process.env.GLOBAL_COVID_19 = "{}";
@@ -17,15 +16,13 @@ process.env.COUNT = 0;
 
 const csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports');
 
-const group = sudeste
+let group = sudeste
 
-writeFile.writeIntegrateFile(group)
+writeFile.writeIntegrateFilePromise(group)
 
 getCSVRequestFiles(
    csseCovid19DailyReport,
    group.starting,
    group.finishing,
-   group.states,
-   readFile.read,
-   writeFile.writeFile
+   group.states
 );
