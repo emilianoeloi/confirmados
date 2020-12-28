@@ -1,13 +1,20 @@
 import { Loader } from './Loader.js'
-import {
-    info,
-    states
-} from './StateCases/index.js'
+import cases from './StateCases/index.js'
 
-let loader = new Loader(info.title);
+const getLoader = function(info, states) {
+    let loader = new Loader(info.title);
 
-states.forEach((country) => {
-    loader.setCaseCountry(country)
-});
+    states.forEach((country) => {
+        loader.setCaseCountry(country)
+    });
 
-export { loader }
+    return loader
+}
+
+let loaders = []
+for(let i = 0; i < cases.length; i++) {
+    const cs = cases[i]
+    loaders.push(getLoader(cs.info, cs.states))
+}
+
+export default loaders

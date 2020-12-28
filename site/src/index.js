@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Norte from './Norte';
-import Nordeste from './Nordeste';
+import App from './App';
+import loaders from './Data.js'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Norte />
-    <Nordeste />
+  <React.StrictMode>    
+    {loaders.map(function (loader, i) {
+      return <App loader={loader} />
+    })}
   </React.StrictMode>,
   document.getElementById('root')
 );

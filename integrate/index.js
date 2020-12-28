@@ -8,7 +8,8 @@ const {
 } = require('./loadTest.js')
 
 const getCSVRequestFiles = require('./getCSVReportFiles.js');
-const writeFile = require('./writeFile.js')
+const writeFile = require('./writeFile.js');
+const { group } = require('console');
 
 process.env.GLOBAL_COVID_19 = "{}";
 process.env.COUNTRIES = [];
@@ -38,5 +39,7 @@ for (let i = 0; i < groups.length; i++) {
    );
 
 }
+
+writeFile.writeIntegratesFilePromise(groups)
 
 

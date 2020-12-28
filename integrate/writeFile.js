@@ -43,6 +43,26 @@ const writeIntegrateFilePromise = function(group) {
 
 }
 
+const writeIntegratesFilePromise = function(groups) {
+    return new Promise((resolve, reject) =>  {
+        try {
+            const jsonIntegrFile = `integrate.json`
+            const integrateFile = `${countriesPath}/${jsonIntegrFile}`;
+            let cs = []
+            for(let i = 0; i < groups.length; i++) {
+                cs.push({
+                    key: groups[i].key
+                })
+            }
+            fs.writeFileSync(integrateFile, JSON.stringify(cs))
+            resolve()
+        } catch (err) {
+            reject(err)
+        }
+    })
+
+}
+
 const writeFilePromise = function() {
     return new Promise((resolve, reject) => {
         try {
@@ -60,5 +80,6 @@ const writeFilePromise = function() {
 module.exports = {
     writeFilePromise,
     writeIntegrateFilePromise,
+    writeIntegratesFilePromise,
     writeCountryFilePromise
 }

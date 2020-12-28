@@ -3,7 +3,6 @@ import {
   Line
 } from 'react-chartjs-2';
 import './App.css';
-import { loader } from './Data.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -15,14 +14,11 @@ class App extends React.Component {
   }
   handleChange(e) {
     this.setState({
-      value: loader.getMaxCases()
+      value: this.props.loader.getMaxCases()
     })
   }
   render() {
-    const data = loader.getData()
-    const dateMin=loader.getDateMin()
-    const dateMax=loader.getDateMax()
-    const value=loader.getMaxCases()
+    const data = this.props.loader.getData()
 
     return (
       <div>
@@ -35,10 +31,10 @@ class App extends React.Component {
 				stacked: false,
 				title: {
 					display: true,
-					text: 'Confirmados de COVID-19 - ' + loader.title
+					text: 'Confirmados de COVID-19 - ' + this.props.loader.title
 				},
 				scales: {
-          yAxes: loader.options,
+          yAxes: this.props.loader.options,
         }
 				}}
       />
