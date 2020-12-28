@@ -81,6 +81,17 @@ const sul = new Load(
     end
 )
 
+const df = new Load(
+    "5",
+    integrateStates,
+    "Distrito Federal",
+    [
+        "df"
+    ],
+    init,
+    end
+)
+
 module.exports = {
     norte,
     nordeste,
