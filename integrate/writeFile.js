@@ -23,10 +23,12 @@ const writeCountryFilePromise = function(countriesData) {
 const writeIntegrateFilePromise = function(group) {
     return new Promise((resolve, reject) =>  {
         try {
-            const jsonIntegrFile = "integrate.json"
+            const jsonIntegrFile = `integrate${group.key}.json`
             const integrateFile = `${countriesPath}/${jsonIntegrFile}`;
+            console.info('integrateFile', integrateFile)
             const c = {
                 info: {
+                    key: group.key,
                     title: group.title
                 },
                 countries: group.countries,

@@ -16,13 +16,27 @@ process.env.COUNT = 0;
 
 const csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports');
 
-let group = sudeste
+let groups = [
+   norte,
+   nordeste,
+   centroOeste,
+   sudeste,
+   sul
+]
 
-writeFile.writeIntegrateFilePromise(group)
+for (let i = 0; i < groups.length; i++) {
 
-getCSVRequestFiles(
-   csseCovid19DailyReport,
-   group.starting,
-   group.finishing,
-   group.states
-);
+   let group = groups[i]
+
+   writeFile.writeIntegrateFilePromise(group)
+
+   getCSVRequestFiles(
+      csseCovid19DailyReport,
+      group.starting,
+      group.finishing,
+      group.states
+   );
+
+}
+
+

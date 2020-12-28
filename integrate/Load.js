@@ -2,9 +2,10 @@
 const State = require('./State.js')
 
 class Load {
-    constructor(integrate, title, states, starting, finishing) {
-        this.setIntegrate(integrate)
+    constructor(key, integrate, title, states, starting, finishing) {
+        this.key = key
         this.title = title
+        this.setIntegrate(integrate)
         this.states = this.createStates(states)
         this.starting = starting
         this.finishing = finishing

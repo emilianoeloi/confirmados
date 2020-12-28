@@ -6,6 +6,7 @@ const jsonIntegrate = require("../__mocks__/integrate.json");
 describe('Load', () => {
     test('Load', () => {
         const teste = new Load(
+            "a",
             jsonIntegrate,
             "Test", 
             [
@@ -19,6 +20,7 @@ describe('Load', () => {
 
     test('Load Errando', () => {
         const teste = new Load(
+            "b",
             jsonIntegrate,
             "Test", 
             [

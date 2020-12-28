@@ -6,40 +6,43 @@ const integrateStates = require('./Paises/Brazil/integrate.json')
 const init = new Date("2020-12-01T00:00:00.000")
 const end = new Date("2020-12-02T23:59:59.999")
 const norte = new Load(
+    "0",
     integrateStates,
     "Região Norte", 
     [
         "pa",
         "am",
-        "ac", // 3
+        "ac",
         "ap",
         "ro",
         "rr", 
-        "to"  // 7
+        "to"
     ],
     init,
     end
 )
 
 const nordeste = new Load(
+    "1",
     integrateStates,
     "Região Nordeste",
     [
         "ba",
         "al",
-        "ce", // 3
+        "ce",
         "ma",
         "pb",
-        "pe", // 6
+        "pe",
         "pi",
         "rn",
-        "se" // 9
+        "se"
     ],
     init,
     end
 )
 
 const centroOeste = new Load(
+    "2",
     integrateStates,
     "Região Centro-Oeste",
     [
@@ -52,19 +55,21 @@ const centroOeste = new Load(
 )
 
 const sudeste = new Load(
+    "3",
     integrateStates,
     "Região Sudeste",
     [
         "sp",
         "rj",
         "mg",
-        "es" // 4 */
+        "es"
     ],
     init,
     end
 )
 
 const sul = new Load(
+    "4",
     integrateStates,
     "Região Sul",
     [
