@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <React.StrictMode>    
     {loaders.map(function (loader, i) {
-      return <App loader={loader} />
+      return <App key={i} loader={loader} ></App>
     })}
   </React.StrictMode>,
   document.getElementById('root')
