@@ -26,16 +26,16 @@ class App extends React.Component {
         ref={this.chartReference}
         data={data}
         options={{
-				responsive: true,
-				hoverMode: 'index',
-				stacked: false,
-				title: {
-					display: true,
-					text: 'Confirmados de COVID-19 - ' + this.props.loader.title
-				},
-				scales: {
-          yAxes: this.props.loader.options,
-        }
+          responsive: true,
+          hoverMode: 'index',
+          stacked: false,
+          title: {
+            display: true,
+            text: 'Confirmados de COVID-19 - ' + this.props.loader.title
+          },
+          scales: {
+            yAxes: this.props.loader.options,
+          }
 				}}
       />
       </div>
