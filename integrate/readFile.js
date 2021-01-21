@@ -43,8 +43,21 @@ var read = function(csvFile, countryGroup, saveCountriesDataCB, writeFileCB) {
     })
  }
 
+ const readConfirmados = function(file) {
+    return new Promise((resolve, reject) => {
+        try {
+            const data = fs.readFileSync(file)
+            const jsonStr = data.toString()
+            resolve(JSON.parse(jsonStr))
+        } catch(err) {
+            reject(err)
+        }
+    })
+ }
+
  module.exports = {
      readPromise,
      getFileName,
      getFileDate,
+     readConfirmados
  }

@@ -89,10 +89,11 @@ class LoaderBar {
         this.datasets.push({
             label: country.name,
             data: data,
-            borderColor: country.color,
+            borderColor: "gray",
+            backgroundColor: country.color,
             yAxisID: yAxis,
             fill: true,
-            borderWidth: 2,
+            borderWidth: 0.5,
             pointRadius: 0,
 			pointHoverRadius: 0,
             showLine: true,
@@ -101,8 +102,7 @@ class LoaderBar {
         this.options.push({
             responseive: true,
             title: {
-                display: true,
-                text: '21/11/2020'
+                display: true
             },
             tooltips: {
                 mode: 'index',

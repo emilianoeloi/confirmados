@@ -17,12 +17,12 @@ const setStorageCountriesPromise = function(data) {
    return new Promise((resolve, reject) => {
       try {
          var storageCountries = {}
-         Object.values(data).forEach(function(a, b) {
-            var keyCountry = Object.keys(data)[b]
+         Object.values(data).forEach(function(day, i) {
+            var keyCountry = Object.keys(data)[i]
             if (storageCountries[keyCountry] === undefined)  {
-               storageCountries[keyCountry] = [a]
+               storageCountries[keyCountry] = [day]
             } else {
-               storageCountries[keyCountry].push(a)
+               storageCountries[keyCountry].push(day)
             }
          })
          resolve(storageCountries)

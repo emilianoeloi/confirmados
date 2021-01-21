@@ -1,10 +1,29 @@
 const {
-    readPromise
+    readPromise,
+    readConfirmados
  } = require('../readFile.js')
 const Country = require('../Country.js')
 const State = require('../State.js')
 const path = require('path');
 const fs = require('fs');
+
+describe('Confirmados', () => {
+    const distritaFederalPath = [
+        path.resolve(__dirname, '../__mocks__/casesDistrito_Federal.json')
+    ]
+
+    test('Existem dados dos casos do Distrito Federal',  done => {
+        readConfirmados(distritaFederalPath[0])
+        .then((data) => {
+            expect(data.length).toEqual(3)
+            done()
+        })
+        .catch((err) => {
+            expect(1).toEqual(err)
+            done()
+        })
+    })
+})
 
 describe('ler os arquivos', () => {
 
@@ -30,10 +49,10 @@ describe('ler os arquivos', () => {
             dezembroPath[0], 
             stateGroup
         ).then((data) => {
-            let m = {}
-            expect(a).toStrictEqual(m)
+            expect(data["Minas Gerais"]["cases"]).toStrictEqual(442186)
             done()
         }).catch((err) => {
+            expect(1).toStrictEqual(err)
             done()
         })
     })
@@ -44,10 +63,10 @@ describe('ler os arquivos', () => {
             janeiroPath[0], 
             countryGroup
         ).then((data) => {
-            let m = {}
-            expect(a).toStrictEqual(m)
+            expect(data).toStrictEqual({})
             done()
         }).catch((err) => {
+            expect(1).toStrictEqual(err)
             done()
         })
     })
@@ -58,10 +77,10 @@ describe('ler os arquivos', () => {
             janeiroPath[1], 
             countryGroup
         ).then((data) => {
-            let m = {}
-            expect(a).toStrictEqual(m)
+            expect(data).toStrictEqual({})
             done()
         }).catch((err) => {
+            expect(1).toStrictEqual(err)
             done()
         })
     })

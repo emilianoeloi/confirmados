@@ -27,6 +27,7 @@ const getCSVReportFiles = function(
                var fileCSV = `${defaultPath}/${month}-${day}-${year}.csv`
 
                readPromise(fileCSV, countryGroup)
+               
                .then((data) => {
                   return setStorageCountriesPromise(data)
                })
