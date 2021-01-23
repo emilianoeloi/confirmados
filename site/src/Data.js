@@ -18,8 +18,6 @@ for(let i = 0; i < cases.length; i++) {
     loaders.push(getLoader(cs.info, cs.states))
 }
 
-console.info('loaders', loaders)
-
 /// 
 const getLoaderBar = function(info, states) {
     let loader = new LoaderBar(info.title);
@@ -36,8 +34,6 @@ for(let i = 0; i < cases.length; i++) {
     const cs = cases[i]
     loadersBar.push(getLoaderBar(cs.info, cs.states))
 }
-
-console.info('loadersBar', loadersBar)
 
 export {
     loaders,

@@ -31,7 +31,7 @@ class BarApp extends React.Component {
           stacked: false,
           title: {
             display: true,
-            text: 'Confirmados de COVID-19 - ' + this.props.loader.title
+            text: 'Casos novos por dia - Confirmados de COVID-19 - ' + this.props.loader.title
           },
           scales: {
             yAxes: this.props.loader.options,

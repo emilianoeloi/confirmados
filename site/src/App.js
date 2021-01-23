@@ -31,7 +31,7 @@ class App extends React.Component {
           stacked: false,
           title: {
             display: true,
-            text: 'Confirmados de COVID-19 - ' + this.props.loader.title
+            text: 'Casos acumulados - Confirmados de COVID-19 - ' + this.props.loader.title
           },
           scales: {
             yAxes: this.props.loader.options,
