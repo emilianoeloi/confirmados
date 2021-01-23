@@ -55,8 +55,10 @@ const getCSVReportFiles = function(
                })
 
                .then((data) => {
-                  return processPromise(data[0])
-                  console.info('then =>', data)
+                  return data.forEach(processPromise)
+
+                  // return processPromise(data[1])
+                  // console.info('then =>', data)
                })
                .catch((err) => {
                   console.info("process 🚨", err)

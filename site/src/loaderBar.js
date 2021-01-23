@@ -46,7 +46,7 @@ class LoaderBar {
                 this.dateMin = cases[i].date
             }
             let item = cases[i]
-            data.push(item.cases)
+            data.push(item.dailyCases)
             setDateFormat(item.date)
             labels.push(getDateFormat())
             this.setTicks(item)
@@ -57,8 +57,8 @@ class LoaderBar {
     }
 
     setTicks(item) {
-        if (this.max < item.cases) { 
-            this.max = item.cases
+        if (this.max < item.dailyCases) { 
+            this.max = item.dailyCases
         }
     }
 

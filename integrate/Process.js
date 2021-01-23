@@ -1,13 +1,16 @@
 // process.js
 const fs = require('fs');
 
+const processForEach = function(element, index, array) {
+    console.log("a[" + index + "] = " + element);
+}
+
 const processPromise = function(fileOrigin) {
-    console.info('fileOrigin', fileOrigin)
     return new Promise((resolve, reject) => {
         try {
             const data = fs.readFileSync(fileOrigin)
             const calculated = calculate(JSON.parse(data))
-            fs.writeFileSync(fileOrigin, JSON.stringify(calculated))
+            fs.writeFileSync(fileOrigin, JSON.stringify(calculated, null, '\t'))
             resolve(calculated)
         } catch(err) {
             reject(err)
@@ -43,10 +46,14 @@ const calculate = function(data) {
         })
     } 
 
+    /// BUG
+    data2[0].dailyCases = data2[1].dailyCases
+
     return data2
 }
 
 module.exports = {
+    processForEach,
     processPromise,
     calculate
 }
