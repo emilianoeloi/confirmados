@@ -9,8 +9,13 @@ const {
    saveCountriesDataPromise
 } = require('./saveCountriesData.js')
 const {
-   writeFilePromise
+   writeCountryFilePromise
 } = require('./writeFile.js')
+const {
+   processPromise
+} = require('./Process.js')
+
+
 
 const getCSVReportFiles = function(
    defaultPath,
@@ -43,13 +48,23 @@ const getCSVReportFiles = function(
                })
 
                .then((data) => {
-                  return writeFilePromise(data)
+                  return writeCountryFilePromise(data)
                })
                .catch((err) => {
-                  console.info("whiteFile, whiteFile 🚨", err)
+                  console.info("writeCountryFilePromise 🚨", err)
                })
 
-               .finally((err) => { })
+               .then((data) => {
+                  return processPromise(data[0])
+                  console.info('then =>', data)
+               })
+               .catch((err) => {
+                  console.info("process 🚨", err)
+               })
+
+               .finally((err) => {
+                  console.info("finally 🚨", err)
+               })
 
                var newDate = loop.setDate(loop.getDate() + 1);
                loop = new Date(newDate);

@@ -19,11 +19,11 @@ process.env.COUNT = 0;
 const csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports');
 
 let groups = [
-   norte,
-   nordeste,
-   centroOeste,
-   sudeste,
-   sul,
+   // norte,
+   // nordeste,
+   // centroOeste,
+   // sudeste,
+   // sul,
    df
 ]
 

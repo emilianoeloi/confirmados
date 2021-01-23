@@ -2,10 +2,12 @@
 const fs = require('fs');
 
 const processPromise = function(fileOrigin) {
+    console.info('fileOrigin', fileOrigin)
     return new Promise((resolve, reject) => {
         try {
             const data = fs.readFileSync(fileOrigin)
             const calculated = calculate(JSON.parse(data))
+            fs.writeFileSync(fileOrigin, JSON.stringify(calculated))
             resolve(calculated)
         } catch(err) {
             reject(err)
