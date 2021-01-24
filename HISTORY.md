@@ -1,6 +1,10 @@
 ***Primeira Versão v1.0.0-alpha***
 Então fiz um site pra eu ver e fazer uma referencia entre paises e os casos confirmados do COVID-19.
 
+## Sábado, 23 de janeiro de 2021
+
+Eu criei um gráfico para "casos novos por dia", mas não consigo colocar as novos casos, pois o meu código só funciona se o gráfico da primeira vez que foi gerada, lá em Janeiro de 2021, ou seja não dá para obeter os daods em um intevalor, por exemplo: 10/01/2021 à 11/01/2021.
+
 ## Sexta-feira, 11 de dezembro de 2020
 
 Já que fiz uma lista de Países, eu vou colocar com os estados. PRa começar o Estados do Brasil.

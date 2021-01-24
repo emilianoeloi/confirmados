@@ -47,7 +47,9 @@ const calculate = function(data) {
     } 
 
     /// BUG
-    data2[0].dailyCases = data2[1].dailyCases
+    if (data2.length >= 2) {
+        data2[0].dailyCases = data2[1].dailyCases
+    }
 
     return data2
 }
