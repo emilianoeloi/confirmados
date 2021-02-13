@@ -100,7 +100,7 @@ class LoaderBar {
             borderDash: [5, 5],
         })
         this.options.push({
-            responseive: true,
+            responsive: true,
             title: {
                 display: true
             },

@@ -99,7 +99,7 @@ class Loader {
             borderDash: [5, 5],
         })
         this.options.push({
-            responseive: true,
+            responsive: true,
             title: {
                 display: true,
                 text: '21/11/2020'
