@@ -1612,5 +1612,113 @@
 		"cases": 212203,
 		"dailyCases": 559,
 		"cumuCases": 212203
+	},
+	{
+		"date": "2021-02-13T08:23:43.000Z",
+		"cases": 212720,
+		"dailyCases": 517,
+		"cumuCases": 212720
+	},
+	{
+		"date": "2021-02-14T08:24:49.000Z",
+		"cases": 212874,
+		"dailyCases": 154,
+		"cumuCases": 212874
+	},
+	{
+		"date": "2021-02-15T08:24:38.000Z",
+		"cases": 213087,
+		"dailyCases": 213,
+		"cumuCases": 213087
+	},
+	{
+		"date": "2021-02-16T08:23:10.000Z",
+		"cases": 213478,
+		"dailyCases": 391,
+		"cumuCases": 213478
+	},
+	{
+		"date": "2021-02-17T08:22:58.000Z",
+		"cases": 214058,
+		"dailyCases": 580,
+		"cumuCases": 214058
+	},
+	{
+		"date": "2021-02-18T08:24:16.000Z",
+		"cases": 214478,
+		"dailyCases": 420,
+		"cumuCases": 214478
+	},
+	{
+		"date": "2021-02-19T08:22:51.000Z",
+		"cases": 215223,
+		"dailyCases": 745,
+		"cumuCases": 215223
+	},
+	{
+		"date": "2021-02-20T08:24:33.000Z",
+		"cases": 215857,
+		"dailyCases": 634,
+		"cumuCases": 215857
+	},
+	{
+		"date": "2021-02-21T08:24:21.000Z",
+		"cases": 215942,
+		"dailyCases": 85,
+		"cumuCases": 215942
+	},
+	{
+		"date": "2021-02-22T08:23:41.000Z",
+		"cases": 216210,
+		"dailyCases": 268,
+		"cumuCases": 216210
+	},
+	{
+		"date": "2021-02-23T08:29:16.000Z",
+		"cases": 216647,
+		"dailyCases": 437,
+		"cumuCases": 216647
+	},
+	{
+		"date": "2021-02-24T08:24:57.000Z",
+		"cases": 217302,
+		"dailyCases": 655,
+		"cumuCases": 217302
+	},
+	{
+		"date": "2021-02-25T08:22:40.000Z",
+		"cases": 218156,
+		"dailyCases": 854,
+		"cumuCases": 218156
+	},
+	{
+		"date": "2021-02-26T08:22:28.000Z",
+		"cases": 218435,
+		"dailyCases": 279,
+		"cumuCases": 218435
+	},
+	{
+		"date": "2021-02-27T08:22:20.000Z",
+		"cases": 219233,
+		"dailyCases": 798,
+		"cumuCases": 219233
+	},
+	{
+		"date": "2021-02-28T08:23:01.000Z",
+		"cases": 219307,
+		"dailyCases": 74,
+		"cumuCases": 219307
+	},
+	{
+		"date": "2021-03-01T08:23:30.000Z",
+		"cases": 219632,
+		"dailyCases": 325,
+		"cumuCases": 219632
+	},
+	{
+		"date": "2021-03-02T08:23:28.000Z",
+		"cases": 220453,
+		"dailyCases": 821,
+		"cumuCases": 220453
 	}
 ]
