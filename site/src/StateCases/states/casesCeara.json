@@ -1744,5 +1744,29 @@
 		"cases": 486770,
 		"dailyCases": 5699,
 		"cumuCases": 486770
+	},
+	{
+		"date": "2021-03-19T08:25:46.000Z",
+		"cases": 491575,
+		"dailyCases": 4805,
+		"cumuCases": 491575
+	},
+	{
+		"date": "2021-03-20T08:25:44.000Z",
+		"cases": 495647,
+		"dailyCases": 4072,
+		"cumuCases": 495647
+	},
+	{
+		"date": "2021-03-21T08:25:43.000Z",
+		"cases": 498400,
+		"dailyCases": 2753,
+		"cumuCases": 498400
+	},
+	{
+		"date": "2021-03-22T08:26:18.000Z",
+		"cases": 511019,
+		"dailyCases": 12619,
+		"cumuCases": 511019
 	}
 ]
