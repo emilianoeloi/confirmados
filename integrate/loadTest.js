@@ -4,7 +4,7 @@ const Load = require('./Load.js')
 const integrateStates = require('./Paises/Brazil/integrate.json')
 
 const init = new Date("2020-06-01T00:00:00.000")
-const end = new Date("2021-03-30T23:59:59.999")
+const end = new Date("2021-04-06T23:59:59.999")
 const norte = new Load(
     "0",
     integrateStates,
