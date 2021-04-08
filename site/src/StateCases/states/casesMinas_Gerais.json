@@ -1852,5 +1852,11 @@
 		"cases": 1159039,
 		"dailyCases": 2604,
 		"cumuCases": 1159039
+	},
+	{
+		"date": "2021-04-06T07:20:53.000Z",
+		"cases": 1169489,
+		"dailyCases": 10450,
+		"cumuCases": 1169489
 	}
 ]

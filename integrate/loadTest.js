@@ -73,8 +73,8 @@ const sul = new Load(
     integrateStates,
     "Região Sul",
     [
-        "pr",
         "rs",
+        "pr",
         "sc"
     ],
     init,
