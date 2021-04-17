@@ -93,5 +93,10 @@
         "key":"finland",
         "name":"Finland",
         "color":"#002F6C"
+    },
+    {
+        "key":"aruba",
+        "name":"Aruba",
+        "color":"#3E90DF"
     }
 ]}
