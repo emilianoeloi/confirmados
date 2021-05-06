@@ -34,8 +34,8 @@ const sweden = new Country("sweden", "Sweden", "#004B87")
 
 const aruba = new Country("aruba", "Aruba", "#3E90DF")
 
-const init = new Date("2021-01-01T00:00:00.000")
-const end = new Date("2021-04-16T23:59:59.999")
+const init = new Date("2020-06-01T00:00:00.000")
+const end = new Date("2021-05-04T23:59:59.999")
 
 const kalmar = new Load(
     "Escandinávia",
@@ -104,9 +104,9 @@ const top7 = new Load(
         india,
         brazil,
         france,
+        turkey,
         russia,
-        uk,
-        turkey
+        uk
     ],
     init,
     end
