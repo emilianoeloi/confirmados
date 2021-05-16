@@ -1,6 +1,6 @@
 const path = require('path');
 const {
-   top7
+   kalmar
 } = require('./loadTest.js')
 
 const getCSVRequestFiles = require('./getCSVReportFiles.js');
@@ -13,7 +13,7 @@ process.env.COUNT = 0;
 
 const csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports');
 
-const group = top7
+const group = kalmar
 
 writeFile.writeIntegrateFile(group)
 
