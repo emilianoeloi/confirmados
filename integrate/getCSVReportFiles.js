@@ -29,6 +29,9 @@ const getCSVReportFiles = function(
                var day = ("0" + loop.getUTCDate()).slice(-2)
                var month = ("0" + (loop.getUTCMonth() + 1)).slice(-2)
                var year = loop.getUTCFullYear()
+
+               var lastUpdated = loop
+
                var fileCSV = `${defaultPath}/${month}-${day}-${year}.csv`
 
                readPromise(fileCSV, countryGroup)
@@ -48,7 +51,7 @@ const getCSVReportFiles = function(
                })
 
                .then((data) => {
-                  return writeCountryFilePromise(data)
+                  return writeCountryFilePromise(data, lastUpdated)
                })
                .catch((err) => {
                   console.info("writeCountryFilePromise 🚨", err)

@@ -1,27 +1,28 @@
 import React from 'react';
 import {
-  Bar
-} from 'react-chartjs-2';
-import './App.css';
+    lastUpdated, 
+    stateList
+} from '../Data/ColumnOneData'
 
 class ColumnOne extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      value: this.props.value
+      value: this.props.value,
+      lastUpdated: lastUpdated(),
+      stateList: stateList()
     }
     this.chartReference = React.createRef();
   }
-  handleChange(e) {
-    this.setState({})
-  }
   render() {
-
+    const lastUpdated = this.state.lastUpdated
+    const stateList = this.state.stateList
     return (
         <div className="pure-g">
             <div className="pure-u-1-1">
                 <p>
                     Last Updated at (M/D/YYYY)<br />
+                    {lastUpdated}
                 </p>
                 <table className="pure-table">
                     <thead>
@@ -31,20 +32,15 @@ class ColumnOne extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr className="pure-table-odd">
-                            <td>
-                                33.092.242 | 589.393 
-                                <br />
-                                US
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                26.282.290 | 295.525 
-                                <br />
-                                US
-                            </td>
-                        </tr>
+                        {stateList.map((state) =>
+                            <tr className={state.key % 2 == 0 ? "pure-table-odd":""}>
+                                <td>
+                                    {state.cases} | {state.deaths} 
+                                    <br />
+                                    {state.name}
+                                </td>
+                            </tr>
+                        )}
                     </tbody>
                 </table>
             </div>

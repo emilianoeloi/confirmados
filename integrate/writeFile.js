@@ -25,7 +25,7 @@ const writeCountryFilePromise = function(countriesData) {
     })
 }
 
-const writeIntegrateFilePromise = function(group) {
+const writeIntegrateFilePromise = function(group, lastUpdated) {
     return new Promise((resolve, reject) =>  {
         try {
             const jsonIntegrFile = `integrate${group.key}.json`
@@ -33,7 +33,8 @@ const writeIntegrateFilePromise = function(group) {
             const c = {
                 info: {
                     key: group.key,
-                    title: group.title
+                    title: group.title,
+                    lastUpdated: lastUpdated
                 },
                 countries: group.countries,
                 states: group.states

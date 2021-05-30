@@ -1,11 +1,7 @@
 import React from 'react';
-import {
-  Bar
-} from 'react-chartjs-2';
 import ColumnOne from './ColumnOne'
 import ColumnTwo from './ColumnTwo'
 import ColumnThree from './ColumnThree'
-import './App.css';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -28,7 +24,6 @@ class Dashboard extends React.Component {
             <div className="pure-u-1-3">
                 <ColumnTwo />
             </div>
-        
             <div className="pure-u-1-3">
                 <ColumnThree />
             </div>

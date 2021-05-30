@@ -2128,5 +2128,47 @@
 		"cases": 976251,
 		"dailyCases": 4801,
 		"cumuCases": 976251
+	},
+	{
+		"date": "2021-05-22T07:20:51.000Z",
+		"cases": 980712,
+		"dailyCases": 4461,
+		"cumuCases": 980712
+	},
+	{
+		"date": "2021-05-23T07:20:53.000Z",
+		"cases": 983587,
+		"dailyCases": 2875,
+		"cumuCases": 983587
+	},
+	{
+		"date": "2021-05-24T07:21:08.000Z",
+		"cases": 984967,
+		"dailyCases": 1380,
+		"cumuCases": 984967
+	},
+	{
+		"date": "2021-05-25T07:20:35.000Z",
+		"cases": 989909,
+		"dailyCases": 4942,
+		"cumuCases": 989909
+	},
+	{
+		"date": "2021-05-26T07:20:59.000Z",
+		"cases": 995364,
+		"dailyCases": 5455,
+		"cumuCases": 995364
+	},
+	{
+		"date": "2021-05-27T07:20:36.000Z",
+		"cases": 999463,
+		"dailyCases": 4099,
+		"cumuCases": 999463
+	},
+	{
+		"date": "2021-05-28T07:20:41.000Z",
+		"cases": 1003523,
+		"dailyCases": 4060,
+		"cumuCases": 1003523
 	}
 ]

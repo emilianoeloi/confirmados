@@ -1,14 +1,18 @@
 import React from 'react';
 import {
-  Bar
-} from 'react-chartjs-2';
-import './App.css';
+  totalCases,
+  totalDeaths,
+  totalVaccineDoses
+} from '../Data/ColumnTwoData'
 
 class ColumnTwo extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      value: this.props.value
+      value: this.props.value,
+      cases: totalCases(),
+      deaths: totalDeaths(),
+      vaccineDoses: totalVaccineDoses()
     }
     this.chartReference = React.createRef();
   }
@@ -16,25 +20,27 @@ class ColumnTwo extends React.Component {
     this.setState({})
   }
   render() {
-
+    let cases = this.state.cases
+    let deaths = this.state.deaths
+    let vaccineDoses = this.state.vaccineDoses
     return (
         <div className="pure-g">
             <div className="pure-u-1-3">
                 <p>
                     Cases <br />
-                    166.272.195
+                    {cases}
                 </p>
             </div>
             <div className="pure-u-1-3">
                 <p>
                     Deaths <br />
-                    3.446.059
+                    {deaths}
                 </p>
             </div>
             <div className="pure-u-1-3">
                 <p>
                     Vaccine Doses Administered <br />
-                    1.630.113.800
+                    {vaccineDoses}
                 </p>
             </div>
             <div className="pure-u-3-3">
