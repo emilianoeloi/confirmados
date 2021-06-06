@@ -1,7 +1,13 @@
 import { Loader } from './Loader.js'
 import { LoaderBar } from './loaderBar.js'
+
 import cases from './StateCases/index.js'
 
+/*
+    Obter carregador - Obter os dados do gráfico linha
+    info: 
+    states: 
+*/
 const getLoader = function(info, states) {
     let loader = new Loader(info.title);
 
@@ -18,7 +24,12 @@ for(let i = 0; i < cases.length; i++) {
     loaders.push(getLoader(cs.info, cs.states))
 }
 
-/// 
+
+/*
+    Obter os carregadores (Barras) - Obter os dados do gráfico para Barras
+    info:
+    states: 
+*/
 const getLoaderBar = function(info, states) {
     let loader = new LoaderBar(info.title);
 
