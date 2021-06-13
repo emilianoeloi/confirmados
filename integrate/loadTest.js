@@ -35,7 +35,7 @@ const sweden = new Country("sweden", "Sweden", "#004B87")
 const aruba = new Country("aruba", "Aruba", "#3E90DF")
 
 const init = new Date("2020-06-01T00:00:00.000")
-const end = new Date("2021-05-15T23:59:59.999")
+const end = new Date("2021-06-12T23:59:59.999")
 
 const kalmar = new Load(
     "Escandinávia",
@@ -113,5 +113,6 @@ const top7 = new Load(
 )
 
 module.exports = {
-    kalmar
+    kalmar,
+    top7
 };
