@@ -9,21 +9,21 @@ class Load {
     }
 }
 
-const brazil = new Country("brazil", "Brazil", "#009c3b")
+
 const russia = new Country("russia", "Russia", "#ffffff")
 const india = new Country("india", "India", "#FF9933")
 const china = new Country("china", "China", "#DE2910")
 const southAfrica = new Country("south_africa", "South Africa", "#000000")
 const france = new Country("france", "France", "#0055A4")
 const germany = new Country("germany", "Germany", "#000000")
-const argentina = new Country("argentina", "Argentina", "#75AADB")
+
 const spain = new Country("spain", "Spain", "#AA151B")
 const italy = new Country("italy", "Italy", "#008C45")
 const us = new Country("us", "US", "#3C3B6E")
 const uk = new Country("united_kingdom", "United Kingdom", "#00247D")
-const paraguay = new Country("paraguay", "Paraguay", "#D52B1E")
-const uruguay = new Country("uruguay", "Uruguay", "#FCD116")
-const venezuela = new Country("venezuela", "Venezuela", "#008033")
+
+
+
 const turkey = new Country("turkey", "Turkey", "#E30A17")
 
 const denmark = new Country("denmark", "Denmark", "#C60C30")
@@ -34,8 +34,45 @@ const sweden = new Country("sweden", "Sweden", "#004B87")
 
 const aruba = new Country("aruba", "Aruba", "#3E90DF")
 
+// Mercosur
+/// Pleno
+const argentina = new Country("argentina", "Argentina", "#75AADB")
+const brazil = new Country("brazil", "Brazil", "#009c3b")
+const paraguay = new Country("paraguay", "Paraguay", "#D52B1E")
+const uruguay = new Country("uruguay", "Uruguay", "#FCD116")
+const venezuela = new Country("venezuela", "Venezuela", "#008033")
+/// Associados
+const chile = new Country("chile", "Chile", "#D52B1E")
+const bolivia = new Country("bolivia", "Bolivia", "#F9E300")
+const peru = new Country("peru", "Peru", "#D91023")
+const colombia = new Country("colombia", "Colombia", "#003893")
+const ecuador = new Country("ecuador", "Ecuador", "#equador")
+const guyana = new Country("guyana", "Guyana", "#018A2D")
+const suriname = new Country("suriname", "Suriname", "#377E3F")
+
 const init = new Date("2020-06-01T00:00:00.000")
-const end = new Date("2021-06-12T23:59:59.999")
+const end = new Date("2021-07-01T23:59:59.999")
+
+const mercosur = new Load(
+    "MERCOSUR",
+    [
+        //brazil,
+        argentina,
+        paraguay,
+        uruguay,
+        venezuela,
+        //
+        chile,
+        bolivia,
+        peru,
+        colombia,
+        ecuador,
+        guyana,
+        suriname
+    ],
+    init,
+    end
+)
 
 const kalmar = new Load(
     "Escandinávia",
@@ -76,17 +113,6 @@ const g20 = new Load(
     end
 )
 
-const mercosur = new Load(
-    "MERCOSUR",
-    [
-        paraguay,
-        venezuela,
-        uruguay,
-    ],
-    init,
-    end
-)
-
 const americaDoSul = new Load(
     "América do Sul",
     [
@@ -113,6 +139,5 @@ const top7 = new Load(
 )
 
 module.exports = {
-    kalmar,
-    top7
+    mercosur
 };
