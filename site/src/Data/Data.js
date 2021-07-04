@@ -1,7 +1,7 @@
 import { Loader } from './Loader.js'
 import { LoaderBar } from './loaderBar.js'
 
-import cases from './StateCases/index.js'
+import cases from '../StateCases/index.js'
 
 /*
     Obter carregador - Obter os dados do gráfico linha

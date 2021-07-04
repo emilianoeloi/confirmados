@@ -217,6 +217,8 @@ How to delete a file in bash: https://linuxhint.com/delete_file_bash/ Acesso em 
 
 *Saúde*
 
+openDataSUS: https://opendatasus.saude.gov.br Acesso em 02/07/2021
+
 11 coisas que você não sabe sobre o AVC - https://saude.abril.com.br/medicina/11-coisas-que-voce-nao-sabe-sobre-o-avc/ Acesso em 04/10/2020
 
 *História*

@@ -13,7 +13,7 @@ function csvJSON(csv){
         result.push(obj);
     }
 
-    return JSON.stringify(result); //JSO
+    return JSON.stringify(result); //JSON
 }
 
 export default csvJSON

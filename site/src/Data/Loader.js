@@ -15,10 +15,9 @@ class Loader {
         this.countryName = ""
     }
 
-    getData() {
-        return {
-            labels: this.labels,
-            datasets: this.datasets
+    setTicks(item) {
+        if (this.max < item.cases) { 
+            this.max = item.cases
         }
     }
 
@@ -54,32 +53,6 @@ class Loader {
 
         this.dateMax = cases[cases.length-1].date
         this.setCountry(country, data, labels)
-    }
-
-    setTicks(item) {
-        if (this.max < item.cases) { 
-            this.max = item.cases
-        }
-    }
-
-    getTicks() {
-        return this.max
-    }
-
-    getDateMin() {
-        return this.dateMin
-    }
-
-    getDateMax() {
-        return this.dateMax
-    }
-
-    getMaxCases() {
-        return 30
-    }
-
-    getTitle() {
-        return this.title
     }
 
     setCountry(country, data, labels) {
@@ -124,6 +97,33 @@ class Loader {
         if (this.display) {
             this.display = false
         }
+    }
+
+    getData() {
+        return {
+            labels: this.labels,
+            datasets: this.datasets
+        }
+    }
+
+    getTicks() {
+        return this.max
+    }
+
+    getDateMin() {
+        return this.dateMin
+    }
+
+    getDateMax() {
+        return this.dateMax
+    }
+
+    getMaxCases() {
+        return 30
+    }
+
+    getTitle() {
+        return this.title
     }
 }
 

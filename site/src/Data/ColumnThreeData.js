@@ -2,7 +2,7 @@
 import {
     loaders,
     loadersBar
-   } from '../Data.js'
+   } from './Data.js'
 
 const dataFromCases = function() {
     return {name: "Cases"}

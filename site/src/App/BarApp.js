@@ -21,22 +21,22 @@ class BarApp extends React.Component {
 
     return (
       <div>
-      <Bar
-        ref={this.chartReference}
-        data={data}
-        options={{
-          responsive: true,
-          hoverMode: 'index',
-          stacked: false,
-          title: {
-            display: true,
-            text: 'Casos novos por dia - Confirmados de COVID-19 - ' + this.props.loader.title
-          },
-          scales: {
-            yAxes: this.props.loader.options,
-          }
-				}}
-      />
+        <Bar
+          ref={this.chartReference}
+          data={data}
+          options={{
+            responsive: true,
+            hoverMode: 'index',
+            stacked: false,
+            title: {
+              display: true,
+              text: 'Casos novos por dia - Confirmados de COVID-19 - ' + this.props.loader.title
+            },
+            scales: {
+              yAxes: this.props.loader.options, 
+            }
+          }}
+        />
       </div>
     )
   }

@@ -4,11 +4,12 @@ import {
   dataFromDeaths,
   dataFromVaccineDoses
 } from '../Data/ColumnThreeData'
-import BarApp from '../BarApp'
+import BarApp from '../App/BarApp'
+import LineApp from '../App/LineApp'
 import {
   loaders,
   loadersBar
- } from '../Data.js'
+ } from '../Data/Data.js'
 
 class ColumnThree extends React.Component {
   constructor(props) {
@@ -33,7 +34,9 @@ class ColumnThree extends React.Component {
       <div className="pure-g">
         <div className="pure-u-1-1">
           <BarApp loader={loadersBar[0]} ></BarApp>
-          Gráfico {dataFromDeaths.name} <hr />
+          <hr />
+          <LineApp loader={loaders[0]}></LineApp> 
+          <hr />
           Gráfico {dataFromVaccineDoses.name} <hr />
         </div>
       </div>

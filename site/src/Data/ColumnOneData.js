@@ -1,6 +1,6 @@
 // ColumnOneData
-import { Loader } from '../Loader.js'
-import { LoaderBar } from '../loaderBar.js'
+import { Loader } from './Loader.js'
+import { LoaderBar } from './loaderBar.js'
 import cases from '../StateCases/index.js'
 
 class ColumnOne {
@@ -35,7 +35,7 @@ class ColumnOne {
 
 
 const lastUpdated = function() {
-    return "10/05/2021"
+    return "01/07/2021"
 }
 
 const stateList = function() {

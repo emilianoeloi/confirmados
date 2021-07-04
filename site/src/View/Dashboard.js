@@ -18,7 +18,7 @@ class Dashboard extends React.Component {
 
     return (
         <div>
-            <div className="pure-u-1-3 vai-sabrina">
+            <div className="pure-u-1-3">
                 <ColumnOne />
             </div>
             <div className="pure-u-1-3">
