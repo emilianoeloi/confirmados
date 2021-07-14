@@ -125,6 +125,8 @@ const top7 = new Load(
 
 Novel Coronavirus (COVID-19) Cases, provided by JHU CSSE: https://systems.jhu.edu/research/public-health/ncov/
 
+Our Worldin Data: https://ourworldindata.org/about Acessado em 13/07/2021
+
 Brazil Ministry of Health: https://covid.saude.gov.br/
 
 National Health Commission Update: http://weekly.chinacdc.cn/news/TrackingtheEpidemic.htm

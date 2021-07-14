@@ -1082,7 +1082,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 20075,Hamilton,Kansas,US,2020-05-19 02:32:18,37.99978709,-101.7921066,9,0,0,9,"Hamilton, Kansas, US"
 31081,Hamilton,Nebraska,US,2020-05-19 02:32:18,40.87349452,-98.02099117,51,7,0,44,"Hamilton, Nebraska, US"
 36041,Hamilton,New York,US,2020-05-19 02:32:18,43.66146647,-74.49721957,5,0,0,5,"Hamilton, New York, US"
-39061,Hamilton,Ohio,US,2020-05-19 02:32:18,39.19673558,-84.54502924,2082,114,0,1970,"Hamilton, Ohio, US"
+39061,Hamilton,Ohio,US,2020-05-19 02:32:18,39.19673558,-84.54502924,2082,113,0,1970,"Hamilton, Ohio, US"
 47065,Hamilton,Tennessee,US,2020-05-19 02:32:18,35.17670231,-85.16652245,357,13,0,344,"Hamilton, Tennessee, US"
 48193,Hamilton,Texas,US,2020-05-19 02:32:18,31.70470573,-98.11083887,7,0,0,7,"Hamilton, Texas, US"
 46057,Hamlin,South Dakota,US,2020-05-19 02:32:18,44.67385954,-97.18829593,3,0,0,3,"Hamlin, South Dakota, US"
@@ -2354,7 +2354,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 17167,Sangamon,Illinois,US,2020-05-19 02:32:18,39.75836914,-89.65872023,309,25,0,284,"Sangamon, Illinois, US"
 26151,Sanilac,Michigan,US,2020-05-19 02:32:18,43.42406072,-82.82055898,39,5,0,34,"Sanilac, Michigan, US"
 6083,Santa Barbara,California,US,2020-05-19 02:32:18,34.65329488,-120.0188492,1474,11,0,1463,"Santa Barbara, California, US"
-6085,Santa Clara,California,US,2020-05-19 02:32:18,37.23104908,-121.6970462,2453,135,0,2318,"Santa Clara, California, US"
+6085,Santa Clara,California,US,2020-05-19 02:32:18,37.23104908,-121.6970462,2453,137,0,2318,"Santa Clara, California, US"
 4023,Santa Cruz,Arizona,US,2020-05-19 02:32:18,31.52508998,-110.8479088,78,0,0,78,"Santa Cruz, Arizona, US"
 6087,Santa Cruz,California,US,2020-05-19 02:32:18,37.05580291,-122.0066524,163,2,0,161,"Santa Cruz, California, US"
 35049,Santa Fe,New Mexico,US,2020-05-19 02:32:18,35.50708973,-105.9774716,124,3,0,121,"Santa Fe, New Mexico, US"
@@ -3313,6 +3313,6 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 2063,Chugach,Alaska,US,2021-04-02 15:13:53,61.16666,-149.9,1,0,0,0,"Chugach, Alaska, US"
 ,,Unknown,China,2020-05-19 02:32:18,,,0,0,0,0,"Unknown, China"
 ,,,Kiribati,2020-05-19 02:32:18,-3.3704,-168.734,0,0,0,0,Kiribati
-,,,Palau,2020-05-19 02:32:18,7.5150,134.5825,0,0,0,0,Palau
+,,,Palau,2020-05-19 02:32:18,7.515,134.5825,0,0,0,0,Palau
 ,,Cook Islands,New Zealand,2020-05-19 02:32:18,-21.2367,-159.7777,0,0,0,0,"Cook Islands, New Zealand"
 ,,,Summer Olympics 2020,2020-05-19 02:32:18,35.6491,139.7737,0,0,0,0,Summer Olympics 2020

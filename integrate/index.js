@@ -1,6 +1,6 @@
 const path = require('path');
 const {
-   mercosur
+   brics
 } = require('./loadTest.js')
 
 const getCSVRequestFiles = require('./getCSVReportFiles.js');
@@ -13,7 +13,7 @@ process.env.COUNT = 0;
 
 const csseCovid19DailyReport = path.join(__dirname, 'csse_covid_19_daily_reports');
 
-const group = mercosur
+const group = brics
 
 writeFile.writeIntegrateFile(group)
 

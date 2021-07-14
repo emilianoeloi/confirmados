@@ -50,13 +50,13 @@ const ecuador = new Country("ecuador", "Ecuador", "#equador")
 const guyana = new Country("guyana", "Guyana", "#018A2D")
 const suriname = new Country("suriname", "Suriname", "#377E3F")
 
-const init = new Date("2020-06-01T00:00:00.000")
-const end = new Date("2021-07-01T23:59:59.999")
+const init = new Date("2020-06-12T00:00:00.000")
+const end = new Date("2021-07-12T23:59:59.999")
 
 const mercosur = new Load(
     "MERCOSUR",
     [
-        //brazil,
+        brazil,
         argentina,
         paraguay,
         uruguay,
@@ -90,8 +90,8 @@ const kalmar = new Load(
 const brics = new Load(
     "BRICS",
     [
-        brazil,
         india,
+        brazil,
         russia,
         southAfrica,
         china
@@ -139,5 +139,5 @@ const top7 = new Load(
 )
 
 module.exports = {
-    mercosur
+    brics
 };

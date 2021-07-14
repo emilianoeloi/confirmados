@@ -814,7 +814,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 47063,Hamblen,Tennessee,US,2020-04-01 21:58:49,36.21990035,-83.26586179,3,0,0,0,"Hamblen, Tennessee, US"
 18057,Hamilton,Indiana,US,2020-04-01 21:58:49,40.07306535,-86.05244729,179,4,0,0,"Hamilton, Indiana, US"
 36041,Hamilton,New York,US,2020-04-01 21:58:49,43.66146647,-74.49721957,2,0,0,0,"Hamilton, New York, US"
-39061,Hamilton,Ohio,US,2020-04-01 21:58:49,39.19673558,-84.54502924,154,9,0,0,"Hamilton, Ohio, US"
+39061,Hamilton,Ohio,US,2020-04-01 21:58:49,39.19673558,-84.54502924,154,8,0,0,"Hamilton, Ohio, US"
 47065,Hamilton,Tennessee,US,2020-04-01 21:58:49,35.17670231,-85.16652245,50,3,0,0,"Hamilton, Tennessee, US"
 46057,Hamlin,South Dakota,US,2020-04-01 21:58:49,44.67385954,-97.18829593,1,0,0,0,"Hamlin, South Dakota, US"
 25013,Hampden,Massachusetts,US,2020-04-01 21:58:49,42.13440424,-72.63235561,475,16,0,0,"Hampden, Massachusetts, US"
@@ -1742,7 +1742,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 17167,Sangamon,Illinois,US,2020-04-01 21:58:49,39.75836914,-89.65872023,17,2,0,0,"Sangamon, Illinois, US"
 26151,Sanilac,Michigan,US,2020-04-01 21:58:49,43.42406072,-82.82055898,7,1,0,0,"Sanilac, Michigan, US"
 6083,Santa Barbara,California,US,2020-04-01 21:58:49,34.65329488,-120.0188492,99,0,0,0,"Santa Barbara, California, US"
-6085,Santa Clara,California,US,2020-04-01 21:58:49,37.23104908,-121.6970462,956,32,0,0,"Santa Clara, California, US"
+6085,Santa Clara,California,US,2020-04-01 21:58:49,37.23104908,-121.6970462,956,33,0,0,"Santa Clara, California, US"
 4023,Santa Cruz,Arizona,US,2020-04-01 21:58:49,31.52508998,-110.8479088,3,0,0,0,"Santa Cruz, Arizona, US"
 6087,Santa Cruz,California,US,2020-04-01 21:58:49,37.05580291,-122.0066524,49,1,0,0,"Santa Cruz, California, US"
 35049,Santa Fe,New Mexico,US,2020-04-01 21:58:49,35.50708973,-105.9774716,42,0,0,0,"Santa Fe, New Mexico, US"
@@ -2487,6 +2487,6 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Zimbabwe,2020-04-01 21:58:34,-19.015438,29.154857,8,1,0,7,Zimbabwe
 ,,Unknown,China,2020-04-01 21:58:49,,,0,0,0,0,"Unknown, China"
 ,,,Kiribati,2020-04-01 21:58:49,-3.3704,-168.734,0,0,0,0,Kiribati
-,,,Palau,2020-04-01 21:58:49,7.5150,134.5825,0,0,0,0,Palau
+,,,Palau,2020-04-01 21:58:49,7.515,134.5825,0,0,0,0,Palau
 ,,Cook Islands,New Zealand,2020-04-01 21:58:49,-21.2367,-159.7777,0,0,0,0,"Cook Islands, New Zealand"
 ,,,Summer Olympics 2020,2020-04-01 21:58:49,35.6491,139.7737,0,0,0,0,Summer Olympics 2020
