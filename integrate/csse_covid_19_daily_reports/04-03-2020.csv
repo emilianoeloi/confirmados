@@ -1802,7 +1802,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 33015,Rockingham,New Hampshire,US,2020-04-03 22:46:37,42.98499744,-71.12883377,170,1,0,0,"Rockingham, New Hampshire, US"
 37157,Rockingham,North Carolina,US,2020-04-03 22:46:37,36.39593137,-79.77504841,3,1,0,0,"Rockingham, North Carolina, US"
 51165,Rockingham,Virginia,US,2020-04-03 22:46:37,38.51006137,-78.87260325,11,0,0,0,"Rockingham, Virginia, US"
-36087,Rockland,New York,US,2020-04-03 22:46:37,41.15027894,-74.02560498,4289,42,0,0,"Rockland, New York, US"
+36087,Rockland,New York,US,2020-04-03 22:46:37,41.15027894,-74.02560498,4289,0,0,0,"Rockland, New York, US"
 48397,Rockwall,Texas,US,2020-04-03 22:46:37,32.89779518,-96.40771592,10,0,0,0,"Rockwall, Texas, US"
 40131,Rogers,Oklahoma,US,2020-04-03 22:46:37,36.37004357,-95.60406759,10,0,0,0,"Rogers, Oklahoma, US"
 30085,Roosevelt,Montana,US,2020-04-03 22:46:37,48.29607488,-105.00792679999999,1,0,0,0,"Roosevelt, Montana, US"
@@ -2532,7 +2532,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Jamaica,2020-04-03 22:46:20,18.1096,-77.2975,47,3,2,42,Jamaica
 ,,,Japan,2020-04-03 22:46:20,36.204824,138.252924,2617,63,514,2040,Japan
 ,,,Jordan,2020-04-03 22:46:20,31.24,36.51,310,5,58,247,Jordan
-,,,Kazakhstan,2020-04-03 22:46:20,48.0196,66.9237,464,6,29,429,Kazakhstan
+,,,Kazakhstan,2020-04-03 22:46:20,48.0196,66.9237,464,3,29,429,Kazakhstan
 ,,,Kenya,2020-04-03 22:46:20,-0.0236,37.9062,122,4,4,114,Kenya
 ,,,"Korea, South",2020-04-03 22:46:20,35.90775700000001,127.766922,10062,174,6021,3867,"Korea, South"
 ,,,Kosovo,2020-04-03 22:46:20,42.602636,20.902977,126,1,10,115,Kosovo

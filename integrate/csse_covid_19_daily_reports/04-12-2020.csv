@@ -2084,7 +2084,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 33015,Rockingham,New Hampshire,US,2020-04-12 23:18:00,42.98499744,-71.12883377,314,1,0,313,"Rockingham, New Hampshire, US"
 37157,Rockingham,North Carolina,US,2020-04-12 23:18:00,36.39593137,-79.77504841,14,2,0,12,"Rockingham, North Carolina, US"
 51165,Rockingham,Virginia,US,2020-04-12 23:18:00,38.51006137,-78.87260325,43,0,0,43,"Rockingham, Virginia, US"
-36087,Rockland,New York,US,2020-04-12 23:18:00,41.15027894,-74.02560498,7721,200,0,7521,"Rockland, New York, US"
+36087,Rockland,New York,US,2020-04-12 23:18:00,41.15027894,-74.02560498,7721,197,0,7521,"Rockland, New York, US"
 48397,Rockwall,Texas,US,2020-04-12 23:18:00,32.89779518,-96.40771592,20,0,0,20,"Rockwall, Texas, US"
 40131,Rogers,Oklahoma,US,2020-04-12 23:18:00,36.37004357,-95.60406759,25,0,0,25,"Rogers, Oklahoma, US"
 38079,Rolette,North Dakota,US,2020-04-12 23:18:00,48.77245354,-99.84097493,1,0,0,1,"Rolette, North Dakota, US"
@@ -2670,7 +2670,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 54105,Wirt,West Virginia,US,2020-04-12 23:18:00,39.02775007,-81.37473928,2,0,0,2,"Wirt, West Virginia, US"
 48497,Wise,Texas,US,2020-04-12 23:18:00,33.21570665,-97.65460265,5,0,0,5,"Wise, Texas, US"
 51195,Wise,Virginia,US,2020-04-12 23:18:00,36.9746148,-82.62410519,8,0,0,8,"Wise, Virginia, US"
-39173,Wood,Ohio,US,2020-04-12 23:18:00,41.36224827,-83.62285108,54,4,0,51,"Wood, Ohio, US"
+39173,Wood,Ohio,US,2020-04-12 23:18:00,41.36224827,-83.62285108,54,5,0,51,"Wood, Ohio, US"
 48499,Wood,Texas,US,2020-04-12 23:18:00,32.78722382,-95.38236368,5,0,0,5,"Wood, Texas, US"
 54107,Wood,West Virginia,US,2020-04-12 23:18:00,39.20967886,-81.5162836,18,0,0,18,"Wood, West Virginia, US"
 55141,Wood,Wisconsin,US,2020-04-12 23:18:00,44.45537896,-90.04158336,2,0,0,2,"Wood, Wisconsin, US"
@@ -2892,7 +2892,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Jamaica,2020-04-12 23:17:00,18.1096,-77.2975,69,4,13,52,Jamaica
 ,,,Japan,2020-04-12 23:17:00,36.204824,138.252924,6748,108,762,5878,Japan
 ,,,Jordan,2020-04-12 23:17:00,31.24,36.51,389,7,201,181,Jordan
-,,,Kazakhstan,2020-04-12 23:17:00,48.0196,66.9237,951,10,99,842,Kazakhstan
+,,,Kazakhstan,2020-04-12 23:17:00,48.0196,66.9237,951,12,99,842,Kazakhstan
 ,,,Kenya,2020-04-12 23:17:00,-0.0236,37.9062,197,8,25,164,Kenya
 ,,,"Korea, South",2020-04-12 23:17:00,35.907757,127.766922,10512,214,7368,2930,"Korea, South"
 ,,,Kosovo,2020-04-12 23:17:00,42.602636,20.902977,283,7,58,218,Kosovo
