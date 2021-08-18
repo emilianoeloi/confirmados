@@ -16,6 +16,7 @@ const china = new Country("china", "China", "#DE2910")
 const southAfrica = new Country("south_africa", "South Africa", "#000000")
 const france = new Country("france", "France", "#0055A4")
 const germany = new Country("germany", "Germany", "#000000")
+const indonesia = new Country("indonesia", "Indonesia", "#a5a5a5")
 
 const spain = new Country("spain", "Spain", "#AA151B")
 const italy = new Country("italy", "Italy", "#008C45")
@@ -50,8 +51,8 @@ const ecuador = new Country("ecuador", "Ecuador", "#equador")
 const guyana = new Country("guyana", "Guyana", "#018A2D")
 const suriname = new Country("suriname", "Suriname", "#377E3F")
 
-const init = new Date("2020-06-12T00:00:00.000")
-const end = new Date("2021-07-12T23:59:59.999")
+const init = new Date("2020-08-17T00:00:00.000")
+const end = new Date("2021-08-17T23:59:59.999")
 
 const mercosur = new Load(
     "MERCOSUR",
@@ -132,12 +133,13 @@ const top7 = new Load(
         france,
         turkey,
         russia,
-        uk
+        uk,
+        indonesia
     ],
     init,
     end
 )
 
 module.exports = {
-    brics
+    top7
 };
