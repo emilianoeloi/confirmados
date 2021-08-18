@@ -1,278 +1,8 @@
 [
 	{
-		"date": "2020-07-03T07:33:51.000Z",
-		"cases": 82314,
-		"dailyCases": 3171,
-		"cumuCases": 82314
-	},
-	{
-		"date": "2020-07-04T07:33:46.000Z",
-		"cases": 85485,
-		"dailyCases": 3171,
-		"cumuCases": 85485
-	},
-	{
-		"date": "2020-07-05T07:33:57.000Z",
-		"cases": 87048,
-		"dailyCases": 1563,
-		"cumuCases": 87048
-	},
-	{
-		"date": "2020-07-06T07:34:00.000Z",
-		"cases": 88279,
-		"dailyCases": 1231,
-		"cumuCases": 88279
-	},
-	{
-		"date": "2020-07-07T08:33:48.000Z",
-		"cases": 91954,
-		"dailyCases": 3675,
-		"cumuCases": 91954
-	},
-	{
-		"date": "2020-07-08T07:34:23.000Z",
-		"cases": 95536,
-		"dailyCases": 3582,
-		"cumuCases": 95536
-	},
-	{
-		"date": "2020-07-09T07:34:24.000Z",
-		"cases": 98319,
-		"dailyCases": 2783,
-		"cumuCases": 98319
-	},
-	{
-		"date": "2020-07-10T07:34:26.000Z",
-		"cases": 101186,
-		"dailyCases": 2867,
-		"cumuCases": 101186
-	},
-	{
-		"date": "2020-07-11T07:34:30.000Z",
-		"cases": 104188,
-		"dailyCases": 3002,
-		"cumuCases": 104188
-	},
-	{
-		"date": "2020-07-12T07:43:04.000Z",
-		"cases": 105763,
-		"dailyCases": 1575,
-		"cumuCases": 105763
-	},
-	{
-		"date": "2020-07-13T07:34:46.000Z",
-		"cases": 106891,
-		"dailyCases": 1128,
-		"cumuCases": 106891
-	},
-	{
-		"date": "2020-07-14T07:34:39.000Z",
-		"cases": 110029,
-		"dailyCases": 3138,
-		"cumuCases": 110029
-	},
-	{
-		"date": "2020-07-15T07:44:59.000Z",
-		"cases": 112993,
-		"dailyCases": 2964,
-		"cumuCases": 112993
-	},
-	{
-		"date": "2020-07-16T07:34:50.000Z",
-		"cases": 116373,
-		"dailyCases": 3380,
-		"cumuCases": 116373
-	},
-	{
-		"date": "2020-07-17T07:34:45.000Z",
-		"cases": 118657,
-		"dailyCases": 2284,
-		"cumuCases": 118657
-	},
-	{
-		"date": "2020-07-18T07:34:58.000Z",
-		"cases": 120238,
-		"dailyCases": 1581,
-		"cumuCases": 120238
-	},
-	{
-		"date": "2020-07-19T08:34:40.000Z",
-		"cases": 122169,
-		"dailyCases": 1931,
-		"cumuCases": 122169
-	},
-	{
-		"date": "2020-07-20T07:38:46.000Z",
-		"cases": 123292,
-		"dailyCases": 1123,
-		"cumuCases": 123292
-	},
-	{
-		"date": "2020-07-21T07:34:42.000Z",
-		"cases": 126844,
-		"dailyCases": 3552,
-		"cumuCases": 126844
-	},
-	{
-		"date": "2020-07-22T08:15:04.000Z",
-		"cases": 133245,
-		"dailyCases": 6401,
-		"cumuCases": 133245
-	},
-	{
-		"date": "2020-07-23T08:30:40.000Z",
-		"cases": 138358,
-		"dailyCases": 5113,
-		"cumuCases": 138358
-	},
-	{
-		"date": "2020-07-24T07:47:39.000Z",
-		"cases": 142767,
-		"dailyCases": 4409,
-		"cumuCases": 142767
-	},
-	{
-		"date": "2020-07-25T07:35:00.000Z",
-		"cases": 146399,
-		"dailyCases": 3632,
-		"cumuCases": 146399
-	},
-	{
-		"date": "2020-07-26T07:35:02.000Z",
-		"cases": 148179,
-		"dailyCases": 1780,
-		"cumuCases": 148179
-	},
-	{
-		"date": "2020-07-27T07:58:43.000Z",
-		"cases": 149109,
-		"dailyCases": 930,
-		"cumuCases": 149109
-	},
-	{
-		"date": "2020-07-28T07:35:11.000Z",
-		"cases": 153313,
-		"dailyCases": 4204,
-		"cumuCases": 153313
-	},
-	{
-		"date": "2020-07-29T07:35:05.000Z",
-		"cases": 157334,
-		"dailyCases": 4021,
-		"cumuCases": 157334
-	},
-	{
-		"date": "2020-07-30T07:35:18.000Z",
-		"cases": 161630,
-		"dailyCases": 4296,
-		"cumuCases": 161630
-	},
-	{
-		"date": "2020-07-31T07:36:27.000Z",
-		"cases": 166154,
-		"dailyCases": 4524,
-		"cumuCases": 166154
-	},
-	{
-		"date": "2020-08-01T07:34:47.000Z",
-		"cases": 168926,
-		"dailyCases": 2772,
-		"cumuCases": 168926
-	},
-	{
-		"date": "2020-08-02T07:34:35.000Z",
-		"cases": 170476,
-		"dailyCases": 1550,
-		"cumuCases": 170476
-	},
-	{
-		"date": "2020-08-03T07:41:59.000Z",
-		"cases": 171391,
-		"dailyCases": 915,
-		"cumuCases": 171391
-	},
-	{
-		"date": "2020-08-04T07:34:43.000Z",
-		"cases": 175389,
-		"dailyCases": 3998,
-		"cumuCases": 175389
-	},
-	{
-		"date": "2020-08-05T07:35:02.000Z",
-		"cases": 179737,
-		"dailyCases": 4348,
-		"cumuCases": 179737
-	},
-	{
-		"date": "2020-08-06T07:35:11.000Z",
-		"cases": 183690,
-		"dailyCases": 3953,
-		"cumuCases": 183690
-	},
-	{
-		"date": "2020-08-07T07:34:53.000Z",
-		"cases": 187892,
-		"dailyCases": 4202,
-		"cumuCases": 187892
-	},
-	{
-		"date": "2020-08-08T07:34:54.000Z",
-		"cases": 191401,
-		"dailyCases": 3509,
-		"cumuCases": 191401
-	},
-	{
-		"date": "2020-08-09T07:34:55.000Z",
-		"cases": 193029,
-		"dailyCases": 1628,
-		"cumuCases": 193029
-	},
-	{
-		"date": "2020-08-10T07:35:08.000Z",
-		"cases": 194097,
-		"dailyCases": 1068,
-		"cumuCases": 194097
-	},
-	{
-		"date": "2020-08-11T07:27:29.000Z",
-		"cases": 198767,
-		"dailyCases": 4670,
-		"cumuCases": 198767
-	},
-	{
-		"date": "2020-08-12T07:29:15.000Z",
-		"cases": 203020,
-		"dailyCases": 4253,
-		"cumuCases": 203020
-	},
-	{
-		"date": "2020-08-13T07:51:19.000Z",
-		"cases": 206955,
-		"dailyCases": 3935,
-		"cumuCases": 206955
-	},
-	{
-		"date": "2020-08-14T07:27:31.000Z",
-		"cases": 210993,
-		"dailyCases": 4038,
-		"cumuCases": 210993
-	},
-	{
-		"date": "2020-08-15T07:27:42.000Z",
-		"cases": 214379,
-		"dailyCases": 3386,
-		"cumuCases": 214379
-	},
-	{
-		"date": "2020-08-16T07:27:20.000Z",
-		"cases": 216030,
-		"dailyCases": 1651,
-		"cumuCases": 216030
-	},
-	{
 		"date": "2020-08-17T07:27:56.000Z",
 		"cases": 217115,
-		"dailyCases": 1085,
+		"dailyCases": 3926,
 		"cumuCases": 217115
 	},
 	{
@@ -2194,5 +1924,275 @@
 		"cases": 1135261,
 		"dailyCases": 3211,
 		"cumuCases": 1135261
+	},
+	{
+		"date": "2021-07-04T07:21:28.000Z",
+		"cases": 1137167,
+		"dailyCases": 1906,
+		"cumuCases": 1137167
+	},
+	{
+		"date": "2021-07-05T07:21:32.000Z",
+		"cases": 1138377,
+		"dailyCases": 1210,
+		"cumuCases": 1138377
+	},
+	{
+		"date": "2021-07-06T07:21:20.000Z",
+		"cases": 1141612,
+		"dailyCases": 3235,
+		"cumuCases": 1141612
+	},
+	{
+		"date": "2021-07-07T07:21:26.000Z",
+		"cases": 1144464,
+		"dailyCases": 2852,
+		"cumuCases": 1144464
+	},
+	{
+		"date": "2021-07-08T07:21:21.000Z",
+		"cases": 1147552,
+		"dailyCases": 3088,
+		"cumuCases": 1147552
+	},
+	{
+		"date": "2021-07-09T07:21:25.000Z",
+		"cases": 1152031,
+		"dailyCases": 4479,
+		"cumuCases": 1152031
+	},
+	{
+		"date": "2021-07-10T07:21:43.000Z",
+		"cases": 1155841,
+		"dailyCases": 3810,
+		"cumuCases": 1155841
+	},
+	{
+		"date": "2021-07-11T07:21:34.000Z",
+		"cases": 1158122,
+		"dailyCases": 2281,
+		"cumuCases": 1158122
+	},
+	{
+		"date": "2021-07-12T07:21:18.000Z",
+		"cases": 1159419,
+		"dailyCases": 1297,
+		"cumuCases": 1159419
+	},
+	{
+		"date": "2021-07-13T07:21:35.000Z",
+		"cases": 1161932,
+		"dailyCases": 2513,
+		"cumuCases": 1161932
+	},
+	{
+		"date": "2021-07-14T07:21:48.000Z",
+		"cases": 1164162,
+		"dailyCases": 2230,
+		"cumuCases": 1164162
+	},
+	{
+		"date": "2021-07-15T07:21:22.000Z",
+		"cases": 1165822,
+		"dailyCases": 1660,
+		"cumuCases": 1165822
+	},
+	{
+		"date": "2021-07-16T07:22:22.000Z",
+		"cases": 1168377,
+		"dailyCases": 2555,
+		"cumuCases": 1168377
+	},
+	{
+		"date": "2021-07-17T07:22:07.000Z",
+		"cases": 1171292,
+		"dailyCases": 2915,
+		"cumuCases": 1171292
+	},
+	{
+		"date": "2021-07-18T07:21:24.000Z",
+		"cases": 1173423,
+		"dailyCases": 2131,
+		"cumuCases": 1173423
+	},
+	{
+		"date": "2021-07-19T07:21:48.000Z",
+		"cases": 1174613,
+		"dailyCases": 1190,
+		"cumuCases": 1174613
+	},
+	{
+		"date": "2021-07-20T07:21:40.000Z",
+		"cases": 1175267,
+		"dailyCases": 654,
+		"cumuCases": 1175267
+	},
+	{
+		"date": "2021-07-21T07:21:19.000Z",
+		"cases": 1178355,
+		"dailyCases": 3088,
+		"cumuCases": 1178355
+	},
+	{
+		"date": "2021-07-22T07:21:29.000Z",
+		"cases": 1180732,
+		"dailyCases": 2377,
+		"cumuCases": 1180732
+	},
+	{
+		"date": "2021-07-23T03:21:36.000Z",
+		"cases": 1182673,
+		"dailyCases": 1941,
+		"cumuCases": 1182673
+	},
+	{
+		"date": "2021-07-24T07:22:12.000Z",
+		"cases": 1184314,
+		"dailyCases": 1641,
+		"cumuCases": 1184314
+	},
+	{
+		"date": "2021-07-25T07:21:28.000Z",
+		"cases": 1185439,
+		"dailyCases": 1125,
+		"cumuCases": 1185439
+	},
+	{
+		"date": "2021-07-26T07:21:18.000Z",
+		"cases": 1186213,
+		"dailyCases": 774,
+		"cumuCases": 1186213
+	},
+	{
+		"date": "2021-07-27T07:21:39.000Z",
+		"cases": 1187550,
+		"dailyCases": 1337,
+		"cumuCases": 1187550
+	},
+	{
+		"date": "2021-07-28T07:21:33.000Z",
+		"cases": 1188967,
+		"dailyCases": 1417,
+		"cumuCases": 1188967
+	},
+	{
+		"date": "2021-07-29T07:21:34.000Z",
+		"cases": 1190992,
+		"dailyCases": 2025,
+		"cumuCases": 1190992
+	},
+	{
+		"date": "2021-07-30T07:21:35.000Z",
+		"cases": 1192293,
+		"dailyCases": 1301,
+		"cumuCases": 1192293
+	},
+	{
+		"date": "2021-07-31T07:21:50.000Z",
+		"cases": 1193689,
+		"dailyCases": 1396,
+		"cumuCases": 1193689
+	},
+	{
+		"date": "2021-08-01T07:21:36.000Z",
+		"cases": 1194316,
+		"dailyCases": 627,
+		"cumuCases": 1194316
+	},
+	{
+		"date": "2021-08-02T07:21:39.000Z",
+		"cases": 1194954,
+		"dailyCases": 638,
+		"cumuCases": 1194954
+	},
+	{
+		"date": "2021-08-03T07:21:25.000Z",
+		"cases": 1195507,
+		"dailyCases": 553,
+		"cumuCases": 1195507
+	},
+	{
+		"date": "2021-08-04T07:21:51.000Z",
+		"cases": 1197413,
+		"dailyCases": 1906,
+		"cumuCases": 1197413
+	},
+	{
+		"date": "2021-08-05T07:21:18.000Z",
+		"cases": 1199008,
+		"dailyCases": 1595,
+		"cumuCases": 1199008
+	},
+	{
+		"date": "2021-08-06T07:21:30.000Z",
+		"cases": 1200275,
+		"dailyCases": 1267,
+		"cumuCases": 1200275
+	},
+	{
+		"date": "2021-08-07T07:21:33.000Z",
+		"cases": 1201950,
+		"dailyCases": 1675,
+		"cumuCases": 1201950
+	},
+	{
+		"date": "2021-08-08T07:21:24.000Z",
+		"cases": 1202434,
+		"dailyCases": 484,
+		"cumuCases": 1202434
+	},
+	{
+		"date": "2021-08-09T07:21:27.000Z",
+		"cases": 1202820,
+		"dailyCases": 386,
+		"cumuCases": 1202820
+	},
+	{
+		"date": "2021-08-10T07:21:58.000Z",
+		"cases": 1204276,
+		"dailyCases": 1456,
+		"cumuCases": 1204276
+	},
+	{
+		"date": "2021-08-11T07:21:25.000Z",
+		"cases": 1205316,
+		"dailyCases": 1040,
+		"cumuCases": 1205316
+	},
+	{
+		"date": "2021-08-12T07:21:24.000Z",
+		"cases": 1206678,
+		"dailyCases": 1362,
+		"cumuCases": 1206678
+	},
+	{
+		"date": "2021-08-13T07:21:25.000Z",
+		"cases": 1207796,
+		"dailyCases": 1118,
+		"cumuCases": 1207796
+	},
+	{
+		"date": "2021-08-14T07:21:41.000Z",
+		"cases": 1208878,
+		"dailyCases": 1082,
+		"cumuCases": 1208878
+	},
+	{
+		"date": "2021-08-15T07:21:31.000Z",
+		"cases": 1209429,
+		"dailyCases": 551,
+		"cumuCases": 1209429
+	},
+	{
+		"date": "2021-08-16T07:21:49.000Z",
+		"cases": 1209749,
+		"dailyCases": 320,
+		"cumuCases": 1209749
+	},
+	{
+		"date": "2021-08-17T07:21:35.000Z",
+		"cases": 1210672,
+		"dailyCases": 923,
+		"cumuCases": 1210672
 	}
 ]
