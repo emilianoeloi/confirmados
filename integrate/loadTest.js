@@ -51,8 +51,8 @@ const ecuador = new Country("ecuador", "Ecuador", "#equador")
 const guyana = new Country("guyana", "Guyana", "#018A2D")
 const suriname = new Country("suriname", "Suriname", "#377E3F")
 
-const init = new Date("2020-08-17T00:00:00.000")
-const end = new Date("2021-08-17T23:59:59.999")
+const init = new Date("2020-09-06T00:00:00.000")
+const end = new Date("2021-09-06T23:59:59.999")
 
 const mercosur = new Load(
     "MERCOSUR",
