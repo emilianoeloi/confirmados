@@ -11,19 +11,28 @@ Eu tive um derrame cerebral (AVE-He) que comprometeu uma parte do meu cérebro o
 ## Gráfico
 
 ### Região Norte do Brasil
-![confirmados](images/confirmados_2020-12-12_regiao_norte.png)
+![confirmados](images/confirmados_2021-09-07_Regiao_Norte_01.png)
+![confirmados](images/confirmados_2021-09-07_Regiao_Norte_02.png)
 
 ### Região Nordeste do Brasil
-![confirmados](images/confirmados_2020-12-12_regiao_nordeste.png)
+![confirmados](images/confirmados_2021-09-07_Regiao_Nordeste_02.png)
+![confirmados](images/confirmados_2021-09-07_Regiao_Nordeste_01.png)
 
 ### Região Centro-Oeste do Brasil
-![confirmados](images/confirmados_2020-12-12_regiao_centro_oeste.png)
+![confirmados](images/confirmados_2021-09-07_Regiao_Centro-Oeste_02.png)
+![confirmados](images/confirmados_2021-09-07_Regiao_Centro-Oeste_01.png)
 
 ### Região Sudeste do Brasil
-![confirmados](images/confirmados_2020-12-12_regiao_sudeste_brasil.png)
+![confirmados](images/confirmados_2021-09-07_Regiao_Sudeste_02.png)
+![confirmados](images/confirmados_2021-09-07_Regiao_Sudeste_01.png)
 
 ### Região Sul do Brasil
-![confirmados](images/confirmados_2020-12-12_regiao_sul_brasil.png)
+![confirmados](images/confirmados_2021-09-07_Regiao_Sul_01.png)
+![confirmados](images/confirmados_2021-09-07_Regiao_Sul_02.png)
+
+### Distrito Federal
+![confirmados](images/confirmados_2021-09-07_DF_01.png)
+![confirmados](images/confirmados_2021-09-07_DF_02.png)
 
 Confirmados pelo COVID-19 pelo período x confirmados.
 
