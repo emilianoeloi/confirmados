@@ -17,6 +17,10 @@ const southAfrica = new Country("south_africa", "South Africa", "#000000")
 const france = new Country("france", "France", "#0055A4")
 const germany = new Country("germany", "Germany", "#000000")
 const indonesia = new Country("indonesia", "Indonesia", "#a5a5a5")
+const iran = new Country("iran", "Iran", "#239F40")
+const philippines = new Country("philippines", "Philippines", "#002165")
+
+philippines
 
 const spain = new Country("spain", "Spain", "#AA151B")
 const italy = new Country("italy", "Italy", "#008C45")
@@ -51,8 +55,8 @@ const ecuador = new Country("ecuador", "Ecuador", "#equador")
 const guyana = new Country("guyana", "Guyana", "#018A2D")
 const suriname = new Country("suriname", "Suriname", "#377E3F")
 
-const init = new Date("2020-09-06T00:00:00.000")
-const end = new Date("2021-09-06T23:59:59.999")
+const init = new Date("2020-09-25T00:00:00.000")
+const end = new Date("2021-09-25T23:59:59.999")
 
 const mercosur = new Load(
     "MERCOSUR",
@@ -129,12 +133,11 @@ const top7 = new Load(
     [
         us,
         india,
-        brazil,
-        france,
-        turkey,
-        russia,
         uk,
-        indonesia
+        turkey,
+        iran,
+        brazil,
+        philippines
     ],
     init,
     end
