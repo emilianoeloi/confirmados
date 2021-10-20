@@ -104,10 +104,10 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 6059,Orange,California,US,3/22/20 23:45,33.70147516,-117.7645998,95,0,0,0,"Orange, California, US"
 6001,Alameda,California,US,3/22/20 23:45,37.64629437,-121.8929271,72,1,0,0,"Alameda, California, US"
 6013,Contra Costa,California,US,3/22/20 23:45,37.91923498,-121.9289527,79,1,0,0,"Contra Costa, California, US"
-6067,Sacramento,California,US,3/22/20 23:45,38.45106826,-121.3425374,81,3,0,0,"Sacramento, California, US"
+6067,Sacramento,California,US,3/22/20 23:45,38.45106826,-121.3425374,81,4,0,0,"Sacramento, California, US"
 6041,Marin,California,US,3/22/20 23:45,38.07122463,-122.7210631,30,0,0,0,"Marin, California, US"
 6077,San Joaquin,California,US,3/22/20 23:45,37.93433732,-121.2730061,33,2,0,0,"San Joaquin, California, US"
-6065,Riverside,California,US,3/22/20 23:45,33.74314981,-115.9933578,29,6,0,0,"Riverside, California, US"
+6065,Riverside,California,US,3/22/20 23:45,33.74314981,-115.9933578,29,5,0,0,"Riverside, California, US"
 6079,San Luis Obispo,California,US,3/22/20 23:45,35.38822029,-120.4039028,19,0,0,0,"San Luis Obispo, California, US"
 6111,Ventura,California,US,3/22/20 23:45,34.44465746,-119.0910613,26,0,0,0,"Ventura, California, US"
 6097,Sonoma,California,US,3/22/20 23:45,38.52746429,-122.8862506,18,1,0,0,"Sonoma, California, US"
@@ -116,7 +116,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 6095,Solano,California,US,3/22/20 23:45,38.26827353,-121.9357113,7,0,0,0,"Solano, California, US"
 6083,Santa Barbara,California,US,3/22/20 23:45,34.65329488,-120.0188492,16,0,0,0,"Santa Barbara, California, US"
 6061,Placer,California,US,3/22/20 23:45,39.06167234,-120.7240569,18,1,0,0,"Placer, California, US"
-6107,Tulare,California,US,3/22/20 23:45,36.22026558,-118.8020203,6,0,0,0,"Tulare, California, US"
+6107,Tulare,California,US,3/22/20 23:45,36.22026558,-118.8020203,7,0,0,0,"Tulare, California, US"
 6053,Monterey,California,US,3/22/20 23:45,36.21862405,-121.2413397,14,1,0,0,"Monterey, California, US"
 6113,Yolo,California,US,3/22/20 23:45,38.68278902,-121.9018288,6,0,0,0,"Yolo, California, US"
 6019,Fresno,California,US,3/22/20 23:45,36.75733899,-119.6466953,9,0,0,0,"Fresno, California, US"
@@ -3307,7 +3307,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Vietnam,3/22/20 23:45,14.058324,108.277199,113,0,17,96,Vietnam
 ,,,Jordan,3/22/20 23:45,31.24,36.51,112,0,1,111,Jordan
 ,,,New Zealand,3/22/20 23:45,-40.9006,174.886,102,0,0,102,New Zealand
-,,,Cyprus,3/22/20 23:45,35.1264,33.4299,95,1,3,91,Cyprus
+,,,Cyprus,3/22/20 23:45,35.1264,33.4299,84,0,3,91,Cyprus
 ,,,Moldova,3/22/20 23:45,47.4116,28.3699,94,1,1,92,Moldova
 ,,,Malta,3/22/20 23:45,35.9375,14.3754,90,0,2,88,Malta
 ,,,Albania,3/22/20 23:45,41.1533,20.1683,89,2,2,85,Albania
@@ -3331,7 +3331,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Afghanistan,3/22/20 23:45,33.93911,67.709953,34,0,1,38,Afghanistan
 ,,,Cameroon,3/22/20 23:45,3.848,11.5021,40,0,2,38,Cameroon
 ,,Martinique,France,3/22/20 23:45,14.6415,-61.0242,37,1,0,36,"Martinique, France"
-,,,Liechtenstein,3/22/20 23:45,47.14,9.55,37,0,0,37,Liechtenstein
+,,,Liechtenstein,3/22/20 23:45,47.14,9.55,46,0,0,37,Liechtenstein
 ,,,Cuba,3/22/20 23:45,21.521757,-77.781167,35,1,0,34,Cuba
 ,,Channel Islands,United Kingdom,3/22/20 23:45,49.3723,-2.3644,32,0,0,32,"Channel Islands, United Kingdom"
 ,,,Congo (Kinshasa),3/22/20 23:45,-4.322447,15.307045,30,1,0,29,Congo (Kinshasa)
