@@ -2063,7 +2063,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 48405,San Augustine,Texas,US,2020-04-09 23:02:37,31.39457611,-94.17000399,7,1,0,0,"San Augustine, Texas, US"
 6069,San Benito,California,US,2020-04-09 23:02:37,36.60308176,-121.069975,30,2,0,0,"San Benito, California, US"
 6071,San Bernardino,California,US,2020-04-09 23:02:37,34.84060306,-116.1774685,717,27,0,0,"San Bernardino, California, US"
-6073,San Diego,California,US,2020-04-09 23:02:37,33.03484597,-116.73653259999999,1530,36,0,0,"San Diego, California, US"
+6073,San Diego,California,US,2020-04-09 23:02:37,33.03484597,-116.73653259999999,1628,36,0,0,"San Diego, California, US"
 6075,San Francisco,California,US,2020-04-09 23:02:37,37.75215114,-122.43856720000001,748,8,0,0,"San Francisco, California, US"
 48407,San Jacinto,Texas,US,2020-04-09 23:02:37,30.57933681,-95.16260304,3,0,0,0,"San Jacinto, Texas, US"
 6077,San Joaquin,California,US,2020-04-09 23:02:37,37.93433732,-121.2730061,226,14,0,0,"San Joaquin, California, US"
@@ -2795,7 +2795,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Georgia,2020-04-09 23:02:19,42.3154,43.3569,218,3,51,164,Georgia
 ,,,Germany,2020-04-09 23:02:19,51.165690999999995,10.451526,118181,2607,52407,63167,Germany
 ,,,Ghana,2020-04-09 23:02:19,7.9465,-1.0232,378,6,3,369,Ghana
-,,,Greece,2020-04-09 23:02:19,39.0742,21.8243,1955,87,269,1599,Greece
+,,,Greece,2020-04-09 23:02:19,39.0742,21.8243,1955,86,269,1599,Greece
 ,,,Grenada,2020-04-09 23:02:19,12.1165,-61.678999999999995,12,0,0,12,Grenada
 ,,,Guatemala,2020-04-09 23:02:19,15.7835,-90.2308,95,3,17,75,Guatemala
 ,,,Guinea,2020-04-09 23:02:19,9.9456,-9.6966,194,0,11,183,Guinea
