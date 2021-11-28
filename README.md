@@ -119,6 +119,14 @@ const top7 = new Load(
 
 --------------
 
+## Ferramentas
+
+Adobe Color: https://color.adobe.com/pt/create/color-wheel 
+
+Scheme Color: https://www.schemecolor.com/
+
+--------------
+
 ## Referências
 
 *covid-19*
@@ -136,10 +144,6 @@ NYC Department of Health and Mental Hygiene: https://github.com/nytimes/covid-19
 Awesome Coronavirus: https://corona.js.org/
 
 JSON time-series of coronavirus cases (confirmed, deaths and recovered) per country - updated daily: https://github.com/pomber/covid19 Acesso em 28/11/2020
-
-*UX*
-
-Scheme Color: https://www.schemecolor.com/
 
 *Markdown*
 
