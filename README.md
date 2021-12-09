@@ -29,8 +29,8 @@ Confirmados pelo COVID-19 pelo período x confirmados.
 ```javascript
 /// loadTest.js
 
-const start = new Date("2020-11-27T00:00:00.000")
-const end = new Date("2020-11-27T23:59:59.999")
+const start = new Date("2020-12-08T00:00:00.000")
+const end = new Date("2021-12-08T23:59:59.999")
 
 const top7 = new Load(
     "Top 7",
@@ -39,8 +39,8 @@ const top7 = new Load(
         germany,
         uk,
         russia,
+        france,
         turkey,
-        ukraine,
         poland
     ],
     init,
