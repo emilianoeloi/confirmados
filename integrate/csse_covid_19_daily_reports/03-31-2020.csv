@@ -2316,7 +2316,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Eswatini,2020-03-31 23:43:43,-26.5225,31.4659,9,0,0,9,Eswatini
 ,,,Ethiopia,2020-03-31 23:43:43,9.145,40.4897,26,0,2,24,Ethiopia
 ,,,Fiji,2020-03-31 23:43:43,-17.7134,178.065,5,0,0,5,Fiji
-,,,Finland,2020-03-31 23:43:43,61.92411,25.748151,1418,17,10,1391,Finland
+,,,Finland,2020-03-31 23:43:43,61.92411,25.748151,1672,51,10,1391,Finland
 ,,,France,2020-03-31 23:43:43,46.2276,2.2137,51579,3517,9444,38618,France
 ,,,Gabon,2020-03-31 23:43:43,-0.8037,11.6094,16,1,0,15,Gabon
 ,,,Gambia,2020-03-31 23:43:43,13.4432,-15.3101,4,1,0,3,Gambia
@@ -2364,7 +2364,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Mali,2020-03-31 23:43:43,17.570692,-3.996166000000001,28,2,0,26,Mali
 ,,,Malta,2020-03-31 23:43:43,35.9375,14.3754,169,0,2,167,Malta
 ,,,Mauritania,2020-03-31 23:43:43,21.0079,-10.9408,6,1,2,3,",,Mauritania"
-,,,Mauritius,2020-03-31 23:43:43,-20.348404000000002,57.552152,143,5,0,138,Mauritius
+,,,Mauritius,2020-03-31 23:43:43,-20.348404000000002,57.552152,125,3,0,138,Mauritius
 ,,,Mexico,2020-03-31 23:43:43,23.6345,-102.5528,1094,28,35,1031,Mexico
 ,,,Moldova,2020-03-31 23:43:43,47.4116,28.3699,353,4,18,331,Moldova
 ,,,Monaco,2020-03-31 23:43:43,43.7333,7.4167,52,1,2,49,Monaco
@@ -2458,3 +2458,4 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,W.P. Putrajaya,Malaysia,2020-03-31 23:43:56,2.9264,101.6964,27,1,5,21,"W.P. Putrajaya, Malaysia"
 ,,Unknown,Malaysia,2020-03-31 23:43:56,,,0,0,0,0,"Unknown, Malaysia"
 ,,,Tonga,2020-03-31 23:43:56,-21.179,-175.1982,0,0,0,0,Tonga
+,,,Winter Olympics 2022,2020-03-31 23:43:56,39.9042,116.4074,0,0,0,0,Winter Olympics 2022

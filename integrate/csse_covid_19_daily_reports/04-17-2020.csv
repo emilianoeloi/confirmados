@@ -1703,7 +1703,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 55081,Monroe,Wisconsin,US,2020-04-17 23:30:52,43.94641218,-90.61881899999999,13,0,0,13,"Monroe, Wisconsin, US"
 48337,Montague,Texas,US,2020-04-17 23:30:52,33.67521893,-97.72500958,4,0,0,5,"Montague, Texas, US"
 26117,Montcalm,Michigan,US,2020-04-17 23:30:52,43.31082541,-85.15252824,24,1,0,23,"Montcalm, Michigan, US"
-6053,Monterey,California,US,2020-04-17 23:30:52,36.21862405,-121.24133970000001,120,3,0,116,"Monterey, California, US"
+6053,Monterey,California,US,2020-04-17 23:30:52,36.21862405,-121.24133970000001,122,3,0,116,"Monterey, California, US"
 8083,Montezuma,Colorado,US,2020-04-17 23:30:52,37.33859579,-108.59588570000001,13,2,0,11,"Montezuma, Colorado, US"
 1101,Montgomery,Alabama,US,2020-04-17 23:30:52,32.2206831,-86.20969272,200,5,0,195,"Montgomery, Alabama, US"
 13209,Montgomery,Georgia,US,2020-04-17 23:30:52,32.17201038,-82.53527476,2,0,0,2,"Montgomery, Georgia, US"
@@ -2111,7 +2111,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 8105,Rio Grande,Colorado,US,2020-04-17 23:30:52,37.5836865,-106.3847838,7,0,0,7,"Rio Grande, Colorado, US"
 18137,Ripley,Indiana,US,2020-04-17 23:30:52,39.10235626,-85.26212744,77,3,0,74,"Ripley, Indiana, US"
 29181,Ripley,Missouri,US,2020-04-17 23:30:52,36.65460667,-90.85990261,3,0,0,3,"Ripley, Missouri, US"
-6065,Riverside,California,US,2020-04-17 23:30:52,33.74314981,-115.9933578,2088,50,0,2036,"Riverside, California, US"
+6065,Riverside,California,US,2020-04-17 23:30:52,33.74314981,-115.9933578,2094,50,0,2036,"Riverside, California, US"
 47145,Roane,Tennessee,US,2020-04-17 23:30:52,35.84923189,-84.52458689,7,0,0,7,"Roane, Tennessee, US"
 54087,Roane,West Virginia,US,2020-04-17 23:30:52,38.71622686,-81.35243568,2,0,0,2,"Roane, West Virginia, US"
 51161,Roanoke,Virginia,US,2020-04-17 23:30:52,37.26865804,-80.06396753,20,0,0,20,"Roanoke, Virginia, US"
@@ -2178,7 +2178,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 35045,San Juan,New Mexico,US,2020-04-17 23:30:52,36.50838318,-108.32043700000001,229,13,0,216,"San Juan, New Mexico, US"
 49037,San Juan,Utah,US,2020-04-17 23:30:52,37.62762978,-109.80337140000002,17,2,0,15,"San Juan, Utah, US"
 53055,San Juan,Washington,US,2020-04-17 23:30:52,48.60182783,-122.96745,13,0,0,13,"San Juan, Washington, US"
-6079,San Luis Obispo,California,US,2020-04-17 23:30:52,35.38822029,-120.4039028,117,1,0,116,"San Luis Obispo, California, US"
+6079,San Luis Obispo,California,US,2020-04-17 23:30:52,35.38822029,-120.4039028,119,1,0,116,"San Luis Obispo, California, US"
 6081,San Mateo,California,US,2020-04-17 23:30:52,37.422880799999994,-122.32755459999998,770,31,0,739,"San Mateo, California, US"
 8113,San Miguel,Colorado,US,2020-04-17 23:30:52,38.00450883,-108.4020725,12,0,0,12,"San Miguel, Colorado, US"
 35047,San Miguel,New Mexico,US,2020-04-17 23:30:52,35.48014807,-104.8163562,2,0,0,2,"San Miguel, New Mexico, US"
@@ -2188,8 +2188,8 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 39143,Sandusky,Ohio,US,2020-04-17 23:30:52,41.35624126,-83.137872,16,3,0,13,"Sandusky, Ohio, US"
 17167,Sangamon,Illinois,US,2020-04-17 23:30:52,39.75836914,-89.65872023,58,3,0,55,"Sangamon, Illinois, US"
 26151,Sanilac,Michigan,US,2020-04-17 23:30:52,43.42406072,-82.82055898,27,3,0,24,"Sanilac, Michigan, US"
-6083,Santa Barbara,California,US,2020-04-17 23:30:52,34.65329488,-120.0188492,350,3,0,347,"Santa Barbara, California, US"
-6085,Santa Clara,California,US,2020-04-17 23:30:52,37.23104908,-121.6970462,1833,74,0,1758,"Santa Clara, California, US"
+6083,Santa Barbara,California,US,2020-04-17 23:30:52,34.65329488,-120.0188492,351,3,0,347,"Santa Barbara, California, US"
+6085,Santa Clara,California,US,2020-04-17 23:30:52,37.23104908,-121.6970462,1834,74,0,1758,"Santa Clara, California, US"
 4023,Santa Cruz,Arizona,US,2020-04-17 23:30:52,31.52508998,-110.8479088,14,0,0,14,"Santa Cruz, Arizona, US"
 6087,Santa Cruz,California,US,2020-04-17 23:30:52,37.05580291,-122.0066524,94,2,0,92,"Santa Cruz, California, US"
 35049,Santa Fe,New Mexico,US,2020-04-17 23:30:52,35.50708973,-105.9774716,79,0,0,79,"Santa Fe, New Mexico, US"
@@ -2453,7 +2453,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 47169,Trousdale,Tennessee,US,2020-04-17 23:30:52,36.39026213,-86.16087954,19,1,0,18,"Trousdale, Tennessee, US"
 39155,Trumbull,Ohio,US,2020-04-17 23:30:52,41.31735028,-80.76109643,213,22,0,191,"Trumbull, Ohio, US"
 54093,Tucker,West Virginia,US,2020-04-17 23:30:52,39.11240885,-79.57053576,4,0,0,4,"Tucker, West Virginia, US"
-6107,Tulare,California,US,2020-04-17 23:30:52,36.22026558,-118.8020203,373,17,0,355,"Tulare, California, US"
+6107,Tulare,California,US,2020-04-17 23:30:52,36.22026558,-118.8020203,375,17,0,355,"Tulare, California, US"
 40143,Tulsa,Oklahoma,US,2020-04-17 23:30:52,36.11939621,-95.94013939,376,21,0,355,"Tulsa, Oklahoma, US"
 28143,Tunica,Mississippi,US,2020-04-17 23:30:52,34.64967704,-90.37481167,28,1,0,27,"Tunica, Mississippi, US"
 6109,Tuolumne,California,US,2020-04-17 23:30:52,38.02644018,-119.95250929999999,2,0,0,2,"Tuolumne, California, US"
@@ -2833,7 +2833,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,Northwest Territories,Canada,2020-04-17 23:38:31,64.8255,-124.8457,5,0,0,5,"Northwest Territories, Canada"
 ,,Nova Scotia,Canada,2020-04-17 23:38:31,44.681999999999995,-63.7443,606,4,0,602,"Nova Scotia, Canada"
 ,,Nunavut,Canada,2020-04-17 23:38:31,70.2998,-83.1076,0,0,0,0,"Nunavut, Canada"
-,,Ontario,Canada,2020-04-17 23:38:31,51.2538,-85.3232,10456,524,0,9932,"Ontario, Canada"
+,,Ontario,Canada,2020-04-17 23:38:31,51.2538,-85.3232,9525,478,0,9932,"Ontario, Canada"
 ,,Prince Edward Island,Canada,2020-04-17 23:38:31,46.5107,-63.4168,26,0,0,26,"Prince Edward Island, Canada"
 72,,Puerto Rico,US,2020-04-17 23:30:52,18.2208,-66.5901,1068,58,0,1010,"Puerto Rico, US"
 ,,Qinghai,China,2020-02-23 11:19:02,35.7452,95.9956,18,0,18,0,"Qinghai, China"
@@ -2922,7 +2922,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Eswatini,2020-04-17 23:30:32,-26.5225,31.4659,16,1,8,7,Eswatini
 ,,,Ethiopia,2020-04-17 23:30:32,9.145,40.4897,96,3,15,78,Ethiopia
 ,,,Fiji,2020-04-17 23:30:32,-17.7134,178.065,17,0,0,17,Fiji
-,,,Finland,2020-04-17 23:30:32,61.92411,25.748151,3489,82,1700,1707,Finland
+,,,Finland,2020-04-17 23:30:32,61.92411,25.748151,3982,195,1700,1707,Finland
 ,,,France,2020-04-17 23:30:32,46.2276,2.2137,146942,18662,34420,93860,France
 ,,,Gabon,2020-04-17 23:30:32,-0.8037,11.6094,108,1,7,100,Gabon
 ,,,Gambia,2020-04-17 23:30:32,13.4432,-15.3101,9,1,2,6,Gambia
@@ -3068,3 +3068,4 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,W.P. Putrajaya,Malaysia,2020-04-17 23:30:52,2.9264,101.6964,55,1,32,22,"W.P. Putrajaya, Malaysia"
 ,,Unknown,Malaysia,2020-04-17 23:30:52,,,0,0,0,0,"Unknown, Malaysia"
 ,,,Tonga,2020-04-17 23:30:52,-21.179,-175.1982,0,0,0,0,Tonga
+,,,Winter Olympics 2022,2020-04-17 23:30:52,39.9042,116.4074,0,0,0,0,Winter Olympics 2022

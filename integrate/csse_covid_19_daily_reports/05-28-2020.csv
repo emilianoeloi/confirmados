@@ -23,7 +23,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 27001,Aitkin,Minnesota,US,2020-05-29 02:32:50,46.60962049,-93.4116826,7,0,0,7,"Aitkin, Minnesota, US"
 12001,Alachua,Florida,US,2020-05-29 02:32:50,29.67866525,-82.35928158,372,7,0,365,"Alachua, Florida, US"
 37001,Alamance,North Carolina,US,2020-05-29 02:32:50,36.0434701,-79.39976137,325,24,0,301,"Alamance, North Carolina, US"
-6001,Alameda,California,US,2020-05-29 02:32:50,37.64629437,-121.8929271,3087,94,0,2992,"Alameda, California, US"
+6001,Alameda,California,US,2020-05-29 02:32:50,37.64629437,-121.8929271,3089,94,0,2992,"Alameda, California, US"
 8003,Alamosa,Colorado,US,2020-05-29 02:32:50,37.57250606,-105.7885451,60,2,0,58,"Alamosa, Colorado, US"
 36001,Albany,New York,US,2020-05-29 02:32:50,42.60060306,-73.97723916,1814,76,0,1738,"Albany, New York, US"
 56001,Albany,Wyoming,US,2020-05-29 02:32:50,41.65498705,-105.7235415,24,0,0,24,"Albany, Wyoming, US"
@@ -595,7 +595,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 22029,Concordia,Louisiana,US,2020-05-29 02:32:50,31.44817835,-91.63814433,86,5,0,81,"Concordia, Louisiana, US"
 1035,Conecuh,Alabama,US,2020-05-29 02:32:50,31.43401703,-86.99320044,36,1,0,35,"Conecuh, Alabama, US"
 8021,Conejos,Colorado,US,2020-05-29 02:32:50,37.201606,-106.19174879999998,1,0,0,1,"Conejos, Colorado, US"
-6013,Contra Costa,California,US,2020-05-29 02:32:50,37.91923498,-121.9289527,1392,37,0,1355,"Contra Costa, California, US"
+6013,Contra Costa,California,US,2020-05-29 02:32:50,37.91923498,-121.9289527,1393,37,0,1355,"Contra Costa, California, US"
 56009,Converse,Wyoming,US,2020-05-29 02:32:50,42.97272268,-105.5081848,24,0,0,24,"Converse, Wyoming, US"
 5029,Conway,Arkansas,US,2020-05-29 02:32:50,35.26205537,-92.70506566,14,1,0,13,"Conway, Arkansas, US"
 13075,Cook,Georgia,US,2020-05-29 02:32:50,31.16068491,-83.42947229,48,2,0,46,"Cook, Georgia, US"
@@ -931,7 +931,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 16043,Fremont,Idaho,US,2020-05-29 02:32:50,44.22800938,-111.4809943,3,0,0,3,"Fremont, Idaho, US"
 19071,Fremont,Iowa,US,2020-05-29 02:32:50,40.74542720000001,-95.60129045,4,0,0,4,"Fremont, Iowa, US"
 56013,Fremont,Wyoming,US,2020-05-29 02:32:50,43.04183996,-108.6296893,261,0,0,261,"Fremont, Wyoming, US"
-6019,Fresno,California,US,2020-05-29 02:32:50,36.75733899,-119.6466953,1695,31,0,1660,"Fresno, California, US"
+6019,Fresno,California,US,2020-05-29 02:32:50,36.75733899,-119.6466953,1694,31,0,1660,"Fresno, California, US"
 48163,Frio,Texas,US,2020-05-29 02:32:50,28.86751206,-99.10804207,21,0,0,37,"Frio, Texas, US"
 31063,Frontier,Nebraska,US,2020-05-29 02:32:50,40.52993007,-100.3924658,1,0,0,1,"Frontier, Nebraska, US"
 5049,Fulton,Arkansas,US,2020-05-29 02:32:50,36.38177105,-91.81729127,7,0,0,7,"Fulton, Arkansas, US"
@@ -1412,7 +1412,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 51101,King William,Virginia,US,2020-05-29 02:32:50,37.70965316,-77.09384941,26,0,0,26,"King William, Virginia, US"
 51097,King and Queen,Virginia,US,2020-05-29 02:32:50,37.71044922,-76.88689628,10,1,0,9,"King and Queen, Virginia, US"
 40073,Kingfisher,Oklahoma,US,2020-05-29 02:32:50,35.94530008,-97.94193268,11,0,0,11,"Kingfisher, Oklahoma, US"
-6031,Kings,California,US,2020-05-29 02:32:50,36.07409056,-119.8159973,629,3,0,626,"Kings, California, US"
+6031,Kings,California,US,2020-05-29 02:32:50,36.07409056,-119.8159973,630,3,0,626,"Kings, California, US"
 46077,Kingsbury,South Dakota,US,2020-05-29 02:32:50,44.36956169,-97.4913945,0,0,0,0,"Kingsbury, South Dakota, US"
 20097,Kiowa,Kansas,US,2020-05-29 02:32:50,37.55848695,-99.2856537,2,0,0,2,"Kiowa, Kansas, US"
 40075,Kiowa,Oklahoma,US,2020-05-29 02:32:50,34.91671958,-98.97720696,6,0,0,6,"Kiowa, Oklahoma, US"
@@ -1854,7 +1854,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 55081,Monroe,Wisconsin,US,2020-05-29 02:32:50,43.94641218,-90.618819,16,1,0,15,"Monroe, Wisconsin, US"
 48337,Montague,Texas,US,2020-05-29 02:32:50,33.67521893,-97.72500958,4,1,0,8,"Montague, Texas, US"
 26117,Montcalm,Michigan,US,2020-05-29 02:32:50,43.31082541,-85.15252824,65,1,0,64,"Montcalm, Michigan, US"
-6053,Monterey,California,US,2020-05-29 02:32:50,36.21862405,-121.2413397,473,10,0,462,"Monterey, California, US"
+6053,Monterey,California,US,2020-05-29 02:32:50,36.21862405,-121.2413397,475,10,0,462,"Monterey, California, US"
 8083,Montezuma,Colorado,US,2020-05-29 02:32:50,37.33859579,-108.59588570000001,37,3,0,34,"Montezuma, Colorado, US"
 1101,Montgomery,Alabama,US,2020-05-29 02:32:50,32.2206831,-86.20969272,1550,34,0,1516,"Montgomery, Alabama, US"
 5097,Montgomery,Arkansas,US,2020-05-29 02:32:50,34.53704874,-93.65824478,2,0,0,2,"Montgomery, Arkansas, US"
@@ -2299,7 +2299,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 18137,Ripley,Indiana,US,2020-05-29 02:32:50,39.10235626,-85.26212744,110,6,0,104,"Ripley, Indiana, US"
 29181,Ripley,Missouri,US,2020-05-29 02:32:50,36.65460667,-90.85990261,7,0,0,7,"Ripley, Missouri, US"
 54085,Ritchie,West Virginia,US,2020-05-29 02:32:50,39.18094587,-81.06356878,1,0,0,1,"Ritchie, West Virginia, US"
-6065,Riverside,California,US,2020-05-29 02:32:50,33.74314981,-115.9933578,7251,304,0,6945,"Riverside, California, US"
+6065,Riverside,California,US,2020-05-29 02:32:50,33.74314981,-115.9933578,7259,304,0,6945,"Riverside, California, US"
 47145,Roane,Tennessee,US,2020-05-29 02:32:50,35.84923189,-84.52458689,16,0,0,16,"Roane, Tennessee, US"
 54087,Roane,West Virginia,US,2020-05-29 02:32:50,38.71622686,-81.35243568,9,0,0,9,"Roane, West Virginia, US"
 51161,Roanoke,Virginia,US,2020-05-29 02:32:50,37.26865804,-80.06396753,97,7,0,90,"Roanoke, Virginia, US"
@@ -2369,7 +2369,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 35045,San Juan,New Mexico,US,2020-05-29 02:32:50,36.50838318,-108.320437,1662,114,0,1548,"San Juan, New Mexico, US"
 49037,San Juan,Utah,US,2020-05-29 02:32:50,37.62762978,-109.80337140000002,283,5,0,278,"San Juan, Utah, US"
 53055,San Juan,Washington,US,2020-05-29 02:32:50,48.60182783,-122.96745,15,0,0,15,"San Juan, Washington, US"
-6079,San Luis Obispo,California,US,2020-05-29 02:32:50,35.38822029,-120.4039028,269,1,0,268,"San Luis Obispo, California, US"
+6079,San Luis Obispo,California,US,2020-05-29 02:32:50,35.38822029,-120.4039028,271,1,0,268,"San Luis Obispo, California, US"
 6081,San Mateo,California,US,2020-05-29 02:32:50,37.4228808,-122.32755459999998,2073,71,0,2002,"San Mateo, California, US"
 8113,San Miguel,Colorado,US,2020-05-29 02:32:50,38.00450883,-108.4020725,23,0,0,23,"San Miguel, Colorado, US"
 35047,San Miguel,New Mexico,US,2020-05-29 02:32:50,35.48014807,-104.8163562,14,0,0,14,"San Miguel, New Mexico, US"
@@ -2380,8 +2380,8 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 39143,Sandusky,Ohio,US,2020-05-29 02:32:50,41.35624126,-83.137872,72,11,0,61,"Sandusky, Ohio, US"
 17167,Sangamon,Illinois,US,2020-05-29 02:32:50,39.75836914,-89.65872023,343,28,0,315,"Sangamon, Illinois, US"
 26151,Sanilac,Michigan,US,2020-05-29 02:32:50,43.42406072,-82.82055898,40,5,0,35,"Sanilac, Michigan, US"
-6083,Santa Barbara,California,US,2020-05-29 02:32:50,34.65329488,-120.0188492,1648,9,0,1637,"Santa Barbara, California, US"
-6085,Santa Clara,California,US,2020-05-29 02:32:50,37.23104908,-121.6970462,2702,140,0,2559,"Santa Clara, California, US"
+6083,Santa Barbara,California,US,2020-05-29 02:32:50,34.65329488,-120.0188492,1653,9,0,1637,"Santa Barbara, California, US"
+6085,Santa Clara,California,US,2020-05-29 02:32:50,37.23104908,-121.6970462,2705,140,0,2559,"Santa Clara, California, US"
 4023,Santa Cruz,Arizona,US,2020-05-29 02:32:50,31.52508998,-110.8479088,225,0,0,225,"Santa Cruz, Arizona, US"
 6087,Santa Cruz,California,US,2020-05-29 02:32:50,37.05580291,-122.0066524,201,2,0,199,"Santa Cruz, California, US"
 35049,Santa Fe,New Mexico,US,2020-05-29 02:32:50,35.50708973,-105.9774716,138,3,0,135,"Santa Fe, New Mexico, US"
@@ -2670,7 +2670,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 47169,Trousdale,Tennessee,US,2020-05-29 02:32:50,36.39026213,-86.16087954,1393,4,0,1389,"Trousdale, Tennessee, US"
 39155,Trumbull,Ohio,US,2020-05-29 02:32:50,41.31735028,-80.76109643,551,52,0,499,"Trumbull, Ohio, US"
 54093,Tucker,West Virginia,US,2020-05-29 02:32:50,39.11240885,-79.57053576,4,0,0,4,"Tucker, West Virginia, US"
-6107,Tulare,California,US,2020-05-29 02:32:50,36.22026558,-118.8020203,1836,79,0,1757,"Tulare, California, US"
+6107,Tulare,California,US,2020-05-29 02:32:50,36.22026558,-118.8020203,1842,79,0,1757,"Tulare, California, US"
 40143,Tulsa,Oklahoma,US,2020-05-29 02:32:50,36.11939621,-95.94013939,960,49,0,911,"Tulsa, Oklahoma, US"
 28143,Tunica,Mississippi,US,2020-05-29 02:32:50,34.64967704,-90.37481167,53,3,0,50,"Tunica, Mississippi, US"
 6109,Tuolumne,California,US,2020-05-29 02:32:50,38.02644018,-119.9525093,5,0,0,5,"Tuolumne, California, US"
@@ -2774,7 +2774,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 37181,Vance,North Carolina,US,2020-05-29 02:32:50,36.36880673,-78.40670845,297,20,0,277,"Vance, North Carolina, US"
 18163,Vanderburgh,Indiana,US,2020-05-29 02:32:50,38.02658833,-87.58763124,259,3,0,256,"Vanderburgh, Indiana, US"
 42121,Venango,Pennsylvania,US,2020-05-29 02:32:50,41.40323442,-79.75845449,8,0,0,8,"Venango, Pennsylvania, US"
-6111,Ventura,California,US,2020-05-29 02:32:50,34.44465746,-119.0910613,1090,29,0,1060,"Ventura, California, US"
+6111,Ventura,California,US,2020-05-29 02:32:50,34.44465746,-119.0910613,1093,29,0,1060,"Ventura, California, US"
 17183,Vermilion,Illinois,US,2020-05-29 02:32:50,40.18417171,-87.73384359,38,1,0,37,"Vermilion, Illinois, US"
 22113,Vermilion,Louisiana,US,2020-05-29 02:32:50,29.83517605,-92.30292538,53,3,0,50,"Vermilion, Louisiana, US"
 18165,Vermillion,Indiana,US,2020-05-29 02:32:50,39.8523352,-87.46160542,10,0,0,10,"Vermillion, Indiana, US"
@@ -3231,7 +3231,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,Oita,Japan,2020-05-29 02:32:50,33.200697,131.43323999999998,60,1,58,1,"Oita, Japan"
 ,,Okayama,Japan,2020-05-29 02:32:50,34.89246,133.826252,25,0,25,0,"Okayama, Japan"
 ,,Okinawa,Japan,2020-05-29 02:32:50,25.768923,126.668016,142,6,136,0,"Okinawa, Japan"
-,,Ontario,Canada,2020-05-29 02:32:50,51.2538,-85.3232,28320,2292,20781,5247,"Ontario, Canada"
+,,Ontario,Canada,2020-05-29 02:32:50,51.2538,-85.3232,26866,2189,20781,5247,"Ontario, Canada"
 ,,Osaka,Japan,2020-05-29 02:32:50,34.620965000000005,135.507481,1782,82,1539,161,"Osaka, Japan"
 ,,P.A. Bolzano,Italy,2020-05-29 02:32:50,46.49933453,11.35662422,2595,291,2147,157,"P.A. Bolzano, Italy"
 ,,P.A. Trento,Italy,2020-05-29 02:32:50,46.06893511,11.12123097,4425,462,3505,458,"P.A. Trento, Italy"
@@ -3400,7 +3400,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Eswatini,2020-05-29 02:32:50,-26.5225,31.4659,279,2,168,109,Eswatini
 ,,,Ethiopia,2020-05-29 02:32:50,9.145,40.4897,831,7,191,633,Ethiopia
 ,,,Fiji,2020-05-29 02:32:50,-17.7134,178.065,18,0,15,3,Fiji
-,,,Finland,2020-05-29 02:32:50,61.92411,25.748151,6743,313,5500,930,Finland
+,,,Finland,2020-05-29 02:32:50,61.92411,25.748151,6913,304,5500,930,Finland
 ,,,France,2020-05-29 02:32:50,46.2276,2.2137,185300,28612,65098,91590,France
 ,,,Gabon,2020-05-29 02:32:50,-0.8037,11.6094,2431,14,668,1749,Gabon
 ,,,Gambia,2020-05-29 02:32:50,13.4432,-15.3101,25,1,19,5,Gambia
@@ -3544,3 +3544,4 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,W.P. Putrajaya,Malaysia,2020-05-29 02:32:50,2.9264,101.6964,93,1,83,9,"W.P. Putrajaya, Malaysia"
 ,,Unknown,Malaysia,2020-05-29 02:32:50,,,0,0,0,0,"Unknown, Malaysia"
 ,,,Tonga,2020-05-29 02:32:50,-21.179,-175.1982,0,0,0,0,Tonga
+,,,Winter Olympics 2022,2020-05-29 02:32:50,39.9042,116.4074,0,0,0,0,Winter Olympics 2022

@@ -3228,7 +3228,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,Northwest Territories,Canada,2020-03-27 23:27:32,64.8255,-124.8457,1,0,0,1,",Northwest Territories,Canada"
 ,,Nova Scotia,Canada,2020-03-27 23:27:32,44.681999999999995,-63.7443,90,0,0,90,"Nova Scotia, Canada"
 ,,Nunavut,Canada,2020-03-27 23:27:32,70.2998,-83.1076,0,0,0,0,"Nunavut, Canada"
-,,Ontario,Canada,2020-03-27 23:27:32,51.2538,-85.3232,994,18,0,976,"Ontario, Canada"
+,,Ontario,Canada,2020-03-27 23:27:32,51.2538,-85.3232,993,18,0,976,"Ontario, Canada"
 ,,Prince Edward Island,Canada,2020-03-27 23:27:32,46.5107,-63.4168,9,0,0,9,"Prince Edward Island, Canada"
 ,,Puerto Rico,US,2020-03-27 22:14:55,18.2208,-66.5901,79,3,0,76,"Puerto Rico, US"
 ,,Qinghai,China,2020-02-23 11:19:02,35.7452,95.9956,18,0,18,0,"Qinghai, China"
@@ -3313,7 +3313,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Eswatini,2020-03-27 23:23:03,-26.5225,31.4659,9,0,0,9,Eswatini
 ,,,Ethiopia,2020-03-27 23:23:03,9.145,40.4897,16,0,0,16,Ethiopia
 ,,,Fiji,2020-03-27 23:23:03,-17.7134,178.065,5,0,0,5,Fiji
-,,,Finland,2020-03-27 23:23:03,61.92411,25.748151,1041,7,10,1024,Finland
+,,,Finland,2020-03-27 23:23:03,61.92411,25.748151,1301,25,10,1024,Finland
 ,,,France,2020-03-27 23:23:03,46.2276,2.2137,32609,1994,5700,24915,France
 ,,,Gabon,2020-03-27 23:23:03,-0.8037,11.6094,7,1,0,6,Gabon
 ,,,Gambia,2020-03-27 23:23:03,13.4432,-15.3101,3,1,0,2,Gambia
@@ -3360,7 +3360,7 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,,Mali,2020-03-27 23:23:03,17.570692,-3.996166000000001,11,0,0,11,Mali
 ,,,Malta,2020-03-27 23:23:03,35.9375,14.3754,139,0,2,137,Malta
 ,,,Mauritania,2020-03-27 23:23:03,21.0079,-10.9408,3,0,0,3,",,Mauritania"
-,,,Mauritius,2020-03-27 23:23:03,-20.348404000000002,57.552152,94,2,0,92,Mauritius
+,,,Mauritius,2020-03-27 23:23:03,-20.348404000000002,57.552152,82,2,0,92,Mauritius
 ,,,Mexico,2020-03-27 23:23:03,23.6345,-102.5528,585,8,4,573,Mexico
 ,,,Moldova,2020-03-27 23:23:03,47.4116,28.3699,199,2,2,195,Moldova
 ,,,Monaco,2020-03-27 23:23:03,43.7333,7.4167,42,0,1,41,Monaco
@@ -3453,3 +3453,4 @@ FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths
 ,,W.P. Putrajaya,Malaysia,2020-03-27 22:14:55,2.9264,101.6964,20,1,5,14,"W.P. Putrajaya, Malaysia"
 ,,Unknown,Malaysia,2020-03-27 22:14:55,,,0,0,0,0,"Unknown, Malaysia"
 ,,,Tonga,2020-03-27 22:14:55,-21.179,-175.1982,0,0,0,0,Tonga
+,,,Winter Olympics 2022,2020-03-27 22:14:55,39.9042,116.4074,0,0,0,0,Winter Olympics 2022
